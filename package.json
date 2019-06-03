@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "reactjsph-website",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "ReactJS PH website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "ReactJS PH <reactjs.ph@yahoo.com>",
   "dependencies": {
     "gatsby": "^2.8.2",
     "gatsby-image": "^2.1.2",
@@ -21,9 +21,6 @@
   "devDependencies": {
     "prettier": "^1.17.1"
   },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -35,9 +32,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/reactph/reactjsph-website"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/reactph/reactjsph-website/issues"
   }
 }
