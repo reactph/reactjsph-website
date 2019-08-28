@@ -8,8 +8,8 @@
 
 import React from "react"
 import { ThemeProvider } from "emotion-theming"
-import theme from "@rebass/preset"
 
+import theme from "./src/theme"
 import "./src/reset.css"
 
 // eslint-disable-next-line import/prefer-default-export
