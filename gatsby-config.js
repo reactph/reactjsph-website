@@ -3,6 +3,13 @@ module.exports = {
     title: `ReactJS Philippines`,
     description: `ReactJS Enthusiasts in the Philippines`,
     author: `ReactJS PH`,
+    email: `reactjs.ph@yahoo.com`,
+    social: {
+      facebook: `https://www.facebook.com/reactjsphilippines/`,
+      messenger: `https://m.me/reactjsphilippines`,
+      meetup: `https://www.meetup.com/ReactJS-Philippines/`,
+      linkedin: `https://www.linkedin.com/company/reactjs-philippines/`,
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
