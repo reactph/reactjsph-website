@@ -3,6 +3,13 @@ module.exports = {
     title: `ReactJS Philippines`,
     description: `ReactJS Enthusiasts in the Philippines`,
     author: `ReactJS PH`,
+    email: `reactjs.ph@yahoo.com`,
+    social: {
+      facebook: `https://www.facebook.com/reactjsphilippines/`,
+      messenger: `https://m.me/reactjsphilippines`,
+      meetup: `https://www.meetup.com/ReactJS-Philippines/`,
+      linkedin: `https://www.linkedin.com/company/reactjs-philippines/`,
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,11 +25,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `ReactJS PHilippines`,
+        name: `ReactJS Philippines`,
         short_name: `ReactJS PH`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#0c1d60`,
+        theme_color: `#0c1d60`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
