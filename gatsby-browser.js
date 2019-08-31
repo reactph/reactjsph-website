@@ -9,6 +9,7 @@
 import React from "react"
 import { ThemeProvider } from "emotion-theming"
 import { Global } from "@emotion/core"
+import { Box } from "rebass"
 
 import theme from "./src/theme"
 import globalStyles from "./src/global"
@@ -18,7 +19,7 @@ export const wrapRootElement = ({ element }) => (
   <>
     <ThemeProvider theme={theme}>
       <Global styles={globalStyles} />
-      {element}
+      <Box variant="styles.root">{element}</Box>
     </ThemeProvider>
   </>
 )
