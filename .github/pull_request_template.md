@@ -14,3 +14,5 @@
 
 **Notes**
 - Other things needs to be mentioned
+
+Closes #xx - issue number
