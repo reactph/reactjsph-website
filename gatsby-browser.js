@@ -8,11 +8,17 @@
 
 import React from "react"
 import { ThemeProvider } from "emotion-theming"
+import { Global } from "@emotion/core"
 
 import theme from "./src/theme"
-import "./src/reset.css"
+import globalStyles from "./src/global"
 
 // eslint-disable-next-line import/prefer-default-export
 export const wrapRootElement = ({ element }) => (
-  <ThemeProvider theme={theme}>{element}</ThemeProvider>
+  <>
+    <ThemeProvider theme={theme}>
+      <Global styles={globalStyles} />
+      {element}
+    </ThemeProvider>
+  </>
 )
