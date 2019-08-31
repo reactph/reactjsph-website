@@ -8,11 +8,18 @@
 
 import React from "react"
 import { ThemeProvider } from "emotion-theming"
-import theme from "@rebass/preset"
+import { Global } from "@emotion/core"
+import { Box } from "rebass"
 
-import "./src/reset.css"
+import theme from "./src/theme"
+import globalStyles from "./src/global"
 
 // eslint-disable-next-line import/prefer-default-export
 export const wrapRootElement = ({ element }) => (
-  <ThemeProvider theme={theme}>{element}</ThemeProvider>
+  <>
+    <ThemeProvider theme={theme}>
+      <Global styles={globalStyles} />
+      <Box variant="styles.root">{element}</Box>
+    </ThemeProvider>
+  </>
 )
