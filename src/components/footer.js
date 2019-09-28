@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Flex, Text, Link } from "rebass"
+import { Box, Flex, Text, Link, Image } from "rebass"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faFacebook,
@@ -7,12 +7,13 @@ import {
   faMeetup,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link as GatsbyLink } from "gatsby"
 
 import Container from "./container"
+import Logo from "../images/brandmark.svg"
 
-const SiteSocialQuery = graphql`
-  query SiteSocialQuery {
+const FooterQuery = graphql`
+  query FooterQuery {
     site {
       siteMetadata {
         social {
@@ -25,80 +26,106 @@ const SiteSocialQuery = graphql`
     }
   }
 `
-
 const designerLink = "https://galacemiguel.com"
 
-const Footer = () => {
+const Footer = () => (
+  <Box as="footer" backgroundColor="darkBlue" pb={2} mt={3}>
+    <Container>
+      <Flex justifyContent="space-between" alignItems="stretch">
+        <FooterContentLeft />
+        <FooterBrandLogo />
+        <FooterContentRight />
+      </Flex>
+    </Container>
+  </Box>
+)
+
+const FooterBrandLogo = () => (
+  <Box px={2}>
+    <GatsbyLink to="/">
+      <Image src={Logo} alt="React JS Philippines" width="10.88rem" />
+    </GatsbyLink>
+  </Box>
+)
+
+const FooterContentLeft = () => (
+  <Flex
+    flex={1}
+    textAlign="left"
+    flexDirection="column"
+    sx={{
+      ":before": {
+        content: `""`,
+        display: "block",
+        flex: 1,
+        borderBottom: "2px solid #505D90",
+      },
+    }}
+  >
+    <Box flex={1} pt={1}>
+      <Text fontSize={1} color="white">
+        {`Designed by `}
+        <Link href={designerLink} color="white">
+          Miguel N. Galace.
+        </Link>
+      </Text>
+      <Text fontSize={1} color="white">
+        © 2019 ReactJS Philippines. All rights reserved.
+      </Text>
+    </Box>
+  </Flex>
+)
+
+const FooterContentRight = () => {
   const {
     site: {
       siteMetadata: {
         social: { facebook, linkedin, meetup, messenger },
       },
     },
-  } = useStaticQuery(SiteSocialQuery)
+  } = useStaticQuery(FooterQuery)
 
   return (
-    <Box as="footer" backgroundColor="darkBlue" pb={2} mt={3}>
-      <Container>
-        <Flex justifyContent="space-between" alignItems="flex-start">
-          <Box
-            pt={1}
-            flex={1}
-            textAlign="left"
-            sx={{
-              borderTop: "2px solid #505D90",
-            }}
-          >
-            <Text fontSize={1} color="white">
-              {`Designed by `}
-              <Link href={designerLink} color="white">
-                Miguel N. Galace.
-              </Link>
-            </Text>
-            <Text fontSize={1} color="white">
-              © 2019 ReactJS Philippines. All rights reserved.
-            </Text>
-          </Box>
+    <Flex
+      flex={1}
+      textAlign="left"
+      flexDirection="column"
+      sx={{
+        ":before": {
+          content: `""`,
+          display: "block",
+          flex: 1,
+          borderBottom: "2px solid #505D90",
+        },
+      }}
+    >
+      <Flex flex={1} justifyContent="flex-end" pt={1}>
+        <Text
+          fontSize={2}
+          color="white"
+          fontWeight="bold"
+          mr={1}
+          sx={{ textTransform: "uppercase" }}
+        >
+          Join the community
+        </Text>
 
-          <Box>SUN</Box>
-
-          <Flex
-            pt={1}
-            flex={1}
-            justifyContent="flex-end"
-            alignItems="center"
-            sx={{
-              borderTop: "2px solid #505D90",
-            }}
-          >
-            <Text
-              fontSize={2}
-              color="white"
-              fontWeight="bold"
-              mr={1}
-              sx={{ textTransform: "uppercase" }}
-            >
-              Join the community
-            </Text>
-
-            <Text fontSize={3}>
-              <Link href={facebook} color="white" mr={1}>
-                <FontAwesomeIcon icon={faFacebook} />
-              </Link>
-              <Link href={messenger} color="white" mr={1}>
-                <FontAwesomeIcon icon={faFacebookMessenger} />
-              </Link>
-              <Link href={meetup} color="white" mr={1}>
-                <FontAwesomeIcon icon={faMeetup} />
-              </Link>
-              <Link href={linkedin} color="white">
-                <FontAwesomeIcon icon={faLinkedin} />
-              </Link>
-            </Text>
-          </Flex>
-        </Flex>
-      </Container>
-    </Box>
+        <Text fontSize={3}>
+          <Link href={facebook} color="white" mr={1}>
+            <FontAwesomeIcon icon={faFacebook} />
+          </Link>
+          <Link href={messenger} color="white" mr={1}>
+            <FontAwesomeIcon icon={faFacebookMessenger} />
+          </Link>
+          <Link href={meetup} color="white" mr={1}>
+            <FontAwesomeIcon icon={faMeetup} />
+          </Link>
+          <Link href={linkedin} color="white">
+            <FontAwesomeIcon icon={faLinkedin} />
+          </Link>
+        </Text>
+      </Flex>
+    </Flex>
   )
 }
 
