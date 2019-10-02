@@ -53,6 +53,33 @@ const customTheme = {
     "42.56rem",
     "85.12rem",
   ],
+  variants: {
+    nav: {
+      mx: 2,
+      p: 0,
+      fontSize: 1,
+      fontWeight: "bold",
+      display: "inline-block",
+      color: "white",
+      textDecoration: "none",
+      transition: "400ms ease all",
+      textTransform: "uppercase",
+      "&:hover": {
+        color: "gold",
+      },
+      "&::after": {
+        content: '""',
+        display: "block",
+        width: "0",
+        height: "2px",
+        background: "gold",
+        transition: "width 300ms",
+      },
+      "&:hover::after": {
+        width: "100%",
+      },
+    },
+  },
 }
 
 export default customTheme
