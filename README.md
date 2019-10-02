@@ -44,7 +44,7 @@ Currently, the ReactJSPH Website is deployed at github pages (https://reactph.gi
 1. To deploy to github pages
 
     ```sh
-    npm run deploy
+    yarn run deploy
     ```
 
 2. A github login should prompt after the build. You need to have the necessary github role in order to have deploy access.
