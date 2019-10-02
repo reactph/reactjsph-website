@@ -28,9 +28,7 @@ const Layout = ({ children }) => (
       <Box backgroundColor="darkBlue" minHeight="100vh">
         <Header siteTitle={data.site.siteMetadata.title} />
 
-        <Box m="0 auto" maxWidth={960} px={1}>
-          <Box as="main">{children}</Box>
-        </Box>
+        <Box as="main">{children}</Box>
 
         <Footer />
       </Box>
