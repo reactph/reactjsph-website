@@ -27,9 +27,7 @@ const Layout = ({ children }) => (
     render={data => (
       <Box backgroundColor="darkBlue" minHeight="100vh">
         <Header siteTitle={data.site.siteMetadata.title} />
-
         <Box as="main">{children}</Box>
-
         <Footer />
       </Box>
     )}

@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
 import MissionSection from "../components/MissionSection"
+import VisionSection from "../components/VisionSection"
 import Contact from "../components/contact"
 
 const IndexPage = () => (
@@ -11,6 +12,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <Hero />
     <MissionSection />
+    <VisionSection />
     <Contact />
   </Layout>
 )
