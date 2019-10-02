@@ -28,6 +28,7 @@ const MissionSection = () => {
           width="100%"
           mx="auto"
           mb={2}
+          lineHeight="3.157rem"
           sx={{ textTransform: "uppercase" }}
         >
           To be the representative chapter of ReactJS in the Philippines
