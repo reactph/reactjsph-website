@@ -15,6 +15,14 @@ const heroStyle = css`
     margin-right: -50vw;
 `
 
+const generate3dShadow = (size, color) => {
+  let result = []
+  for (let i = size; i > 0; i -= 1) {
+    result = [...result, `${i}px ${i}px ${color}`]
+  }
+  return result.join()
+}
+
 const Hero = () => (
   <Box css={heroStyle}>
     <Box
@@ -51,7 +59,9 @@ const Hero = () => (
               color: theme.colors.white,
               opacity: 1,
               border: `5px solid ${theme.colors.white}`,
-              boxShadow: `3px 3px ${theme.colors.white}`,
+              boxShadow: generate3dShadow(5, theme.colors.white),
+              borderRadius: 0,
+              fontWeight: theme.fontWeights.thin,
             })}
           >
             JOIN THE COMMUNITY
