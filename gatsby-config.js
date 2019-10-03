@@ -11,6 +11,7 @@ module.exports = {
       linkedin: `https://www.linkedin.com/company/reactjs-philippines/`,
     },
   },
+  pathPrefix: `/reactjsph-website`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
