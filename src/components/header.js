@@ -6,15 +6,15 @@ import Logo from "../images/logo.svg"
 import Container from "./container"
 
 const menus = [
-  { id: 1, label: "Meetups", path: "/meetups" },
-  { id: 2, label: "Blog", path: "/blog" },
-  { id: 3, label: "Jobs", path: "/jobs" },
+  { label: "Meetups", path: "/meetups" },
+  { label: "Blog", path: "/blog" },
+  { label: "Jobs", path: "/jobs" },
 ]
 
 const Header = ({ siteTitle }) => (
-  <Box mb={0} as="header">
+  <Box as="header">
     <Container>
-      <Flex color="white" justifyContent="space-between" py={0}>
+      <Flex color="white" justifyContent="space-between" py={1}>
         <GatsbyLink
           to="/"
           style={{
@@ -22,17 +22,11 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          <Image
-            src={Logo}
-            alt={siteTitle}
-            sx={{
-              width: ["206px", "50%"],
-            }}
-          />
+          <Image src={Logo} alt={siteTitle} width="12.5rem" />
         </GatsbyLink>
         <Box>
           {menus.map(menu => (
-            <Link key={menu.id} variant="nav" href={menu.path}>
+            <Link key={menu.label} variant="nav" href={menu.path}>
               {menu.label}
             </Link>
           ))}

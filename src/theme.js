@@ -55,8 +55,7 @@ const customTheme = {
   ],
   variants: {
     nav: {
-      mx: 2,
-      p: 0,
+      mx: 1,
       fontSize: 1,
       fontWeight: "bold",
       display: "inline-block",
@@ -64,19 +63,26 @@ const customTheme = {
       textDecoration: "none",
       transition: "400ms ease all",
       textTransform: "uppercase",
-      "&:hover": {
-        color: "gold",
-      },
-      "&::after": {
+
+      ":first-child": { ml: "0px" },
+
+      ":last-child": { mr: "0px" },
+
+      ":after": {
         content: '""',
         display: "block",
-        width: "0",
-        height: "2px",
+        width: 0,
+        height: 2,
         background: "gold",
         transition: "width 300ms",
       },
-      "&:hover::after": {
-        width: "100%",
+
+      ":hover": {
+        color: "gold",
+
+        ":after": {
+          width: "100%",
+        },
       },
     },
   },
