@@ -1,7 +1,7 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
+import React from "react"
+import RootElement from "./src/root-element"
 
-// You can delete this file if you're not using it
+// eslint-disable-next-line import/prefer-default-export
+export const wrapRootElement = ({ element }) => (
+  <RootElement>{element}</RootElement>
+)
