@@ -10,7 +10,7 @@ const heroStyle = css`
     right: 50%;
     background: url("${heroImg}") no-repeat center;
     width: 100vw;
-    height: 50rem;
+    height: 80rem;
     margin-left: -50vw;
     margin-right: -50vw;
 `
@@ -38,17 +38,17 @@ const Hero = () => (
       })}
     >
       <Container>
-        <Box opacity="1" marginTop={4}>
-          <Text fontSize={6} color="gold" fontWeight="body">
-            ★★★ ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+        <Box opacity="1" marginTop="18rem">
+          <Text fontSize={6} color="gold" fontWeight="body" zIndex={2}>
+            ★★★ ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
           </Text>
-          <Text fontSize={7} fontWeight="hero" color="white">
+          <Text fontSize={7} fontWeight="hero" color="white" zIndex={2}>
             WE ARE
           </Text>
-          <Text fontSize={6} fontWeight="hero" color="lightBlue">
+          <Text fontSize={6} fontWeight="hero" color="lightBlue" zIndex={2}>
             REACTJS
           </Text>
-          <Text fontSize={6} fontWeight="hero" color="gold">
+          <Text fontSize={6} fontWeight="hero" color="gold" zIndex={2}>
             PHILIPPINES
           </Text>
           <Button
