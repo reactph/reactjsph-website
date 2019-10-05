@@ -1,7 +1,7 @@
 import React from "react"
 import { Box, Text, Button } from "rebass"
 import { css } from "@emotion/core"
-import { heroImg, brandmark } from "../images"
+import { heroImg, heroBrandmark } from "../images"
 import Container from "./container"
 
 const heroStyle = css`
@@ -77,11 +77,12 @@ const Hero = () => (
         left: 0,
         backgroundColor: theme.colors.darkBlue,
         width: "inherit",
-        height: "inherit",
+        height: "calc(100% + 5rem)",
         background: `url("${heroImg}") no-repeat center`,
-        WebkitMaskImage: `url("${brandmark}")`,
+        WebkitMaskImage: `url("${heroBrandmark}")`,
         WebkitMaskRepeat: "no-repeat",
         WebkitMaskPosition: "right",
+        WebkitMaskPositionY: "-5rem",
       })}
     />
   </Box>
