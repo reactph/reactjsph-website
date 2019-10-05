@@ -35,7 +35,6 @@ const Hero = () => (
         height: "inherit",
         lineHeight: 0.95,
         opacity: 0.85,
-        "-webkit-clip-path": `url("${brandmark}")`,
       })}
     >
       <Container>
@@ -71,6 +70,20 @@ const Hero = () => (
         </Box>
       </Container>
     </Box>
+    <Box
+      css={theme => ({
+        position: "absolute",
+        top: 0,
+        left: 0,
+        backgroundColor: theme.colors.darkBlue,
+        width: "inherit",
+        height: "inherit",
+        background: `url("${heroImg}") no-repeat center`,
+        WebkitMaskImage: `url("${brandmark}")`,
+        WebkitMaskRepeat: "no-repeat",
+        WebkitMaskPosition: "right",
+      })}
+    />
   </Box>
 )
 
