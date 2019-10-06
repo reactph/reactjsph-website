@@ -4,6 +4,8 @@ module.exports = {
     description: `ReactJS Enthusiasts in the Philippines`,
     author: `ReactJS PH`,
     email: `reactjs.ph@yahoo.com`,
+    cover: `/images/cover.jpg`,
+    url: `https://www.reactjs.ph`,
     social: {
       facebook: `https://www.facebook.com/reactjsphilippines/`,
       messenger: `https://m.me/reactjsphilippines`,
@@ -33,7 +35,7 @@ module.exports = {
         background_color: `#0c1d60`,
         theme_color: `#0c1d60`,
         display: `minimal-ui`,
-        icon: `src/images/icons/favicon-96x96.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
         icons: [
           {
             src: `icons/icon-16x16.png`,
@@ -46,13 +48,38 @@ module.exports = {
             type: `image/png`,
           },
           {
+            src: `icons/icon-48x48.png`,
+            sizes: `48x48`,
+            type: `image/png`,
+          },
+          {
+            src: `icons/icon-72x72.png`,
+            sizes: `72x72`,
+            type: `image/png`,
+          },
+          {
             src: `icons/icon-96x96.png`,
             sizes: `96x96`,
             type: `image/png`,
           },
           {
-            src: `icons/android-icon-192x192.png`,
+            src: `icons/icon-144x144.png`,
+            sizes: `144x144`,
+            type: `image/png`,
+          },
+          {
+            src: `icons/icon-192x192.png`,
             sizes: `192x192`,
+            type: `image/png`,
+          },
+          {
+            src: `icons/icon-384x384.png`,
+            sizes: `384x384`,
+            type: `image/png`,
+          },
+          {
+            src: `icons/icon-512x512.png`,
+            sizes: `512x512`,
             type: `image/png`,
           },
           {
