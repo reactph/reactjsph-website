@@ -9,7 +9,7 @@ const Members = [
   {
     id: 1,
     photo: "",
-    name: "John Dave decano",
+    name: "Marjorie J. Martinez",
     role: "Director, External Affairs",
   },
   {
@@ -52,6 +52,12 @@ const Members = [
     id: 7,
     photo: "",
     name: "Paul Simon Ongpin",
+    role: "Member, Board of Trustees",
+  },
+  {
+    id: 8,
+    photo: "",
+    name: "John Dave decano",
     role: "Member, Board of Trustees",
   },
 ]
