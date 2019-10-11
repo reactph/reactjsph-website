@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Text, Button } from "rebass"
+import { Box, Text, Button, Flex } from "rebass"
 import { css } from "@emotion/core"
 import { heroImg, heroBrandmark } from "../images"
 import Container from "./container"
@@ -7,8 +7,8 @@ import Container from "./container"
 const heroStyle = css`
     position: relative;
     background: url("${heroImg}") no-repeat center;
-    width: 100vw;
-    height: 80rem;
+    width: 100%;
+    height: 65rem;
 `
 
 const generate3dShadow = (size, color) => {
@@ -29,12 +29,24 @@ const Hero = () => (
         backgroundColor: theme.colors.darkBlue,
         width: "inherit",
         height: "inherit",
-        lineHeight: 0.95,
         opacity: 0.85,
       })}
+    />
+
+    <Flex
+      alignItems="center"
+      css={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        lineHeight: 0.95,
+        zIndex: 1,
+      }}
     >
       <Container>
-        <Box opacity="1" marginTop="18rem">
+        <Box opacity="1">
           <Text fontSize={6} color="gold" fontWeight="body" zIndex={2}>
             ★★★ ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
           </Text>
@@ -65,20 +77,18 @@ const Hero = () => (
           </Button>
         </Box>
       </Container>
-    </Box>
+    </Flex>
+
     <Box
       css={theme => ({
-        position: "absolute",
-        top: 0,
-        left: 0,
         backgroundColor: theme.colors.darkBlue,
-        width: "inherit",
-        height: "calc(100% + 5rem)",
+        width: "100%",
+        height: "100%",
         background: `url("${heroImg}") no-repeat center`,
         WebkitMaskImage: `url("${heroBrandmark}")`,
         WebkitMaskRepeat: "no-repeat",
         WebkitMaskPosition: "right",
-        WebkitMaskPositionY: "-5rem",
+        WebkitMaskPositionY: "-4rem",
       })}
     />
   </Box>
