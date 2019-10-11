@@ -6,13 +6,9 @@ import Container from "./container"
 
 const heroStyle = css`
     position: relative;
-    left: 50%;
-    right: 50%;
     background: url("${heroImg}") no-repeat center;
     width: 100vw;
     height: 80rem;
-    margin-left: -50vw;
-    margin-right: -50vw;
 `
 
 const generate3dShadow = (size, color) => {
