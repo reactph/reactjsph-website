@@ -35,7 +35,9 @@ const customTheme = {
     "99.376rem",
   ],
   fontWeights: {
+    thin: 100,
     body: 400,
+    hero: 600,
     heading: 900,
     bold: 900,
   },

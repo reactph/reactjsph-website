@@ -12,7 +12,7 @@ const menus = [
 ]
 
 const Header = ({ siteTitle }) => (
-  <Box as="header">
+  <Box as="header" backgroundColor="transparent" position="absolute">
     <Container>
       <Flex color="white" justifyContent="space-between" py={1}>
         <GatsbyLink
