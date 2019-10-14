@@ -6,7 +6,10 @@ import Container from "./container"
 
 const heroStyle = css`
     position: relative;
-    background: url("${heroImg}") no-repeat center;
+    background-image: url("${heroImg}");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     width: 100%;
     height: 65rem;
 `
@@ -84,7 +87,10 @@ const Hero = () => (
         backgroundColor: theme.colors.darkBlue,
         width: "100%",
         height: "100%",
-        background: `url("${heroImg}") no-repeat center`,
+        backgroundImage: `url("${heroImg}")`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
         WebkitMaskImage: `url("${heroBrandmark}")`,
         WebkitMaskRepeat: "no-repeat",
         WebkitMaskPosition: "right",
