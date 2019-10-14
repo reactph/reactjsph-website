@@ -1,6 +1,8 @@
 import { Link as GatsbyLink } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import { css } from "@emotion/core"
+
 import { Box, Image, Flex, Link } from "rebass"
 import Logo from "../images/logo.svg"
 import Container from "./container"
@@ -12,7 +14,17 @@ const menus = [
 ]
 
 const Header = ({ siteTitle }) => (
-  <Box as="header" backgroundColor="transparent" position="absolute">
+  <Box
+    as="header"
+    css={css`
+      background-color: transparent;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+    `}
+  >
     <Container>
       <Flex color="white" justifyContent="space-between" py={1}>
         <GatsbyLink
