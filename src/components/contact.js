@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Box, Text } from "rebass"
+import { Box, Text, Button } from "rebass"
 import Container from "./container"
 import { generate3dShadow } from "./hero"
 
@@ -30,25 +30,26 @@ const Contact = () => {
             sx={{
               display: "grid",
               gridTemplateColumns: "repeat(3, 1fr)",
-              gridTemplateRows: "repeat(2, auto)",
-              gridColumnGap: "1.33rem",
-              gridRowGap: "1.33rem",
+              gridTemplateRows: "auto 1fr",
+              gridColumnGap: "2rem",
+              gridRowGap: "2rem",
             }}
+            mb={1}
           >
             <Box sx={{ gridArea: "1 / 1 / 2 / 2" }}>
-              <FormInput name="Name" label="Name" type="text" required />
+              <FormInput name="Name" label="Name" type="text" />
             </Box>
             <Box sx={{ gridArea: "2 / 1 / 3 / 2" }}>
-              <FormInput name="Email" label="Email" type="text" required />
+              <FormInput name="Email" label="Email" type="text" />
             </Box>
             <Box sx={{ gridArea: "1 / 2 / 3 / 4" }}>
-              <FormInput
-                name="Message"
-                label="Message"
-                type="textarea"
-                required
-              />
+              <FormInput name="Message" label="Message" type="textarea" />
             </Box>
+          </Box>
+          <Box textAlign="right">
+            <Button variant="primary" type="submit">
+              Send »
+            </Button>
           </Box>
         </form>
       </Container>
@@ -56,7 +57,7 @@ const Contact = () => {
   )
 }
 
-const FormInput = ({ name, label, type, required }) => (
+const FormInput = ({ name, label, type }) => (
   <Box
     sx={{
       label: {
@@ -71,6 +72,13 @@ const FormInput = ({ name, label, type, required }) => (
         backgroundColor: "transparent",
         boxShadow: theme => generate3dShadow(5, theme.colors.white),
         boxSizing: "border-box",
+        color: theme => theme.colors.white,
+        fontSize: 1,
+        padding: 0,
+      },
+
+      textarea: {
+        height: "14.8rem",
       },
     }}
   >
@@ -83,10 +91,8 @@ const FormInput = ({ name, label, type, required }) => (
       >
         {label}
       </Text>
-      {type === "textarea" && <textarea name={name} required={required} />}
-      {type !== "textarea" && (
-        <input name={name} type={type} required={required} />
-      )}
+      {type === "textarea" && <textarea name={name} />}
+      {type !== "textarea" && <input name={name} type={type} />}
     </label>
   </Box>
 )
@@ -95,11 +101,6 @@ FormInput.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  required: PropTypes.bool,
-}
-
-FormInput.defaultProps = {
-  required: false,
 }
 
 export default Contact

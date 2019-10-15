@@ -29,7 +29,7 @@ const FooterQuery = graphql`
 const designerLink = "https://galacemiguel.com"
 
 const Footer = () => (
-  <Box as="footer" backgroundColor="darkBlue" pb={2} mt={3}>
+  <Box as="footer" backgroundColor="darkBlue" py={2}>
     <Container>
       <Box
         sx={{
