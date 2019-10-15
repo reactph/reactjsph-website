@@ -60,18 +60,13 @@ const Hero = () => (
             PHILIPPINES
           </Text>
           <Button
-            css={theme => ({
-              marginTop: theme.space[2],
-              padding: theme.space[1],
-              backgroundColor: theme.colors.darkBlue,
-              color: theme.colors.white,
-              opacity: 1,
-              border: `5px solid ${theme.colors.white}`,
-              boxShadow: generate3dShadow(5, theme.colors.white),
-              borderRadius: 0,
-              fontWeight: theme.fontWeights.thin,
+            sx={{
+              marginTop: 2,
+              py: 1,
+              px: 2,
               outline: 0,
-            })}
+              fontSize: 2,
+            }}
           >
             JOIN THE COMMUNITY
           </Button>
