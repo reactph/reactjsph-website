@@ -1,13 +1,19 @@
 import theme from "@rebass/preset"
+import { generate3dShadow } from "./components/hero"
+
+const darkBlue = "#0C1D60"
+const lightBlue = "#7BD5F5"
+const gold = "#F7D663"
+const white = "#FFF"
 
 const customTheme = {
   ...theme,
   breakpoints: [320, 768, 1024, 1440],
   colors: {
-    darkBlue: "#0C1D60",
-    lightBlue: "#7BD5F5",
-    gold: "#F7D663",
-    white: "#FFF",
+    darkBlue,
+    lightBlue,
+    gold,
+    white,
   },
   fonts: {
     body: "Avenir, Helvetica, Arial, sans-serif",
@@ -86,6 +92,23 @@ const customTheme = {
           width: "100%",
         },
       },
+    },
+  },
+  buttons: {
+    primary: {
+      fontSize: 1,
+      textTransform: "uppercase",
+      color: "white",
+      bg: "transparent",
+      height: "auto",
+      px: 1,
+      py: 0,
+      outline: 0,
+      borderWidth: 3,
+      borderColor: "white",
+      borderStyle: "solid",
+      backgroundColor: "transparent",
+      boxShadow: generate3dShadow(5, white),
     },
   },
 }
