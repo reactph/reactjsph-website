@@ -1,25 +1,6 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
-
-// You can delete this file if you're not using it
-
 import React from "react"
-import { ThemeProvider } from "emotion-theming"
-import { Global } from "@emotion/core"
-import { Box } from "rebass"
+import RootElement from "./src/root-element"
 
-import theme from "./src/theme"
-import globalStyles from "./src/global"
-
-// eslint-disable-next-line import/prefer-default-export
 export const wrapRootElement = ({ element }) => (
-  <>
-    <ThemeProvider theme={theme}>
-      <Global styles={globalStyles} />
-      <Box variant="styles.root">{element}</Box>
-    </ThemeProvider>
-  </>
+  <RootElement>{element}</RootElement>
 )

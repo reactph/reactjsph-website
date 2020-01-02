@@ -1,13 +1,19 @@
 import theme from "@rebass/preset"
+import { generate3dShadow } from "./components/hero"
+
+const darkBlue = "#0C1D60"
+const lightBlue = "#7BD5F5"
+const gold = "#F7D663"
+const white = "#FFF"
 
 const customTheme = {
   ...theme,
   breakpoints: [320, 768, 1024, 1440],
   colors: {
-    darkBlue: "#0C1D60",
-    lightBlue: "#7BD5F5",
-    gold: "#F7D663",
-    white: "#FFF",
+    darkBlue,
+    lightBlue,
+    gold,
+    white,
   },
   fonts: {
     body: "Avenir, Helvetica, Arial, sans-serif",
@@ -35,7 +41,9 @@ const customTheme = {
     "99.376rem",
   ],
   fontWeights: {
+    thin: 100,
     body: 400,
+    hero: 600,
     heading: 900,
     bold: 900,
   },
@@ -53,6 +61,56 @@ const customTheme = {
     "42.56rem",
     "85.12rem",
   ],
+  variants: {
+    nav: {
+      mx: 1,
+      fontSize: 1,
+      fontWeight: "bold",
+      display: "inline-block",
+      color: "white",
+      textDecoration: "none",
+      transition: "400ms ease all",
+      textTransform: "uppercase",
+
+      ":first-child": { ml: "0px" },
+
+      ":last-child": { mr: "0px" },
+
+      ":after": {
+        content: '""',
+        display: "block",
+        width: 0,
+        height: 2,
+        background: "gold",
+        transition: "width 300ms",
+      },
+
+      ":hover": {
+        color: "gold",
+
+        ":after": {
+          width: "100%",
+        },
+      },
+    },
+  },
+  buttons: {
+    primary: {
+      fontSize: 1,
+      textTransform: "uppercase",
+      color: "white",
+      bg: "transparent",
+      height: "auto",
+      px: 1,
+      py: 0,
+      outline: 0,
+      borderWidth: 3,
+      borderColor: "white",
+      borderStyle: "solid",
+      backgroundColor: "transparent",
+      boxShadow: generate3dShadow(5, white),
+    },
+  },
 }
 
 export default customTheme
