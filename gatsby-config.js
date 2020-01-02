@@ -4,7 +4,7 @@ module.exports = {
     description: `ReactJS Enthusiasts in the Philippines`,
     author: `ReactJS PH`,
     email: `reactjs.ph@yahoo.com`,
-    cover: `/images/cover.jpg`,
+    cover: `/meta-image-cover.jpg`,
     url: `https://www.reactjs.ph`,
     social: {
       facebook: `https://www.facebook.com/reactjsphilippines/`,
