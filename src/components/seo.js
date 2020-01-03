@@ -19,6 +19,8 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            cover
+            url
           }
         }
       }
@@ -52,8 +54,24 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: `og:url`,
+          content: site.siteMetadata.url,
+        },
+        {
+          property: `og:image`,
+          content: `${site.siteMetadata.url}${site.siteMetadata.cover}`,
+        },
+        {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
+        },
+        {
+          name: `twitter:url`,
+          content: site.siteMetadata.url,
+        },
+        {
+          name: `twitter:image`,
+          content: `${site.siteMetadata.url}${site.siteMetadata.cover}`,
         },
         {
           name: `twitter:creator`,
