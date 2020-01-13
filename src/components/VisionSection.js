@@ -27,7 +27,7 @@ const VisionSection = () => {
         },
       }}
     >
-      <Box maxWidth={792} width="100%" textAlign="center" mx="auto">
+      <Box maxWidth={792} width="100%" textAlign="center" mx="auto" px={2}>
         <Box mb={1}>
           <StarDivider />
         </Box>
@@ -58,7 +58,7 @@ const VisionSection = () => {
       </Box>
       <Box
         height={330}
-        width={998}
+        width="80%"
         mx="auto"
         sx={{
           backgroundImage: `url(${communityImg})`,

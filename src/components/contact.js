@@ -6,7 +6,7 @@ import { generate3dShadow } from "./hero"
 
 const Contact = () => {
   return (
-    <Box backgroundColor="darkBlue" py={1}>
+    <Box backgroundColor="darkBlue" py={2}>
       <Container>
         <Text
           fontSize={6}

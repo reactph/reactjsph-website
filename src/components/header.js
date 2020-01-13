@@ -26,7 +26,12 @@ const Header = ({ siteTitle }) => (
     `}
   >
     <Container>
-      <Flex color="white" justifyContent="space-between" py={1}>
+      <Flex
+        color="white"
+        justifyContent="space-between"
+        alignItems="center"
+        py={1}
+      >
         <GatsbyLink
           to="/"
           style={{
