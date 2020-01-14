@@ -110,6 +110,18 @@ const customTheme = {
       backgroundColor: "transparent",
       boxShadow: generate3dShadow(5, white),
     },
+    outline: {
+      borderWidth: "3px",
+      borderStyle: "solid",
+      borderColor: "darkblue",
+      borderRadius: "0",
+      bg: "white",
+      color: "darkblue",
+      textTransform: "uppercase",
+      px: 0,
+      py: "0.5rem",
+      boxShadow: generate3dShadow(5, "darkblue"),
+    },
   },
 }
 
