@@ -8,7 +8,6 @@ const white = "#FFF"
 
 const customTheme = {
   ...theme,
-  breakpoints: [320, 768, 1024, 1440],
   colors: {
     darkBlue,
     lightBlue,
