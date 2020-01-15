@@ -64,7 +64,7 @@ const Members = [
 
 const TeamSection = () => {
   return (
-    <Box backgroundColor="darkBlue" mt={2}>
+    <Box backgroundColor="darkBlue" mt={2} py={2}>
       <Container>
         <Flex flex={1} justifyContent="center" alignItems="center">
           <Box p={0}>
@@ -178,7 +178,6 @@ const TeamSection = () => {
                   </Text>
                 </Box>
               ))}
-              ;
             </Flex>
           </Box>
         </Box>
