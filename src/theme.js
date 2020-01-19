@@ -1,5 +1,5 @@
 import theme from "@rebass/preset"
-import { generate3dShadow } from "./components/hero"
+import { generate3dShadow } from "./utils"
 
 const darkBlue = "#0C1D60"
 const lightBlue = "#7BD5F5"

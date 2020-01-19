@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Box, Text, Button } from "rebass"
 import Container from "./container"
-import { generate3dShadow } from "./hero"
+import { generate3dShadow } from "../utils"
 
 const Contact = () => {
   return (
