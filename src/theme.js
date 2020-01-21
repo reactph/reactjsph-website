@@ -123,6 +123,7 @@ const customTheme = {
       textTransform: "uppercase",
       p: 1,
       boxShadow: generate3dShadow(5, darkBlue),
+      outline: 0,
       ":focus, :active": {
         borderColor: "lightBlue",
       },
