@@ -72,9 +72,12 @@ const FormInput = ({ name, label, type }) => (
         backgroundColor: "transparent",
         boxShadow: theme => generate3dShadow(5, theme.colors.white),
         boxSizing: "border-box",
-        color: theme => theme.colors.white,
+        color: "white",
         fontSize: 1,
         padding: 0,
+        ":focus, :active": {
+          borderColor: "lightBlue",
+        },
       },
 
       textarea: {
