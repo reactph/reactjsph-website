@@ -5,7 +5,7 @@ import Container from "./container"
 import { generate3dShadow } from "../utils"
 
 const Contact = () => (
-  <Box backgroundColor="darkBlue" py={3}>
+  <Box backgroundColor="darkBlue" py={4}>
     <Container>
       <Text
         fontSize={6}

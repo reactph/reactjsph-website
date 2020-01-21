@@ -63,7 +63,7 @@ const Members = [
 ]
 
 const TeamSection = () => (
-  <Box backgroundColor="darkBlue" py={4}>
+  <Box backgroundColor="darkBlue" py={5}>
     <Container>
       <Flex justifyContent="center" alignItems="center">
         <Text

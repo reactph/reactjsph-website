@@ -33,7 +33,7 @@ const meetups = [
 ]
 
 const MeetupSection = () => (
-  <Box py={3}>
+  <Box pt={4} pb={5}>
     <Container>
       <Text
         as="h2"

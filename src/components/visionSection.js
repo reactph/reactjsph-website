@@ -7,7 +7,7 @@ import communityImg from "../images/community-img.jpg"
 const VisionSection = () => (
   <Box
     backgroundColor="white"
-    pt={3}
+    pt={5}
     mt={40}
     sx={{
       position: "relative",
@@ -52,7 +52,7 @@ const VisionSection = () => (
         A community of developers, who practice excellence, in service of
         Filipinos
       </Text>
-      <Image src={zigzag} alt="divider" mb={3} />
+      <Image src={zigzag} alt="divider" mb={4} />
     </Box>
     <Box
       height={330}
