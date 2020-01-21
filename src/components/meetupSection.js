@@ -5,6 +5,7 @@ import Logo from "../images/logo.svg"
 
 const meetups = [
   {
+    id: 1,
     logo: Logo,
     title: "August Meetup",
     date: "August 2019",
@@ -12,6 +13,7 @@ const meetups = [
     replay: null,
   },
   {
+    id: 2,
     logo: Logo,
     title: "July Meetup",
     date: "18 July 2019, 6:00–10:00 pm",
@@ -20,6 +22,7 @@ const meetups = [
     replay: true,
   },
   {
+    id: 3,
     logo: Logo,
     title: "June Meetup",
     date: "8 June 2019, 1:00–5:00 pm",
@@ -30,7 +33,7 @@ const meetups = [
 ]
 
 const MeetupSection = () => (
-  <Box py={3}>
+  <Box py={2}>
     <Container>
       <Text
         as="h2"
@@ -51,8 +54,8 @@ const MeetupSection = () => (
           gridTemplateColumns: ["auto", `repeat(auto-fit, minmax(256px, 1fr))`],
         }}
       >
-        {meetups.map(({ logo, title, date, venue, replay }) => (
-          <Flex flexDirection="column" color="darkblue" px={1} mt={1}>
+        {meetups.map(({ id, logo, title, date, venue, replay }) => (
+          <Flex key={id} flexDirection="column" color="darkblue" px={1} mt={1}>
             <Image
               src={logo}
               alt={title}
