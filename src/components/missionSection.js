@@ -1,12 +1,11 @@
 import React from "react"
 import { Box, Text, Image } from "rebass"
-
-import StarDivider from "./StarDivider"
+import StarDivider from "./starDivider"
 import zigzag from "../images/divider.svg"
 
 const MissionSection = () => {
   return (
-    <Box backgroundColor="darkBlue" py={1}>
+    <Box backgroundColor="darkBlue" py={2}>
       <Box maxWidth={792} width="100%" textAlign="center" mx="auto" px={2}>
         <Box mb={1}>
           <StarDivider />

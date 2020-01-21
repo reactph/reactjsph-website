@@ -8,7 +8,6 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"
 import { useStaticQuery, graphql, Link as GatsbyLink } from "gatsby"
-
 import Container from "./container"
 import Logo from "../images/brandmark.svg"
 
@@ -33,6 +32,7 @@ const Footer = () => (
     <Container>
       <Box
         sx={{
+          color: "white",
           display: "grid",
           gridTemplateColumns: "1fr auto 1fr",
           gridTemplateRows: "1fr 1fr",
@@ -65,15 +65,13 @@ const FooterBrandLogo = () => (
 
 const FooterContentLeft = () => (
   <Box mt={1}>
-    <Text fontSize={1} color="white">
+    <Text fontSize={1}>
       {`Designed by `}
       <Link href={designerLink} color="white">
         Miguel N. Galace.
       </Link>
     </Text>
-    <Text fontSize={1} color="white">
-      © 2019 ReactJS Philippines. All rights reserved.
-    </Text>
+    <Text fontSize={1}>© 2019 ReactJS Philippines. All rights reserved.</Text>
   </Box>
 )
 
@@ -90,7 +88,6 @@ const FooterContentRight = () => {
     <Flex flex={1} justifyContent="flex-end" alignItems="center" mt={1}>
       <Text
         fontSize={2}
-        color="white"
         fontWeight="bold"
         mr={1}
         sx={{ textTransform: "uppercase" }}

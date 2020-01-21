@@ -1,7 +1,6 @@
 import React from "react"
 import { Box, Text, Image } from "rebass"
-
-import StarDivider from "./StarDivider"
+import StarDivider from "./starDivider"
 import zigzag from "../images/divider.svg"
 import communityImg from "../images/community-img.jpg"
 
@@ -9,7 +8,7 @@ const VisionSection = () => {
   return (
     <Box
       backgroundColor="white"
-      pt={3}
+      pt={2}
       mt={40}
       sx={{
         position: "relative",

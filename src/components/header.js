@@ -1,8 +1,7 @@
-import { Link as GatsbyLink } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import PropTypes from "prop-types"
 import { css } from "@emotion/core"
-
+import { Link as GatsbyLink } from "gatsby"
 import { Box, Image, Flex, Link } from "rebass"
 import Logo from "../images/logo.svg"
 import Container from "./container"
@@ -32,13 +31,7 @@ const Header = ({ siteTitle }) => (
         alignItems="center"
         py={1}
       >
-        <GatsbyLink
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
+        <GatsbyLink to="/">
           <Image src={Logo} alt={siteTitle} width="12.5rem" />
         </GatsbyLink>
         <Box>

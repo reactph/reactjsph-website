@@ -42,16 +42,16 @@ const Hero = () => (
     >
       <Container>
         <Box opacity="1">
-          <Text fontSize={6} color="gold" fontWeight="body" zIndex={2}>
+          <Text fontSize={5} color="gold" fontWeight="body" zIndex={2}>
             ★★★ ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
           </Text>
-          <Text fontSize={7} fontWeight="hero" color="white" zIndex={2}>
+          <Text fontSize={6} fontWeight="hero" color="white" zIndex={2}>
             WE ARE
           </Text>
-          <Text fontSize={6} fontWeight="hero" color="lightBlue" zIndex={2}>
+          <Text fontSize={5} fontWeight="hero" color="lightBlue" zIndex={2}>
             REACTJS
           </Text>
-          <Text fontSize={6} fontWeight="hero" color="gold" zIndex={2}>
+          <Text fontSize={5} fontWeight="hero" color="gold" zIndex={2}>
             PHILIPPINES
           </Text>
           <Button
