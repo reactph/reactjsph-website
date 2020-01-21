@@ -63,7 +63,7 @@ const Members = [
 ]
 
 const TeamSection = () => (
-  <Box backgroundColor="darkBlue" pt={3} pb={2}>
+  <Box backgroundColor="darkBlue" py={4}>
     <Container>
       <Flex justifyContent="center" alignItems="center">
         <Text
@@ -117,7 +117,7 @@ const TeamSection = () => (
           }}
         >
           <Flex
-            mt={2}
+            mt={3}
             flexWrap="wrap"
             flex={1}
             justifyContent="center"
@@ -126,8 +126,8 @@ const TeamSection = () => (
             {Members.map(member => (
               <Box
                 key={member.id}
-                px={1}
-                py={2}
+                px={2}
+                py={3}
                 width={1 / 3}
                 sx={{
                   textAlign: "center",

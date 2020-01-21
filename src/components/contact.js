@@ -5,13 +5,13 @@ import Container from "./container"
 import { generate3dShadow } from "../utils"
 
 const Contact = () => (
-  <Box backgroundColor="darkBlue" py={2}>
+  <Box backgroundColor="darkBlue" py={3}>
     <Container>
       <Text
         fontSize={6}
         fontWeight="bold"
         color="lightBlue"
-        mb={2}
+        mb={3}
         maxWidth="51rem"
         width="100%"
         sx={{
@@ -33,7 +33,7 @@ const Contact = () => (
             gridColumnGap: "2rem",
             gridRowGap: "2rem",
           }}
-          mb={1}
+          mb={2}
         >
           <Box sx={{ gridArea: "1 / 1 / 2 / 2" }}>
             <FormInput name="Name" label="Name" type="text" />
@@ -72,7 +72,7 @@ const FormInput = ({ name, label, type }) => (
         boxSizing: "border-box",
         color: "white",
         fontSize: 1,
-        padding: 0,
+        padding: 1,
         ":focus, :active": {
           borderColor: "lightBlue",
         },

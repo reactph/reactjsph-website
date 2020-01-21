@@ -33,7 +33,7 @@ const meetups = [
 ]
 
 const MeetupSection = () => (
-  <Box py={2}>
+  <Box py={3}>
     <Container>
       <Text
         as="h2"
@@ -41,7 +41,7 @@ const MeetupSection = () => (
         color="lightBlue"
         fontWeight="bold"
         textAlign="center"
-        mb={2}
+        mb={3}
         sx={{ textTransform: "uppercase" }}
       >
         Monthly Meetups
@@ -55,17 +55,17 @@ const MeetupSection = () => (
         }}
       >
         {meetups.map(({ id, logo, title, date, venue, replay }) => (
-          <Flex key={id} flexDirection="column" color="darkblue" px={1} mt={1}>
+          <Flex key={id} flexDirection="column" color="darkblue" px={2} mt={2}>
             <Image
               src={logo}
               alt={title}
               width="12.5rem"
               mx="auto"
-              mb={2}
+              mb={3}
               display="block"
             />
 
-            <Flex bg="white" p={1} flexDirection="column" flex={1}>
+            <Flex bg="white" p={2} flexDirection="column" flex={1}>
               <Box flex={1}>
                 <Flex alignItems="baseline" fontWeight="bold" fontSize={2}>
                   <Link href="/">{title}</Link>
@@ -75,10 +75,10 @@ const MeetupSection = () => (
                 <Text>{venue}</Text>
               </Box>
 
-              <Box mt={2}>
+              <Box mt={3}>
                 {!replay ? (
                   <>
-                    <Button variant="outline" mr={1}>
+                    <Button variant="outline" mr={2}>
                       △ Sponsor
                     </Button>
                     <Button variant="outline">▩ SPEAK</Button>

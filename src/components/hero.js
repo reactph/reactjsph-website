@@ -36,7 +36,7 @@ const Hero = () => (
         left: 0,
         width: "100%",
         height: "100%",
-        lineHeight: 0.95,
+        lineHeight: 1,
         zIndex: 1,
       }}
     >
@@ -56,9 +56,9 @@ const Hero = () => (
           </Text>
           <Button
             sx={{
-              marginTop: 2,
-              py: 1,
-              px: 2,
+              marginTop: 3,
+              py: 2,
+              px: 3,
               outline: 0,
               fontSize: 2,
             }}

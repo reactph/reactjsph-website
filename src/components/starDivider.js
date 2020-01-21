@@ -22,7 +22,7 @@ const StarDivider = () => (
       },
     }}
   >
-    <Text fontSize={4} color="gold" mx={1}>
+    <Text fontSize={4} color="gold" mx={2}>
       &#11089;
     </Text>
   </Flex>

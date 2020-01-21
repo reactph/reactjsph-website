@@ -29,7 +29,7 @@ const Header = ({ siteTitle }) => (
         color="white"
         justifyContent="space-between"
         alignItems="center"
-        py={1}
+        py={2}
       >
         <GatsbyLink to="/">
           <Image src={Logo} alt={siteTitle} width="12.5rem" />

@@ -7,7 +7,7 @@ import communityImg from "../images/community-img.jpg"
 const VisionSection = () => (
   <Box
     backgroundColor="white"
-    pt={2}
+    pt={3}
     mt={40}
     sx={{
       position: "relative",
@@ -25,15 +25,15 @@ const VisionSection = () => (
       },
     }}
   >
-    <Box maxWidth={792} width="100%" textAlign="center" mx="auto" px={2}>
-      <Box mb={1}>
+    <Box maxWidth={792} width="100%" textAlign="center" mx="auto" px={3}>
+      <Box mb={2}>
         <StarDivider />
       </Box>
       <Text
         fontSize={3}
         fontWeight="heading"
         color="gold"
-        mb={2}
+        mb={3}
         sx={{ textTransform: "uppercase" }}
       >
         Vision
@@ -45,7 +45,7 @@ const VisionSection = () => (
         maxWidth={582}
         width="100%"
         mx="auto"
-        mb={2}
+        mb={3}
         lineHeight="3.157rem"
         sx={{ textTransform: "uppercase" }}
       >
