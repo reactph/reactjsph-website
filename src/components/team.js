@@ -49,13 +49,13 @@ const Members = [
     role: "Member, Board of Trustees",
   },
   {
-    id: 7,
+    id: 8,
     photo: "",
     name: "Paul Simon Ongpin",
     role: "Member, Board of Trustees",
   },
   {
-    id: 8,
+    id: 9,
     photo: "",
     name: "John Dave decano",
     role: "Member, Board of Trustees",
@@ -64,42 +64,34 @@ const Members = [
 
 const TeamSection = () => {
   return (
-    <Box backgroundColor="darkBlue" mt={2} py={2}>
+    <Box backgroundColor="darkBlue" pt={3} pb={2}>
       <Container>
-        <Flex flex={1} justifyContent="center" alignItems="center">
-          <Box p={0}>
-            <Text
-              fontSize={5}
-              fontWeight="bold"
-              color="lightBlue"
-              sx={{
-                textTransform: "uppercase",
-              }}
-            >
-              « Core
-            </Text>
-          </Box>
-          <Box p={0}>
-            <Image
-              sx={{
-                width: ["174px", "50%"],
-              }}
-              src={brandmarkLogo}
-              alt="ReactJS Philippines"
-            />
-          </Box>
-          <Box p={0}>
-            <Text
-              fontSize={5}
-              fontWeight="bold"
-              color="lightBlue"
-              sx={{
-                textTransform: "uppercase",
-              }}
-            >
-              Team »
-            </Text>
-          </Box>
+        <Flex justifyContent="center" alignItems="center">
+          <Text
+            fontSize={5}
+            fontWeight="bold"
+            color="lightBlue"
+            sx={{
+              textTransform: "uppercase",
+            }}
+          >
+            « Core
+          </Text>
+          <Image
+            src={brandmarkLogo}
+            alt="ReactJS Philippines"
+            width={["50%", "174px"]}
+          />
+          <Text
+            fontSize={5}
+            fontWeight="bold"
+            color="lightBlue"
+            sx={{
+              textTransform: "uppercase",
+            }}
+          >
+            Team »
+          </Text>
         </Flex>
         <Box
           sx={{
@@ -150,7 +142,6 @@ const TeamSection = () => {
                   }}
                 >
                   <Image
-                    as="img"
                     sx={{
                       objectFit: "cover",
                       objectPosition: "center",
