@@ -108,6 +108,9 @@ const customTheme = {
       borderStyle: "solid",
       backgroundColor: "transparent",
       boxShadow: generate3dShadow(5, white),
+      ":focus, :active": {
+        borderColor: "lightBlue",
+      },
     },
     outline: {
       borderWidth: "3px",
@@ -119,7 +122,10 @@ const customTheme = {
       textTransform: "uppercase",
       px: 0,
       py: "0.5rem",
-      boxShadow: generate3dShadow(5, "darkblue"),
+      boxShadow: generate3dShadow(5, darkBlue),
+      ":focus, :active": {
+        borderColor: "lightBlue",
+      },
     },
   },
 }
