@@ -5,6 +5,7 @@ import Logo from "../images/logo.svg"
 
 const meetups = [
   {
+    id: 1,
     logo: Logo,
     title: "August Meetup",
     date: "August 2019",
@@ -12,6 +13,7 @@ const meetups = [
     replay: null,
   },
   {
+    id: 2,
     logo: Logo,
     title: "July Meetup",
     date: "18 July 2019, 6:00–10:00 pm",
@@ -20,6 +22,7 @@ const meetups = [
     replay: true,
   },
   {
+    id: 3,
     logo: Logo,
     title: "June Meetup",
     date: "8 June 2019, 1:00–5:00 pm",
@@ -30,7 +33,7 @@ const meetups = [
 ]
 
 const MeetupSection = () => (
-  <Box py={3}>
+  <Box pt={4} pb={5}>
     <Container>
       <Text
         as="h2"
@@ -38,7 +41,7 @@ const MeetupSection = () => (
         color="lightBlue"
         fontWeight="bold"
         textAlign="center"
-        mb={2}
+        mb={3}
         sx={{ textTransform: "uppercase" }}
       >
         Monthly Meetups
@@ -51,18 +54,18 @@ const MeetupSection = () => (
           gridTemplateColumns: ["auto", `repeat(auto-fit, minmax(256px, 1fr))`],
         }}
       >
-        {meetups.map(({ logo, title, date, venue, replay }) => (
-          <Flex flexDirection="column" color="darkblue" px={1} mt={1}>
+        {meetups.map(({ id, logo, title, date, venue, replay }) => (
+          <Flex key={id} flexDirection="column" color="darkblue" px={2} mt={2}>
             <Image
               src={logo}
               alt={title}
               width="12.5rem"
               mx="auto"
-              mb={2}
+              mb={3}
               display="block"
             />
 
-            <Flex bg="white" p={1} flexDirection="column" flex={1}>
+            <Flex bg="white" p={2} flexDirection="column" flex={1}>
               <Box flex={1}>
                 <Flex alignItems="baseline" fontWeight="bold" fontSize={2}>
                   <Link href="/">{title}</Link>
@@ -72,10 +75,10 @@ const MeetupSection = () => (
                 <Text>{venue}</Text>
               </Box>
 
-              <Box mt={2}>
+              <Box mt={3}>
                 {!replay ? (
                   <>
-                    <Button variant="outline" mr={1}>
+                    <Button variant="outline" mr={2}>
                       △ Sponsor
                     </Button>
                     <Button variant="outline">▩ SPEAK</Button>

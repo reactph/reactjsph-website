@@ -1,5 +1,5 @@
 import theme from "@rebass/preset"
-import { generate3dShadow } from "./components/hero"
+import { generate3dShadow } from "./utils"
 
 const darkBlue = "#0C1D60"
 const lightBlue = "#7BD5F5"
@@ -51,6 +51,7 @@ const customTheme = {
     heading: 1,
   },
   space: [
+    "0",
     "0.665rem",
     "1.33rem",
     "2.66rem",
@@ -62,7 +63,7 @@ const customTheme = {
   ],
   variants: {
     nav: {
-      mx: 1,
+      mx: 2,
       fontSize: 1,
       fontWeight: "bold",
       display: "inline-block",
@@ -71,9 +72,9 @@ const customTheme = {
       transition: "400ms ease all",
       textTransform: "uppercase",
 
-      ":first-child": { ml: "0px" },
+      ":first-child": { ml: 0 },
 
-      ":last-child": { mr: "0px" },
+      ":last-child": { mr: 0 },
 
       ":after": {
         content: '""',
@@ -100,14 +101,17 @@ const customTheme = {
       color: "white",
       bg: "transparent",
       height: "auto",
-      px: 1,
-      py: 0,
+      px: 2,
+      py: 1,
       outline: 0,
       borderWidth: 3,
       borderColor: "white",
       borderStyle: "solid",
       backgroundColor: "transparent",
       boxShadow: generate3dShadow(5, white),
+      ":focus, :active": {
+        borderColor: "lightBlue",
+      },
     },
     outline: {
       borderWidth: "3px",
@@ -117,9 +121,12 @@ const customTheme = {
       bg: "white",
       color: "darkblue",
       textTransform: "uppercase",
-      px: 0,
-      py: "0.5rem",
-      boxShadow: generate3dShadow(5, "darkblue"),
+      p: 1,
+      boxShadow: generate3dShadow(5, darkBlue),
+      outline: 0,
+      ":focus, :active": {
+        borderColor: "lightBlue",
+      },
     },
   },
 }
