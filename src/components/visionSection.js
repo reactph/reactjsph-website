@@ -25,12 +25,12 @@ const VisionSection = () => (
       },
     }}
   >
-    <Box maxWidth={792} width="100%" textAlign="center" mx="auto" px={3}>
+    <Box maxWidth={792} width="100%" textAlign="center" mx="auto" px={[2, 3]}>
       <Box mb={2}>
         <StarDivider />
       </Box>
       <Text
-        fontSize={3}
+        fontSize={[2, 3]}
         fontWeight="heading"
         color="gold"
         mb={3}
@@ -39,7 +39,7 @@ const VisionSection = () => (
         Vision
       </Text>
       <Text
-        fontSize={3}
+        fontSize={[2, 3]}
         fontWeight="heading"
         color="darkBlue"
         maxWidth={582}
@@ -55,7 +55,7 @@ const VisionSection = () => (
       <Image src={zigzag} alt="divider" mb={4} />
     </Box>
     <Box
-      height={330}
+      height={[200, 330]}
       width="80%"
       mx="auto"
       sx={{
@@ -67,7 +67,7 @@ const VisionSection = () => (
         boxShadow: "0px 0px 20px 0px rgba(0, 0, 0, 0.50)",
       }}
     />
-    <Box height={165} backgroundColor="darkBlue" mt={-165} />
+    <Box height={[100, 165]} backgroundColor="darkBlue" mt={[-100, -165]} />
   </Box>
 )
 

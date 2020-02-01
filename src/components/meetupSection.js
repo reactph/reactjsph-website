@@ -55,7 +55,7 @@ const MeetupSection = () => (
         }}
       >
         {meetups.map(({ id, logo, title, date, venue, replay }) => (
-          <Flex key={id} flexDirection="column" color="darkblue" px={2} mt={2}>
+          <Flex key={id} flexDirection="column" color="darkblue" mt={2}>
             <Image
               src={logo}
               alt={title}

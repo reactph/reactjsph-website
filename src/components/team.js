@@ -67,7 +67,7 @@ const TeamSection = () => (
     <Container>
       <Flex justifyContent="center" alignItems="center">
         <Text
-          fontSize={5}
+          fontSize={[3, 5]}
           fontWeight="bold"
           color="lightBlue"
           sx={{
@@ -79,10 +79,10 @@ const TeamSection = () => (
         <Image
           src={brandmarkLogo}
           alt="ReactJS Philippines"
-          width={["50%", "174px"]}
+          width={["30%", "174px"]}
         />
         <Text
-          fontSize={5}
+          fontSize={[3, 5]}
           fontWeight="bold"
           color="lightBlue"
           sx={{
@@ -104,7 +104,7 @@ const TeamSection = () => (
           sx={{
             position: "absolute",
             width: "100%",
-            top: "28px",
+            top: [0, "28px"],
             left: 0,
             zIndex: 1,
             userSelect: "none",
@@ -116,20 +116,26 @@ const TeamSection = () => (
             position: "relative",
           }}
         >
-          <Flex
+          <Box
             mt={3}
-            flexWrap="wrap"
-            flex={1}
-            justifyContent="center"
-            alignItems="center"
+            pt={[3, 0]}
+            sx={{
+              display: ["flex", "grid"],
+              gridTemplateColumns: [
+                "initial",
+                `repeat(auto-fit, minmax(295px, 1fr))`,
+              ],
+              overflowX: ["scroll", "initial"],
+            }}
           >
             {Members.map(member => (
               <Box
                 key={member.id}
                 px={2}
                 py={3}
-                width={1 / 3}
+                width="100%"
                 sx={{
+                  flexShrink: [0, 1],
                   textAlign: "center",
                   transition: "300ms ease all",
                   "&:hover": {
@@ -168,7 +174,7 @@ const TeamSection = () => (
                 </Text>
               </Box>
             ))}
-          </Flex>
+          </Box>
         </Box>
       </Box>
     </Container>

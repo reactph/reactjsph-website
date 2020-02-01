@@ -5,12 +5,12 @@ import zigzag from "../images/divider.svg"
 
 const MissionSection = () => (
   <Box backgroundColor="darkBlue" py={4}>
-    <Box maxWidth={792} width="100%" textAlign="center" mx="auto" px={3}>
+    <Box maxWidth={792} width="100%" textAlign="center" mx="auto" px={[2, 3]}>
       <Box mb={2}>
         <StarDivider />
       </Box>
       <Text
-        fontSize={3}
+        fontSize={[2, 3]}
         fontWeight="heading"
         color="gold"
         mb={3}
@@ -19,7 +19,7 @@ const MissionSection = () => (
         Mission
       </Text>
       <Text
-        fontSize={3}
+        fontSize={[2, 3]}
         fontWeight="heading"
         color="white"
         maxWidth={582}

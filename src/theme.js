@@ -63,7 +63,7 @@ const customTheme = {
   ],
   variants: {
     nav: {
-      mx: 2,
+      mx: [0, 2],
       fontSize: 1,
       fontWeight: "bold",
       display: "inline-block",

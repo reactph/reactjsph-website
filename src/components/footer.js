@@ -35,12 +35,25 @@ const Footer = () => (
           color: "white",
           display: "grid",
           gridTemplateColumns: "1fr auto 1fr",
-          gridTemplateRows: "1fr 1fr",
-          gridTemplateAreas: `"TopLeft Logo TopRight" "BottomLeft Logo BottomRight"`,
+          gridTemplateRows: ["auto", "1fr 1fr"],
+          gridTemplateAreas: [
+            `"TopLeft Logo TopRight"
+            "BottomRight BottomRight BottomRight"
+            "BottomLeft BottomLeft BottomLeft"`,
+
+            `"TopLeft Logo TopRight"
+            "BottomLeft Logo BottomRight"`,
+          ],
         }}
       >
-        <Box sx={{ gridArea: "TopLeft", borderBottom: "2px solid #505D90" }} />
-        <Box sx={{ gridArea: "TopRight", borderBottom: "2px solid #505D90" }} />
+        <Box
+          mb={[3, 0]}
+          sx={{ gridArea: "TopLeft", borderBottom: "2px solid #505D90" }}
+        />
+        <Box
+          mb={[3, 0]}
+          sx={{ gridArea: "TopRight", borderBottom: "2px solid #505D90" }}
+        />
         <Box sx={{ gridArea: "BottomLeft" }}>
           <FooterContentLeft />
         </Box>
@@ -56,15 +69,19 @@ const Footer = () => (
 )
 
 const FooterBrandLogo = () => (
-  <Box px={3} textAlign="center">
+  <Box px={[2, 3]} textAlign="center">
     <GatsbyLink to="/">
-      <Image src={Logo} alt="React JS Philippines" width="10.88rem" />
+      <Image
+        src={Logo}
+        alt="React JS Philippines"
+        width={["6rem", "10.88rem"]}
+      />
     </GatsbyLink>
   </Box>
 )
 
 const FooterContentLeft = () => (
-  <Box mt={2}>
+  <Box mt={2} textAlign={["center", "left"]}>
     <Text fontSize={1}>
       {`Designed by `}
       <Link href={designerLink} color="white">
@@ -85,11 +102,18 @@ const FooterContentRight = () => {
   } = useStaticQuery(FooterQuery)
 
   return (
-    <Flex flex={1} justifyContent="flex-end" alignItems="center" mt={2}>
+    <Flex
+      flex={1}
+      justifyContent="flex-end"
+      alignItems="center"
+      mt={2}
+      flexDirection={["column", "row"]}
+    >
       <Text
         fontSize={2}
         fontWeight="bold"
-        mr={2}
+        mr={[0, 2]}
+        mb={[2, 0]}
         sx={{ textTransform: "uppercase" }}
       >
         Join the community

@@ -8,7 +8,7 @@ const Contact = () => (
   <Box backgroundColor="darkBlue" py={4}>
     <Container>
       <Text
-        fontSize={6}
+        fontSize={[4, 5]}
         fontWeight="bold"
         color="lightBlue"
         mb={3}
@@ -28,20 +28,20 @@ const Contact = () => (
         <Box
           sx={{
             display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gridTemplateRows: "auto 1fr",
+            gridTemplateColumns: ["auto", `repeat(3, 1fr)`],
+            gridTemplateRows: ["1fr", "auto 1fr"],
             gridColumnGap: "2rem",
             gridRowGap: "2rem",
           }}
           mb={2}
         >
-          <Box sx={{ gridArea: "1 / 1 / 2 / 2" }}>
+          <Box sx={{ gridArea: ["auto", "1 / 1 / 2 / 2"] }}>
             <FormInput name="Name" label="Name" type="text" />
           </Box>
-          <Box sx={{ gridArea: "2 / 1 / 3 / 2" }}>
+          <Box sx={{ gridArea: ["auto", "2 / 1 / 3 / 2"] }}>
             <FormInput name="Email" label="Email" type="text" />
           </Box>
-          <Box sx={{ gridArea: "1 / 2 / 3 / 4" }}>
+          <Box sx={{ gridArea: ["auto", " 1 / 2 / 3 / 4"] }}>
             <FormInput name="Message" label="Message" type="textarea" />
           </Box>
         </Box>
