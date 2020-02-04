@@ -16,18 +16,14 @@ const menus = [
 
 const Header = ({ siteTitle }) => {
   const size = useWindowSize()
-  const [isMobile, setIsMobile] = useState()
   const [showMenu, setShowMenu] = useState()
+  const isMobile = size.width < 640
 
   useEffect(() => {
-    if (size.width < 640) {
-      setIsMobile(true)
-      setShowMenu(false)
-    } else {
-      setIsMobile(false)
+    if (isMobile) {
       setShowMenu(false)
     }
-  }, [size])
+  }, [isMobile])
 
   useEffect(() => {
     if (showMenu) {
