@@ -67,11 +67,12 @@ const TeamSection = () => (
     <Container>
       <Flex justifyContent="center" alignItems="center">
         <Text
-          fontSize={[3, 5]}
+          fontSize={[3, 4]}
           fontWeight="bold"
           color="lightBlue"
           sx={{
             textTransform: "uppercase",
+            whiteSpace: "nowrap",
           }}
         >
           « Core
@@ -82,11 +83,12 @@ const TeamSection = () => (
           width={["30%", "174px"]}
         />
         <Text
-          fontSize={[3, 5]}
+          fontSize={[3, 4]}
           fontWeight="bold"
           color="lightBlue"
           sx={{
             textTransform: "uppercase",
+            whiteSpace: "nowrap",
           }}
         >
           Team »
