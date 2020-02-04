@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import PropTypes from "prop-types"
 import { Link as GatsbyLink } from "gatsby"
 import { Box, Image, Flex, Link } from "rebass"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
-import { useWindowSize } from "../utils"
+import { useWindowSize, useOnClickOutside } from "../utils"
 import Logo from "../images/logo.svg"
 import Container from "./container"
 
@@ -15,9 +15,14 @@ const menus = [
 ]
 
 const Header = ({ siteTitle }) => {
+  const navRef = useRef()
+
   const size = useWindowSize()
-  const [showMenu, setShowMenu] = useState()
   const isMobile = size.width < 640
+
+  const [showMenu, setShowMenu] = useState()
+
+  useOnClickOutside(navRef, () => setShowMenu(false))
 
   useEffect(() => {
     if (isMobile) {
@@ -32,20 +37,6 @@ const Header = ({ siteTitle }) => {
       document.body.style.overflow = "visible"
     }
   }, [showMenu])
-
-  const handleClickOutsideNav = e => {
-    if (!e.target.closest("#nav-menu") && showMenu) {
-      setShowMenu(false)
-    }
-  }
-
-  useEffect(() => {
-    document.body.addEventListener("click", handleClickOutsideNav)
-
-    return () => {
-      document.body.removeEventListener("click", handleClickOutsideNav)
-    }
-  })
 
   return (
     <Box
@@ -70,7 +61,7 @@ const Header = ({ siteTitle }) => {
             <Image src={Logo} alt={siteTitle} width="12.5rem" />
           </GatsbyLink>
 
-          <Box as="nav" id="nav-menu">
+          <Box as="nav" ref={navRef}>
             <Box
               as="button"
               fontSize={3}
