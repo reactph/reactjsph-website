@@ -24,7 +24,9 @@ const Portal = ({ children, show, setShow }) => {
       {children}
     </Box>
   )
-  return createPortal(content, document.body)
+  return typeof document !== `undefined`
+    ? createPortal(content, document.body)
+    : null
 }
 
 Portal.propTypes = {
