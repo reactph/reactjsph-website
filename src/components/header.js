@@ -51,15 +51,10 @@ const Header = ({ siteTitle }) => {
       }}
     >
       <Container>
-        <Flex
-          color="white"
-          justifyContent="space-between"
-          alignItems="center"
-          py={2}
-        >
-          <GatsbyLink to="/">
+        <Flex color="white" alignItems="center" py={2}>
+          <Link as={GatsbyLink} to="/" sx={{ flexGrow: 1 }}>
             <Image src={Logo} alt={siteTitle} width="12.5rem" />
-          </GatsbyLink>
+          </Link>
 
           <Box as="nav" ref={navRef}>
             <Box
@@ -83,6 +78,7 @@ const Header = ({ siteTitle }) => {
               <FontAwesomeIcon
                 aria-hidden="true"
                 icon={!showMenu ? faBars : faTimes}
+                size="1x"
               />
             </Box>
 
