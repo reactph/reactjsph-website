@@ -5,6 +5,7 @@ const darkBlue = "#0C1D60"
 const lightBlue = "#7BD5F5"
 const gold = "#F7D663"
 const white = "#FFF"
+const tomato = "#ff6347"
 
 const customTheme = {
   ...theme,
@@ -13,6 +14,7 @@ const customTheme = {
     lightBlue,
     gold,
     white,
+    tomato,
   },
   fonts: {
     body: "Avenir, Helvetica, Arial, sans-serif",
