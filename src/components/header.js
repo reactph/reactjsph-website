@@ -95,16 +95,12 @@ const Header = ({ siteTitle }) => {
               py={[4, 0]}
               sx={{
                 transition: "right 300ms ease",
-                ...(isMobile
-                  ? {
-                      position: "absolute",
-                      top: 0,
-                      right: showMenu ? 0 : "-250px",
-                      bottom: 0,
-                      width: "250px",
-                      overflow: "hidden",
-                    }
-                  : {}),
+                position: ["absolute", "static"],
+                top: 0,
+                right: showMenu ? 0 : "-250px",
+                bottom: 0,
+                width: ["250px", "100%"],
+                overflow: ["hidden", "visible"],
               }}
             >
               {menus.map(menu => (
