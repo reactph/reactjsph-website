@@ -61,6 +61,7 @@ const Header = ({ siteTitle }) => {
               as="button"
               fontSize={3}
               display={["block", "none"]}
+              width="45px"
               sx={{
                 backgroundColor: "transparent",
                 color: "white",
