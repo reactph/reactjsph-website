@@ -65,7 +65,7 @@ const Header = ({ siteTitle }) => {
             <Box
               as="button"
               fontSize={3}
-              display={isMobile ? "block" : "none"}
+              display={["block", "none"]}
               sx={{
                 backgroundColor: "transparent",
                 color: "white",
