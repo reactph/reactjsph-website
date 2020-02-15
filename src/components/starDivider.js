@@ -22,7 +22,7 @@ const StarDivider = () => (
       },
     }}
   >
-    <Text fontSize={4} lineHeight="1" color="gold" mx={2}>
+    <Text fontSize={[4, 5]} lineHeight="1" color="gold" mx={2}>
       &#11089;
     </Text>
   </Flex>
