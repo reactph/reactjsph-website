@@ -63,7 +63,7 @@ const Members = [
 ]
 
 const TeamSection = () => (
-  <Box backgroundColor="darkBlue" py={5}>
+  <Box backgroundColor="darkBlue" pb={[4, 5]}>
     <Container>
       <Flex justifyContent="center" alignItems="center">
         <Text
@@ -97,6 +97,7 @@ const TeamSection = () => (
         </Text>
       </Flex>
       <Box
+        py="2"
         sx={{
           position: "relative",
           height: "100%",
@@ -121,22 +122,20 @@ const TeamSection = () => (
           }}
         >
           <Box
-            mt={3}
-            pt={[3, 0]}
             sx={{
               display: ["flex", "grid"],
               gridTemplateColumns: [
                 "initial",
                 `repeat(auto-fit, minmax(295px, 1fr))`,
               ],
+              gridRowGap: 6,
+              gridColumnGap: 4,
               overflowX: ["scroll", "initial"],
             }}
           >
             {Members.map(member => (
               <Box
                 key={member.id}
-                px={2}
-                py={3}
                 width="100%"
                 sx={{
                   flexShrink: [0, 1],

@@ -4,7 +4,7 @@ import StarDivider from "./starDivider"
 import zigzag from "../images/divider.svg"
 
 const MissionSection = () => (
-  <Box backgroundColor="darkBlue" py={4}>
+  <Box backgroundColor="darkBlue" pb={[5, 7]}>
     <Box maxWidth={792} width="100%" textAlign="center" mx="auto" px={[2, 3]}>
       <Box mb={2}>
         <StarDivider />
@@ -13,7 +13,7 @@ const MissionSection = () => (
         fontSize={[2, 3]}
         fontWeight="heading"
         color="gold"
-        mb={3}
+        mb={[2, 3]}
         sx={{ textTransform: "uppercase" }}
       >
         Mission

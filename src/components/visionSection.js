@@ -7,8 +7,9 @@ import communityImg from "../images/community-img.jpg"
 const VisionSection = () => (
   <Box
     backgroundColor="white"
-    pt={5}
+    pt={[4, 6]}
     mt={40}
+    mb={[4, 6]}
     sx={{
       position: "relative",
       ":after": {
@@ -33,7 +34,7 @@ const VisionSection = () => (
         fontSize={[2, 3]}
         fontWeight="heading"
         color="gold"
-        mb={3}
+        mb={[2, 3]}
         sx={{ textTransform: "uppercase" }}
       >
         Vision

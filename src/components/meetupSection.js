@@ -33,7 +33,7 @@ const meetups = [
 ]
 
 const MeetupSection = () => (
-  <Box pt={4} pb={5}>
+  <Box pb={[7, 9]}>
     <Container>
       <Text
         as="h2"
@@ -41,7 +41,7 @@ const MeetupSection = () => (
         color="lightBlue"
         fontWeight="bold"
         textAlign="center"
-        mb={3}
+        mb={[2, 3]}
         sx={{ textTransform: "uppercase", textShadow: "main" }}
       >
         Monthly Meetups
