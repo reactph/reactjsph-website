@@ -84,9 +84,9 @@ const Hero = () => (
         <Button
           sx={{
             marginTop: [2, 3],
-            py: 2,
-            px: 3,
-            fontSize: 2,
+            py: [1, 2],
+            px: [2, 3],
+            fontSize: [1, 2],
           }}
         >
           JOIN THE COMMUNITY
@@ -105,9 +105,9 @@ const Hero = () => (
         backgroundSize: "cover",
         WebkitMaskImage: `url("${heroBrandmark}")`,
         WebkitMaskRepeat: "no-repeat",
-        WebkitMaskPositionX: "120%",
+        WebkitMaskPositionX: ["40000%", "120%"],
         WebkitMaskPositionY: "center",
-        WebkitMaskSize: "70%",
+        WebkitMaskSize: ["99.9%", "70%"],
       }}
     />
   </Box>
