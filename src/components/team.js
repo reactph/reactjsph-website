@@ -143,11 +143,13 @@ const TeamSection = () => (
                 sx={{
                   flexShrink: [0, 1],
                   textAlign: "center",
-                  transition: "300ms ease all",
+                  transition: "200ms transform",
+                  textShadow: "main",
                   "&:hover": {
-                    transform: "translateY(-10px)",
+                    transform: "translateY(-0.5rem)",
+                    cursor: "pointer",
                     img: {
-                      transform: "scale(1.1)",
+                      transform: "translateY(-0.5rem)",
                     },
                   },
                 }}
@@ -159,7 +161,8 @@ const TeamSection = () => (
                     width: "174px",
                     height: "174px",
                     borderRadius: "50%",
-                    transition: "300ms ease all",
+                    transition: "200ms transform",
+                    boxShadow: "main",
                   }}
                   src={member.photo || memberPlaceholder}
                   alt={member.name}
