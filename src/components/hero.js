@@ -78,7 +78,6 @@ const Hero = () => (
             marginTop: [2, 3],
             py: 2,
             px: 3,
-            outline: 0,
             fontSize: 2,
           }}
         >
