@@ -72,6 +72,7 @@ const TeamSection = () => (
           color="lightBlue"
           sx={{
             textTransform: "uppercase",
+            textShadow: "main",
             whiteSpace: "nowrap",
           }}
         >
@@ -88,6 +89,7 @@ const TeamSection = () => (
           color="lightBlue"
           sx={{
             textTransform: "uppercase",
+            textShadow: "main",
             whiteSpace: "nowrap",
           }}
         >

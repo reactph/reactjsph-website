@@ -42,7 +42,7 @@ const MeetupSection = () => (
         fontWeight="bold"
         textAlign="center"
         mb={3}
-        sx={{ textTransform: "uppercase" }}
+        sx={{ textTransform: "uppercase", textShadow: "main" }}
       >
         Monthly Meetups
       </Text>
@@ -65,7 +65,13 @@ const MeetupSection = () => (
               display="block"
             />
 
-            <Flex bg="white" p={2} flexDirection="column" flex={1}>
+            <Flex
+              bg="white"
+              p={2}
+              flexDirection="column"
+              flex={1}
+              sx={{ boxShadow: "main" }}
+            >
               <Box flex={1}>
                 <Flex alignItems="baseline" fontWeight="bold" fontSize={2}>
                   <Link href="/">{title}</Link>

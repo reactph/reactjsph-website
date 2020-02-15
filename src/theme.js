@@ -50,17 +50,10 @@ const customTheme = {
     body: 1.333,
     heading: 1,
   },
-  space: [
-    "0",
-    "0.665rem",
-    "1.33rem",
-    "2.66rem",
-    "5.32rem",
-    "10.64rem",
-    "21.28rem",
-    "42.56rem",
-    "85.12rem",
-  ],
+  space: ["0", "0.665rem", "1.33rem", "2.66rem", "5.32rem", "10.64rem"],
+  shadows: {
+    main: "0 0 30px rgba(0, 0, 0, .2)",
+  },
   variants: {
     nav: {
       mx: [0, 2],

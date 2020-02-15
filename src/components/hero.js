@@ -41,38 +41,45 @@ const Hero = () => (
       }}
     >
       <Container>
-        <Text
-          fontSize={[4, 5]}
-          color="gold"
-          fontWeight="body"
-          zIndex={2}
-          mb={1}
-          sx={{
-            position: "relative",
-            ":after": {
-              content: "''",
-              position: "absolute",
-              left: ["150px", "200px"],
-              top: 0,
-              bottom: 0,
-              margin: "auto 0",
-              width: "40%",
-              height: "2px",
-              backgroundColor: "gold",
-            },
-          }}
-        >
-          ★ ★ ★
-        </Text>
-        <Text fontSize={[5, 6]} fontWeight="hero" color="white" zIndex={2}>
-          WE ARE
-        </Text>
-        <Text fontSize={[4, 5]} fontWeight="hero" color="lightBlue" zIndex={2}>
-          REACTJS
-        </Text>
-        <Text fontSize={[4, 5]} fontWeight="hero" color="gold" zIndex={2}>
-          PHILIPPINES
-        </Text>
+        <Box sx={{ textShadow: "main" }}>
+          <Text
+            fontSize={[4, 5]}
+            color="gold"
+            fontWeight="body"
+            zIndex={2}
+            mb={1}
+            sx={{
+              position: "relative",
+              ":after": {
+                content: "''",
+                position: "absolute",
+                left: ["150px", "200px"],
+                top: 0,
+                bottom: 0,
+                margin: "auto 0",
+                width: "40%",
+                height: "2px",
+                backgroundColor: "gold",
+              },
+            }}
+          >
+            ★ ★ ★
+          </Text>
+          <Text fontSize={[5, 6]} fontWeight="hero" color="white" zIndex={2}>
+            WE ARE
+          </Text>
+          <Text
+            fontSize={[4, 5]}
+            fontWeight="hero"
+            color="lightBlue"
+            zIndex={2}
+          >
+            REACTJS
+          </Text>
+          <Text fontSize={[4, 5]} fontWeight="hero" color="gold" zIndex={2}>
+            PHILIPPINES
+          </Text>
+        </Box>
         <Button
           sx={{
             marginTop: [2, 3],

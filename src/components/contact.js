@@ -16,6 +16,7 @@ const Contact = () => (
         width="100%"
         sx={{
           textTransform: "uppercase",
+          textShadow: "main",
         }}
       >
         Sponsor A meet-up{" "}
