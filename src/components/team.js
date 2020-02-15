@@ -63,7 +63,7 @@ const Members = [
 ]
 
 const TeamSection = () => (
-  <Box backgroundColor="darkBlue" pb={[4, 5]}>
+  <Box backgroundColor="darkBlue" overflow="hidden" mb={[3, null, 6]}>
     <Container>
       <Flex justifyContent="center" alignItems="center">
         <Text
@@ -96,25 +96,28 @@ const TeamSection = () => (
           Team »
         </Text>
       </Flex>
-      <Box
-        py="2"
+    </Container>
+    <Box
+      py={[2, 3, 4]}
+      sx={{
+        position: "relative",
+      }}
+    >
+      <Image
+        src={orbitBackground}
         sx={{
-          position: "relative",
+          position: "absolute",
+          top: "-9999px",
+          bottom: "-9999px",
+          left: "-9999px",
+          right: "-9999px",
+          maxWidth: "none",
           height: "100%",
+          m: "auto",
+          userSelect: "none",
         }}
-      >
-        <Image
-          src={orbitBackground}
-          alt="Orbit"
-          sx={{
-            position: "absolute",
-            width: "100%",
-            top: [0, "28px"],
-            left: 0,
-            zIndex: 1,
-            userSelect: "none",
-          }}
-        />
+      />
+      <Container>
         <Box
           sx={{
             zIndex: 2,
@@ -179,8 +182,8 @@ const TeamSection = () => (
             ))}
           </Box>
         </Box>
-      </Box>
-    </Container>
+      </Container>
+    </Box>
   </Box>
 )
 
