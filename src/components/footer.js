@@ -105,15 +105,15 @@ const FooterContentRight = () => {
     <Flex
       flex={1}
       justifyContent="flex-end"
-      alignItems="center"
+      alignItems={["center", "flex-end"]}
       mt={2}
-      flexDirection={["column", "row"]}
+      flexDirection="column"
     >
       <Text
         fontSize={2}
         fontWeight="bold"
-        mr={[0, 2]}
-        mb={[2, 0]}
+        textAlign="right"
+        mb="1"
         sx={{ textTransform: "uppercase" }}
       >
         Join the community
