@@ -96,7 +96,10 @@ const customTheme = {
   },
   buttons: {
     primary: {
+      position: "relative",
       fontSize: 1,
+      fontFamily: "body",
+      letterSpacing: "0.1em",
       textTransform: "uppercase",
       color: "white",
       bg: "transparent",
@@ -107,10 +110,18 @@ const customTheme = {
       borderWidth: 3,
       borderColor: "white",
       borderStyle: "solid",
-      backgroundColor: "transparent",
+      borderRadius: 4,
+      backgroundColor: "rgba(255, 255, 255, 0.04)",
       boxShadow: generate3dShadow(5, white),
-      ":focus, :active": {
+      cursor: "pointer",
+      transition: "200ms border-color, 200ms background-color",
+      ":focus, :hover": {
         borderColor: "lightBlue",
+        backgroundColor: "transparent",
+      },
+      ":active": {
+        boxShadow: generate3dShadow(2, white),
+        transform: "translate(3px, 3px)",
       },
     },
     outline: {
