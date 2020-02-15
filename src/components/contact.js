@@ -66,14 +66,23 @@ const FormInput = ({ name, label, type }) => (
         borderWidth: 3,
         borderColor: "white",
         borderStyle: "solid",
-        backgroundColor: "transparent",
+        backgroundColor: "rgba(255, 255, 255, 0.04)",
+        borderRadius: 4,
         boxShadow: theme => generate3dShadow(5, theme.colors.white),
         boxSizing: "border-box",
         color: "white",
+        fontFamily: "body",
         fontSize: 1,
         padding: 1,
-        ":focus, :active": {
+        cursor: "pointer",
+        transition: "200ms border-color, 200ms background-color",
+        ":focus, :hover": {
           borderColor: "lightBlue",
+          backgroundColor: "transparent",
+        },
+        ":focus, :active": {
+          boxShadow: theme => generate3dShadow(2, theme.colors.white),
+          transform: "translate(3px, 3px)",
         },
       },
 
