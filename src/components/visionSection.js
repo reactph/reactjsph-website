@@ -14,9 +14,9 @@ const VisionSection = () => (
       position: "relative",
       ":after": {
         background:
-          "linear-gradient(-35deg,#ffffff 46px,transparent 0),linear-gradient(35deg,#ffffff 46px,transparent 0)",
+          "linear-gradient(-40deg,#ffffff 46px,transparent 0),linear-gradient(40deg,#ffffff 46px,transparent 0)",
         backgroundRepeat: "repeat-x",
-        backgroundSize: "96px 60px",
+        backgroundSize: "80px 60px",
         content: "''",
         display: "block",
         position: "absolute",
