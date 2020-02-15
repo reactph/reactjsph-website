@@ -12,15 +12,13 @@ const Contact = () => (
         fontWeight="bold"
         color="lightBlue"
         mb={3}
-        maxWidth="51rem"
-        width="100%"
         sx={{
           textTransform: "uppercase",
           textShadow: "main",
         }}
       >
-        Sponsor A meet-up{" "}
-        <Text as="span" color="gold">
+        Sponsor a meet-up
+        <Text color="gold" sx={{ display: "block" }}>
           or just get in touch.
         </Text>
       </Text>
