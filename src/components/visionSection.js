@@ -68,7 +68,7 @@ const VisionSection = () => (
         boxShadow: "0px 0px 20px 0px rgba(0, 0, 0, 0.50)",
       }}
     />
-    <Box height={[100, 165]} backgroundColor="darkBlue" mt={[-100, -165]} />
+    <Box height={[50, 83]} backgroundColor="darkBlue" mt={[-50, -83]} />
   </Box>
 )
 
