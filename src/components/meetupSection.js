@@ -82,13 +82,15 @@ const MeetupSection = () => (
                 <Text>{venue}</Text>
               </Box>
 
-              <Box mt={3}>
+              <Box mt={2}>
                 {!replay ? (
                   <>
-                    <Button variant="outline" mr={2}>
+                    <Button variant="outline" mr={1}>
                       △ Sponsor
                     </Button>
-                    <Button variant="outline">▩ SPEAK</Button>
+                    <Button variant="outline" mt="1">
+                      ▩ SPEAK
+                    </Button>
                   </>
                 ) : (
                   <Button variant="outline">◉ Watch</Button>
