@@ -43,11 +43,11 @@ const VisionSection = () => (
         fontSize={[2, 3]}
         fontWeight="heading"
         color="darkBlue"
-        maxWidth={582}
         width="100%"
         mx="auto"
         mb={3}
-        lineHeight="3.157rem"
+        lineHeight="1.75"
+        letterSpacing="0.05em"
         sx={{ textTransform: "uppercase" }}
       >
         A community of developers, who practice excellence, in service of

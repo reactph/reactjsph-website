@@ -22,11 +22,11 @@ const MissionSection = () => (
         fontSize={[2, 3]}
         fontWeight="heading"
         color="white"
-        maxWidth={582}
         width="100%"
         mx="auto"
         mb={3}
-        lineHeight="3.157rem"
+        lineHeight="1.75"
+        letterSpacing="0.05em"
         sx={{ textTransform: "uppercase" }}
       >
         To be the representative chapter of ReactJS in the Philippines
