@@ -35,24 +35,32 @@ const Footer = () => (
           color: "white",
           display: "grid",
           gridTemplateColumns: "1fr auto 1fr",
-          gridTemplateRows: ["auto", "1fr 1fr"],
+          gridTemplateRows: ["auto", null, "1fr 1fr"],
           gridTemplateAreas: [
             `"TopLeft Logo TopRight"
             "BottomRight BottomRight BottomRight"
             "BottomLeft BottomLeft BottomLeft"`,
-
+            null,
             `"TopLeft Logo TopRight"
             "BottomLeft Logo BottomRight"`,
           ],
         }}
       >
         <Box
-          mb={[3, 0]}
-          sx={{ gridArea: "TopLeft", borderBottom: "2px solid #505D90" }}
+          width="100%"
+          m={["auto", null, 0]}
+          sx={{
+            gridArea: "TopLeft",
+            borderBottom: "1px solid rgba(255, 255, 255, .8)",
+          }}
         />
         <Box
-          mb={[3, 0]}
-          sx={{ gridArea: "TopRight", borderBottom: "2px solid #505D90" }}
+          width="100%"
+          m={["auto", null, 0]}
+          sx={{
+            gridArea: "TopRight",
+            borderBottom: "1px solid rgba(255, 255, 255, .8)",
+          }}
         />
         <Box sx={{ gridArea: "BottomLeft" }}>
           <FooterContentLeft />
@@ -69,19 +77,19 @@ const Footer = () => (
 )
 
 const FooterBrandLogo = () => (
-  <Box px={[2, 3]} textAlign="center">
+  <Box px={[1, null, 3]} textAlign="center">
     <GatsbyLink to="/">
       <Image
         src={Logo}
         alt="React JS Philippines"
-        width={["6rem", "10.88rem"]}
+        width={["8rem", null, "10.88rem"]}
       />
     </GatsbyLink>
   </Box>
 )
 
 const FooterContentLeft = () => (
-  <Box mt={2} textAlign={["center", "left"]}>
+  <Box mt={2} textAlign={["center", null, "left"]}>
     <Text fontSize={1}>
       {`Designed by `}
       <Link href={designerLink} color="white">
@@ -105,7 +113,7 @@ const FooterContentRight = () => {
     <Flex
       flex={1}
       justifyContent="flex-end"
-      alignItems={["center", "flex-end"]}
+      alignItems={["center", null, "flex-end"]}
       mt={2}
       flexDirection="column"
     >
