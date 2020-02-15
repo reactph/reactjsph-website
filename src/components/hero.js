@@ -97,8 +97,9 @@ const Hero = () => (
         backgroundSize: "cover",
         WebkitMaskImage: `url("${heroBrandmark}")`,
         WebkitMaskRepeat: "no-repeat",
-        WebkitMaskPosition: "right",
-        WebkitMaskPositionY: "-4rem",
+        WebkitMaskPositionX: "120%",
+        WebkitMaskPositionY: "center",
+        WebkitMaskSize: "70%",
       }}
     />
   </Box>
