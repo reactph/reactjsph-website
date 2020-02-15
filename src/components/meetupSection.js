@@ -41,6 +41,7 @@ const MeetupSection = () => (
         color="lightBlue"
         fontWeight="bold"
         textAlign="center"
+        lineHeight="heading"
         mb={[2, 3]}
         sx={{ textTransform: "uppercase", textShadow: "main" }}
       >
