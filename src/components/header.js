@@ -9,7 +9,7 @@ import Logo from "../images/logo.svg"
 import Container from "./container"
 
 const menus = [
-  { label: "Meetups", path: "/meetups" },
+  { label: "Meet-ups", path: "/meetups" },
   { label: "Blog", path: "/blog" },
   { label: "Jobs", path: "/jobs" },
 ]

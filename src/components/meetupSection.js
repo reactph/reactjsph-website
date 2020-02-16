@@ -7,7 +7,7 @@ const meetups = [
   {
     id: 1,
     logo: Logo,
-    title: "August Meetup",
+    title: "August Meet-up",
     date: "August 2019",
     venue: "Venue TBA",
     replay: null,
@@ -15,7 +15,7 @@ const meetups = [
   {
     id: 2,
     logo: Logo,
-    title: "July Meetup",
+    title: "July Meet-up",
     date: "18 July 2019, 6:00–10:00 pm",
     venue:
       "SplitmediaLabs Philippines, Inc. 86 Eulogio Rodriguez Jr. Avenue, Quezon City",
@@ -24,7 +24,7 @@ const meetups = [
   {
     id: 3,
     logo: Logo,
-    title: "June Meetup",
+    title: "June Meet-up",
     date: "8 June 2019, 1:00–5:00 pm",
     venue:
       "7/F Launchpad Building, Reliance cor. Sheridan St., Bgy. Highway Hills, Mandaluyong City",
@@ -45,7 +45,7 @@ const MeetupSection = () => (
         mb={[2, 3]}
         sx={{ textTransform: "uppercase", textShadow: "main" }}
       >
-        Monthly Meetups
+        Monthly Meet-ups
       </Text>
 
       <Box
