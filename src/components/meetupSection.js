@@ -51,12 +51,24 @@ const MeetupSection = () => (
       <Box
         sx={{
           display: "grid",
-          gridGap: "2rem",
-          gridTemplateColumns: ["auto", `repeat(auto-fit, minmax(256px, 1fr))`],
+          gridGap: "3rem 2rem",
+          gridTemplateColumns: [
+            "auto",
+            null,
+            `repeat(auto-fit, minmax(25em, 1fr))`,
+          ],
         }}
       >
         {meetups.map(({ id, logo, title, date, venue, replay }) => (
-          <Flex key={id} flexDirection="column" color="darkblue" mt={2}>
+          <Flex
+            key={id}
+            flexDirection="column"
+            width="100%"
+            maxWidth="30em"
+            color="darkblue"
+            mt={2}
+            mx="auto"
+          >
             <Image
               src={logo}
               alt={title}
