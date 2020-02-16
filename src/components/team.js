@@ -67,7 +67,7 @@ const TeamSection = () => (
     <Container>
       <Flex justifyContent="center" alignItems="center">
         <Text
-          fontSize={[3, 4]}
+          fontSize={[3, 4, 5]}
           fontWeight="bold"
           color="lightBlue"
           sx={{
@@ -81,10 +81,11 @@ const TeamSection = () => (
         <Image
           src={brandmarkLogo}
           alt="ReactJS Philippines"
-          width={["30%", "174px"]}
+          width="20vw"
+          maxWidth="10rem"
         />
         <Text
-          fontSize={[3, 4]}
+          fontSize={[3, 4, 5]}
           fontWeight="bold"
           color="lightBlue"
           sx={{
