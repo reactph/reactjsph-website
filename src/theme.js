@@ -55,12 +55,16 @@ const customTheme = {
     "0.665rem",
     "1.33rem",
     "2.66rem",
+    "3.99rem",
     "5.32rem",
+    "6.65rem",
+    "7.98rem",
+    "9.31rem",
     "10.64rem",
-    "21.28rem",
-    "42.56rem",
-    "85.12rem",
   ],
+  shadows: {
+    main: "0 0 30px rgba(0, 0, 0, .2)",
+  },
   variants: {
     nav: {
       mx: [0, 2],
@@ -96,7 +100,10 @@ const customTheme = {
   },
   buttons: {
     primary: {
+      position: "relative",
       fontSize: 1,
+      fontFamily: "body",
+      letterSpacing: "0.1em",
       textTransform: "uppercase",
       color: "white",
       bg: "transparent",
@@ -107,25 +114,41 @@ const customTheme = {
       borderWidth: 3,
       borderColor: "white",
       borderStyle: "solid",
-      backgroundColor: "transparent",
+      borderRadius: 4,
+      backgroundColor: "rgba(255, 255, 255, 0.04)",
       boxShadow: generate3dShadow(5, white),
-      ":focus, :active": {
+      cursor: "pointer",
+      transition: "200ms border-color, 200ms background-color",
+      ":focus, :hover": {
         borderColor: "lightBlue",
+        backgroundColor: "transparent",
+      },
+      ":active": {
+        boxShadow: generate3dShadow(2, white),
+        transform: "translate(3px, 3px)",
       },
     },
     outline: {
       borderWidth: "3px",
       borderStyle: "solid",
       borderColor: "darkblue",
-      borderRadius: "0",
+      borderRadius: 4,
       bg: "white",
       color: "darkblue",
+      fontFamily: "Avenir, Helvetica, Arial, sans-serif",
+      letterSpacing: "0.1em",
       textTransform: "uppercase",
       p: 1,
       boxShadow: generate3dShadow(5, darkBlue),
       outline: 0,
-      ":focus, :active": {
-        borderColor: "lightBlue",
+      cursor: "pointer",
+      transition: "250ms background-color",
+      ":focus, :hover": {
+        backgroundColor: "rgba(12, 29, 96, 0.1)",
+      },
+      ":active": {
+        boxShadow: generate3dShadow(2, darkBlue),
+        transform: "translate(3px, 3px)",
       },
     },
   },

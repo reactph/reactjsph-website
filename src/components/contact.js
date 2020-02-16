@@ -5,21 +5,20 @@ import Container from "./container"
 import { generate3dShadow } from "../utils"
 
 const Contact = () => (
-  <Box backgroundColor="darkBlue" py={4}>
+  <Box backgroundColor="darkBlue">
     <Container>
       <Text
         fontSize={[4, 5]}
         fontWeight="bold"
         color="lightBlue"
         mb={3}
-        maxWidth="51rem"
-        width="100%"
         sx={{
           textTransform: "uppercase",
+          textShadow: "main",
         }}
       >
-        Sponsor A meet-up{" "}
-        <Text as="span" color="gold">
+        Sponsor a meet-up
+        <Text color="gold" sx={{ display: "block" }}>
           or just get in touch.
         </Text>
       </Text>
@@ -28,20 +27,20 @@ const Contact = () => (
         <Box
           sx={{
             display: "grid",
-            gridTemplateColumns: ["auto", `repeat(3, 1fr)`],
-            gridTemplateRows: ["1fr", "auto 1fr"],
+            gridTemplateColumns: ["auto", "1fr 1fr", `repeat(3, 1fr)`],
+            gridTemplateRows: ["1fr", null, "auto 1fr"],
             gridColumnGap: "2rem",
             gridRowGap: "2rem",
           }}
           mb={2}
         >
-          <Box sx={{ gridArea: ["auto", "1 / 1 / 2 / 2"] }}>
+          <Box sx={{ gridArea: ["auto", "1 / 1", "1 / 1 / 2 / 2"] }}>
             <FormInput name="Name" label="Name" type="text" />
           </Box>
-          <Box sx={{ gridArea: ["auto", "2 / 1 / 3 / 2"] }}>
+          <Box sx={{ gridArea: ["auto", "1 / 2", "2 / 1 / 3 / 2"] }}>
             <FormInput name="Email" label="Email" type="text" />
           </Box>
-          <Box sx={{ gridArea: ["auto", " 1 / 2 / 3 / 4"] }}>
+          <Box sx={{ gridArea: ["auto", "2 / 1 / 3 / 3", "1 / 2 / 3 / 4"] }}>
             <FormInput name="Message" label="Message" type="textarea" />
           </Box>
         </Box>
@@ -67,14 +66,23 @@ const FormInput = ({ name, label, type }) => (
         borderWidth: 3,
         borderColor: "white",
         borderStyle: "solid",
-        backgroundColor: "transparent",
+        backgroundColor: "rgba(255, 255, 255, 0.04)",
+        borderRadius: 4,
         boxShadow: theme => generate3dShadow(5, theme.colors.white),
         boxSizing: "border-box",
         color: "white",
+        fontFamily: "body",
         fontSize: 1,
         padding: 1,
-        ":focus, :active": {
+        cursor: "pointer",
+        transition: "200ms border-color, 200ms background-color",
+        ":focus, :hover": {
           borderColor: "lightBlue",
+          backgroundColor: "transparent",
+        },
+        ":focus, :active": {
+          boxShadow: theme => generate3dShadow(2, theme.colors.white),
+          transform: "translate(3px, 3px)",
         },
       },
 
