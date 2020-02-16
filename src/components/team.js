@@ -127,14 +127,10 @@ const TeamSection = () => (
         >
           <Box
             sx={{
-              display: ["flex", "grid"],
-              gridTemplateColumns: [
-                "initial",
-                `repeat(auto-fit, minmax(295px, 1fr))`,
-              ],
-              gridRowGap: 6,
+              display: "grid",
+              gridTemplateColumns: `repeat(auto-fit, minmax(16rem, 1fr))`,
+              gridRowGap: [4, null, 6],
               gridColumnGap: 4,
-              overflowX: ["scroll", "initial"],
             }}
           >
             {Members.map(member => (
