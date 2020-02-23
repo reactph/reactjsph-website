@@ -1,5 +1,7 @@
 import React from "react"
 import { Box, Button, Flex, Image, Link, Text } from "rebass"
+
+import theme from "../theme"
 import Container from "./container"
 import Logo from "../images/logo.svg"
 
@@ -38,14 +40,26 @@ const MeetupSection = () => (
       <Text
         as="h2"
         fontSize={[4, 5]}
-        color="lightBlue"
+        color="darkBlue"
         fontWeight="bold"
         textAlign="center"
         lineHeight="heading"
         mb={[2, 3]}
-        sx={{ textTransform: "uppercase", textShadow: "main" }}
+        sx={{
+          textTransform: "uppercase",
+          textShadow: `
+            -1px -1px 0 ${theme.colors.lightBlue},  
+            1px -1px 0 ${theme.colors.lightBlue},
+            -1px 1px 0 ${theme.colors.lightBlue},
+            1px 1px 0 ${theme.colors.lightBlue},
+            2px 2px 0 ${theme.colors.lightBlue},
+            3px 3px 0 ${theme.colors.lightBlue},
+            4px 4px 0 ${theme.colors.lightBlue},
+            5px 5px 0 ${theme.colors.lightBlue}
+          `,
+        }}
       >
-        Monthly Meet-ups
+        Community Meet‑ups
       </Text>
 
       <Box
