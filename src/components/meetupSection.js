@@ -97,7 +97,13 @@ const MeetupSection = () => (
               p={2}
               flexDirection="column"
               flex={1}
-              sx={{ boxShadow: "main" }}
+              sx={{
+                boxShadow: "main",
+                transition: "200ms transform",
+                "&:hover": {
+                  transform: "translateY(-0.5rem)",
+                },
+              }}
             >
               <Box flex={1}>
                 <Flex alignItems="baseline" fontWeight="bold" fontSize={2}>
