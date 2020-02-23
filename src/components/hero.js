@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react"
 import { Box, Text, Button, Flex } from "rebass"
 import { fabric } from "fabric"
 
+import theme from "../theme"
 import { heroImg, brandmarkPath } from "../images"
 import Container from "./container"
 
@@ -37,7 +38,7 @@ const drawRotatingBrandmark = (canvas, heroImageTemplate) => {
 
   const clipPath = new fabric.Path(brandmarkPath)
   clipPath.absolutePositioned = true
-  clipPath.scale((1.4 * canvas.height) / clipPath.height)
+  clipPath.scale((1.2 * canvas.height) / clipPath.height)
 
   const ANIMATION_TIME = 60 * 1000
   const INITIAL_ANGLE = -15
@@ -137,9 +138,19 @@ const Hero = () => {
       sx={{
         position: "relative",
         width: "100%",
-        height: "100vh",
+        height: "125vh",
         mt: "-105px",
         mb: 4,
+        "&::after": {
+          display: "block",
+          position: "relative",
+          width: "100%",
+          height: "101%",
+          background: `linear-gradient(transparent 60%, ${
+            theme.colors.darkBlue
+          })`,
+          content: "''",
+        },
       }}
     >
       <Box
@@ -162,7 +173,7 @@ const Hero = () => {
           zIndex: 1,
         }}
       >
-        <Container>
+        <Container mb="25vh">
           <Box sx={{ textShadow: "main" }}>
             <Text
               display="flex"
