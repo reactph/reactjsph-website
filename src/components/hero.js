@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react"
 import { Box, Text, Button, Flex } from "rebass"
 import { fabric } from "fabric"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons"
 
 import theme from "../theme"
 import { heroImg, brandmarkPath } from "../images"
@@ -222,6 +224,12 @@ const Hero = () => {
             </Text>
           </Box>
           <Button
+            as="a"
+            href="https://www.facebook.com/groups/reactjsphilippines"
+            target="_blank"
+            rel="noopener"
+            display="inline-flex"
+            alignItems="center"
             sx={{
               marginTop: [2, 3],
               py: [1, 2],
@@ -229,6 +237,9 @@ const Hero = () => {
               fontSize: [1, 2],
             }}
           >
+            <Box display="inline-block" mr="2" my="-1rem" fontSize={[2, 3]}>
+              <FontAwesomeIcon icon={faFacebookSquare} />
+            </Box>
             JOIN THE COMMUNITY
           </Button>
         </Container>
