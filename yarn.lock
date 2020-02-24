@@ -4957,10 +4957,10 @@ extsprintf@1.3.0, extsprintf@^1.2.0:
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.3.0.tgz#96918440e3041a7a414f8c52e3c574eb3c3e1e05"
   integrity sha1-lpGEQOMEGnpBT4xS48V06zw+HgU=
 
-fabric@^4.0.0-beta.7:
-  version "4.0.0-beta.7"
-  resolved "https://registry.yarnpkg.com/fabric/-/fabric-4.0.0-beta.7.tgz#6e3469513632a29ab19343c049ee157b22929024"
-  integrity sha512-yV/DM2Cyk65E0kd4a2gWfhPA3p6VMDnC7EIe86p4nXeq360Dkru3JwRgdXJ5HwoY2r9n3Yqn/2roTMfS45G9fA==
+fabric@3.6.2:
+  version "3.6.2"
+  resolved "https://registry.yarnpkg.com/fabric/-/fabric-3.6.2.tgz#fb0eb36b20a7932b9e44ddf447aa09da4ef3ac70"
+  integrity sha512-LGj/oLg55lYozasrVHHq0prR2cbdKy7TXSByTqCJZ7JgAhJwx7/BbUUZwdlfFXOEDGjb2dBh6Wqv2y/5jFvBEQ==
   optionalDependencies:
     canvas "^2.6.1"
     jsdom "^15.1.0"
