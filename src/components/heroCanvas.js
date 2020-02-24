@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react"
 import { Box } from "rebass"
 import { fabric } from "fabric"
+import debounce from "lodash.debounce"
 
 import { heroImg, brandmarkPath } from "../images"
 
@@ -119,10 +120,10 @@ const HeroCanvas = () => {
   }, [])
 
   useEffect(() => {
-    const handleWindowResize = () => {
+    const handleWindowResize = debounce(() => {
       const canvas = initializeCanvas()
       drawHeroBg(canvas, imageEl)
-    }
+    }, 150)
 
     if (imageEl) {
       window.addEventListener("resize", handleWindowResize)
