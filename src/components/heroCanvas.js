@@ -58,8 +58,6 @@ const drawRotatingBrandmark = (canvas, heroImageTemplate) => {
   const drawClip = timestamp => {
     if (!didWindowResize(window)) {
       fabric.util.requestAnimFrame(drawClip)
-    } else {
-      canvas.clear()
     }
 
     rotatePath(clipPath, clipPathMidpoint, {
