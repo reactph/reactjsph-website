@@ -116,7 +116,7 @@ const HeroCanvas = () => {
 
     emptyImageEl.addEventListener("load", handleImageLoad)
 
-    return () => emptyImageEl.removeEventListener(handleImageLoad)
+    return () => emptyImageEl.removeEventListener("load", handleImageLoad)
   }, [])
 
   useEffect(() => {
