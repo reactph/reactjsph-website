@@ -91,17 +91,18 @@ const drawHeroBg = (canvas, imageEl) => {
 
 const HeroCanvas = () => {
   const canvasContainerRef = useRef(null)
-  const canvasRef = useRef(null)
   const [imageEl, setImageEl] = useState(null)
 
   const initializeCanvas = () => {
     const { clientWidth, clientHeight } = canvasContainerRef.current
-    const canvas = new fabric.Canvas(canvasRef.current, {
+    const canvas = document.createElement("canvas")
+    canvasContainerRef.current.innerHTML = ""
+    canvasContainerRef.current.appendChild(canvas)
+
+    return new fabric.Canvas(canvas, {
       width: clientWidth,
       height: clientHeight,
     })
-
-    return canvas
   }
 
   useEffect(() => {
@@ -138,9 +139,7 @@ const HeroCanvas = () => {
       width="100%"
       height="100%"
       sx={{ position: "absolute" }}
-    >
-      <Box as="canvas" ref={canvasRef} />
-    </Box>
+    />
   )
 }
 
