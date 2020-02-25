@@ -48,8 +48,15 @@ const drawRotatingBrandmark = (canvas, heroImageTemplate) => {
   let startTimestamp = 0
   let angle = INITIAL_ANGLE
 
+  const initialWindowWidth = window.innerWidth
+  const initialWindowHeight = window.innerHeight
+
+  const didWindowResize = window =>
+    window.innerWidth !== initialWindowWidth ||
+    window.innerHeight !== initialWindowHeight
+
   const drawClip = timestamp => {
-    if (window.innerWidth === canvas.width) {
+    if (!didWindowResize(window)) {
       fabric.util.requestAnimFrame(drawClip)
     } else {
       canvas.clear()
