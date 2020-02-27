@@ -51,8 +51,13 @@ const Header = ({ siteTitle }) => {
       }}
     >
       <Container>
-        <Flex color="white" alignItems="center" py={2}>
-          <Link as={GatsbyLink} to="/" sx={{ flexGrow: 1 }}>
+        <Flex
+          color="white"
+          alignItems="center"
+          justifyContent="space-between"
+          py={2}
+        >
+          <Link as={GatsbyLink} to="/">
             <Image src={Logo} alt={siteTitle} width="12.5rem" />
           </Link>
 

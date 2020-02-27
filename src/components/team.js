@@ -71,6 +71,8 @@ const TeamSection = () => (
           fontWeight="bold"
           color="lightBlue"
           sx={{
+            borderBottom: "0.15em groove",
+            borderColor: "lightBlue",
             textTransform: "uppercase",
             textShadow: "main",
             whiteSpace: "nowrap",
@@ -89,6 +91,8 @@ const TeamSection = () => (
           fontWeight="bold"
           color="lightBlue"
           sx={{
+            borderBottom: "0.15em groove",
+            borderColor: "lightBlue",
             textTransform: "uppercase",
             textShadow: "main",
             whiteSpace: "nowrap",
