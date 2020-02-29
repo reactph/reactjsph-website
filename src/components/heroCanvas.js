@@ -37,7 +37,11 @@ const drawRotatingBrandmark = (canvas, heroImageTemplate) => {
 
   const clipPath = new fabric.Path(brandmarkPath)
   clipPath.absolutePositioned = true
-  clipPath.scale((1.2 * canvas.height) / clipPath.height)
+
+  const relativeWidth = 0.8 * canvas.width
+  const ABSOLUTE_MIN_WIDTH = 500
+  const width = Math.max(relativeWidth, ABSOLUTE_MIN_WIDTH)
+  clipPath.scale(width / clipPath.width)
 
   const ANIMATION_TIME = 60 * 1000
   const INITIAL_ANGLE = -15
@@ -63,7 +67,7 @@ const drawRotatingBrandmark = (canvas, heroImageTemplate) => {
     rotatePath(clipPath, clipPathMidpoint, {
       point: new fabric.Point(
         (canvas.width / 4) * 3 - clipPath.getScaledWidth() / 2,
-        -(canvas.height / 4)
+        (0.8 * canvas.height - clipPath.getScaledHeight()) / 2
       ),
       angle,
     })
