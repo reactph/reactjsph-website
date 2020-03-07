@@ -8,7 +8,6 @@ import * as yup from "yup"
 import Recaptcha from "react-google-recaptcha"
 import useIntersectionObserver from "@react-hook/intersection-observer"
 import Container from "./container"
-import Portal from "./portal"
 import MessageSentModal from "./messageSentModal"
 import { generate3dShadow } from "../utils"
 
@@ -31,6 +30,7 @@ const encode = data => {
 
 const Contact = () => {
   const recaptchaRef = useRef(null)
+  const formikRef = useRef(null)
   const [showModal, setShowModal] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const [entry, observerRef] = useIntersectionObserver({
@@ -59,6 +59,12 @@ const Contact = () => {
     })
       .then(() => {
         recaptchaRef.current.reset()
+        formikRef.current.resetForm({
+          name: "",
+          email: "",
+          message: "",
+        })
+
         setShowModal(true)
       })
       .catch(() => {})
@@ -66,6 +72,8 @@ const Contact = () => {
         setSubmitting(false)
       })
   }
+
+  const closeModal = () => setShowModal(false)
 
   return (
     <Box ref={observerRef} backgroundColor="darkBlue" py={4}>
@@ -94,6 +102,7 @@ const Contact = () => {
         </form>
 
         <Formik
+          innerRef={formikRef}
           initialValues={{
             name: "",
             email: "",
@@ -171,9 +180,7 @@ const Contact = () => {
           )}
         </Formik>
       </Container>
-      <Portal show={showModal} setShow={setShowModal}>
-        <MessageSentModal />
-      </Portal>
+      <MessageSentModal isOpen={showModal} onDismiss={closeModal} />
     </Box>
   )
 }
@@ -192,13 +199,12 @@ const FormInput = ({ name, label, type, value, onChange, error }) => (
         width: "100%",
         outline: 0,
         borderWidth: 3,
-        borderColor: error ? "tomato" : "white",
+        borderColor: "white",
         borderStyle: "solid",
         backgroundColor: "transparent",
-        boxShadow: theme =>
-          generate3dShadow(5, error ? theme.colors.tomato : theme.colors.white),
+        boxShadow: theme => generate3dShadow(5, theme.colors.white),
         boxSizing: "border-box",
-        color: error ? "tomato" : "white",
+        color: "white",
         fontSize: 1,
         padding: 1,
         ":focus, :active": {
@@ -219,7 +225,10 @@ const FormInput = ({ name, label, type, value, onChange, error }) => (
         mb={0}
         sx={{ textTransform: "uppercase" }}
       >
-        {label} <small>{error}</small>
+        {label}{" "}
+        <small style={{ fontWeight: "normal", textTransform: "capitalize" }}>
+          {error}
+        </small>
       </Text>
       {type === "textarea" && (
         <textarea name={name} value={value} onChange={onChange} />

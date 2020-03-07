@@ -1,5 +1,6 @@
 import React from "react"
-import { Flex, Box, Text, Link } from "rebass"
+import PropTypes from "prop-types"
+import { Flex, Box, Text, Link, Button } from "rebass"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faFacebook,
@@ -8,6 +9,8 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"
 import { useStaticQuery, graphql } from "gatsby"
+import { DialogOverlay, DialogContent } from "@reach/dialog"
+import "@reach/dialog/styles.css"
 
 const ModalQuery = graphql`
   query ModalQuery {
@@ -24,7 +27,7 @@ const ModalQuery = graphql`
   }
 `
 
-const MessageSentModal = () => {
+const MessageSentModal = ({ isOpen, onDismiss }) => {
   const {
     site: {
       siteMetadata: {
@@ -34,26 +37,27 @@ const MessageSentModal = () => {
   } = useStaticQuery(ModalQuery)
 
   return (
-    <>
-      <Flex
-        sx={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100vh",
-          alignItems: "center",
-          justifyContent: "center",
-          zIndex: 9999,
-        }}
-      >
+    <DialogOverlay
+      isOpen={isOpen}
+      onDismiss={onDismiss}
+      aria-label="Modal Success Overlay"
+    >
+      <DialogContent style={{ padding: 0 }} aria-label="Modal Success Content">
         <Box
           sx={{
             backgroundColor: "white",
-            width: "50%",
             opacity: 1,
+            position: "relative",
           }}
         >
+          <Button
+            m={2}
+            sx={{ position: "absolute", right: 0 }}
+            onClick={onDismiss}
+          >
+            <span aria-hidden>×</span>
+          </Button>
+
           <Box
             sx={{
               backgroundColor: "darkBlue",
@@ -86,7 +90,7 @@ const MessageSentModal = () => {
             flex={1}
             justifyContent="center"
             alignItems="center"
-            my={2}
+            py={2}
             flexDirection="column"
           >
             <Text
@@ -116,9 +120,14 @@ const MessageSentModal = () => {
             </Text>
           </Flex>
         </Box>
-      </Flex>
-    </>
+      </DialogContent>
+    </DialogOverlay>
   )
+}
+
+MessageSentModal.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onDismiss: PropTypes.func.isRequired,
 }
 
 export default MessageSentModal
