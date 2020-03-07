@@ -1,5 +1,7 @@
 import React from "react"
 import { Box, Button, Flex, Image, Link, Text } from "rebass"
+
+import theme from "../theme"
 import Container from "./container"
 import Logo from "../images/logo.svg"
 
@@ -7,7 +9,7 @@ const meetups = [
   {
     id: 1,
     logo: Logo,
-    title: "August Meetup",
+    title: "August Meet-up",
     date: "August 2019",
     venue: "Venue TBA",
     replay: null,
@@ -15,7 +17,7 @@ const meetups = [
   {
     id: 2,
     logo: Logo,
-    title: "July Meetup",
+    title: "July Meet-up",
     date: "18 July 2019, 6:00–10:00 pm",
     venue:
       "SplitmediaLabs Philippines, Inc. 86 Eulogio Rodriguez Jr. Avenue, Quezon City",
@@ -24,7 +26,7 @@ const meetups = [
   {
     id: 3,
     logo: Logo,
-    title: "June Meetup",
+    title: "June Meet-up",
     date: "8 June 2019, 1:00–5:00 pm",
     venue:
       "7/F Launchpad Building, Reliance cor. Sheridan St., Bgy. Highway Hills, Mandaluyong City",
@@ -33,29 +35,54 @@ const meetups = [
 ]
 
 const MeetupSection = () => (
-  <Box pt={4} pb={5}>
+  <Box pb={[7, 9]}>
     <Container>
       <Text
         as="h2"
         fontSize={[4, 5]}
-        color="lightBlue"
+        color="darkBlue"
         fontWeight="bold"
         textAlign="center"
-        mb={3}
-        sx={{ textTransform: "uppercase" }}
+        lineHeight="heading"
+        mb={[2, 3]}
+        sx={{
+          textTransform: "uppercase",
+          textShadow: `
+            -1px -1px 0 ${theme.colors.lightBlue},  
+            1px -1px 0 ${theme.colors.lightBlue},
+            -1px 1px 0 ${theme.colors.lightBlue},
+            1px 1px 0 ${theme.colors.lightBlue},
+            2px 2px 0 ${theme.colors.lightBlue},
+            3px 3px 0 ${theme.colors.lightBlue},
+            4px 4px 0 ${theme.colors.lightBlue},
+            5px 5px 0 ${theme.colors.lightBlue}
+          `,
+        }}
       >
-        Monthly Meetups
+        Community Meet‑ups
       </Text>
 
       <Box
         sx={{
           display: "grid",
-          gridGap: "2rem",
-          gridTemplateColumns: ["auto", `repeat(auto-fit, minmax(256px, 1fr))`],
+          gridGap: "3rem 2rem",
+          gridTemplateColumns: [
+            "auto",
+            null,
+            `repeat(auto-fit, minmax(25em, 1fr))`,
+          ],
         }}
       >
         {meetups.map(({ id, logo, title, date, venue, replay }) => (
-          <Flex key={id} flexDirection="column" color="darkblue" mt={2}>
+          <Flex
+            key={id}
+            flexDirection="column"
+            width="100%"
+            maxWidth="30em"
+            color="darkblue"
+            mt={2}
+            mx="auto"
+          >
             <Image
               src={logo}
               alt={title}
@@ -65,7 +92,19 @@ const MeetupSection = () => (
               display="block"
             />
 
-            <Flex bg="white" p={2} flexDirection="column" flex={1}>
+            <Flex
+              bg="white"
+              p={2}
+              flexDirection="column"
+              flex={1}
+              sx={{
+                boxShadow: "main",
+                transition: "200ms transform",
+                "&:hover": {
+                  transform: "translateY(-0.5rem)",
+                },
+              }}
+            >
               <Box flex={1}>
                 <Flex alignItems="baseline" fontWeight="bold" fontSize={2}>
                   <Link href="/">{title}</Link>
@@ -75,13 +114,15 @@ const MeetupSection = () => (
                 <Text>{venue}</Text>
               </Box>
 
-              <Box mt={3}>
+              <Box mt={2}>
                 {!replay ? (
                   <>
-                    <Button variant="outline" mr={2}>
+                    <Button variant="outline" mr={1}>
                       △ Sponsor
                     </Button>
-                    <Button variant="outline">▩ SPEAK</Button>
+                    <Button variant="outline" mt="1">
+                      ▩ SPEAK
+                    </Button>
                   </>
                 ) : (
                   <Button variant="outline">◉ Watch</Button>

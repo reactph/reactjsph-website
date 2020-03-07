@@ -9,7 +9,7 @@ import Logo from "../images/logo.svg"
 import Container from "./container"
 
 const menus = [
-  { label: "Meetups", path: "/meetups" },
+  { label: "Meet-ups", path: "/meetups" },
   { label: "Blog", path: "/blog" },
   { label: "Jobs", path: "/jobs" },
 ]
@@ -53,19 +53,20 @@ const Header = ({ siteTitle }) => {
       <Container>
         <Flex
           color="white"
-          justifyContent="space-between"
           alignItems="center"
+          justifyContent="space-between"
           py={2}
         >
-          <GatsbyLink to="/">
+          <Link as={GatsbyLink} to="/">
             <Image src={Logo} alt={siteTitle} width="12.5rem" />
-          </GatsbyLink>
+          </Link>
 
           <Box as="nav" ref={navRef}>
             <Box
               as="button"
               fontSize={3}
-              display={isMobile ? "block" : "none"}
+              display={["block", "none"]}
+              width="45px"
               sx={{
                 backgroundColor: "transparent",
                 color: "white",
@@ -83,6 +84,7 @@ const Header = ({ siteTitle }) => {
               <FontAwesomeIcon
                 aria-hidden="true"
                 icon={!showMenu ? faBars : faTimes}
+                size="1x"
               />
             </Box>
 
@@ -95,16 +97,12 @@ const Header = ({ siteTitle }) => {
               py={[4, 0]}
               sx={{
                 transition: "right 300ms ease",
-                ...(isMobile
-                  ? {
-                      position: "absolute",
-                      top: 0,
-                      right: showMenu ? 0 : "-250px",
-                      bottom: 0,
-                      width: "250px",
-                      overflow: "hidden",
-                    }
-                  : {}),
+                position: ["absolute", "static"],
+                top: 0,
+                right: showMenu ? 0 : "-250px",
+                bottom: 0,
+                width: ["250px", "100%"],
+                overflow: ["hidden", "visible"],
               }}
             >
               {menus.map(menu => (
