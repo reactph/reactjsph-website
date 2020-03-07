@@ -3,7 +3,7 @@ import { Box, Flex, Text, Image } from "rebass"
 import Container from "./container"
 import brandmarkLogo from "../images/brandmark.svg"
 import orbitBackground from "../images/orbits.svg"
-import memberPlaceholder from "../images/member-placeholder.jpg"
+import TeamMember from "./teamMember"
 
 const Members = [
   {
@@ -138,51 +138,7 @@ const TeamSection = () => (
             }}
           >
             {Members.map(member => (
-              <Box
-                key={member.id}
-                width="100%"
-                sx={{
-                  flexShrink: [0, 1],
-                  textAlign: "center",
-                  transition: "200ms transform",
-                  textShadow: "main",
-                  "&:hover": {
-                    transform: "translateY(-0.5rem)",
-                    cursor: "pointer",
-                    img: {
-                      transform: "translateY(-0.5rem)",
-                    },
-                  },
-                }}
-              >
-                <Image
-                  sx={{
-                    objectFit: "cover",
-                    objectPosition: "center",
-                    width: "174px",
-                    height: "174px",
-                    borderRadius: "50%",
-                    transition: "200ms transform",
-                    boxShadow: "main",
-                  }}
-                  src={member.photo || memberPlaceholder}
-                  alt={member.name}
-                />
-                <Text
-                  mt={0}
-                  fontSize={2}
-                  fontWeight="bold"
-                  color="white"
-                  sx={{
-                    textTransform: "uppercase",
-                  }}
-                >
-                  {member.name}
-                </Text>
-                <Text fontSize={1} color="white">
-                  {member.role}
-                </Text>
-              </Box>
+              <TeamMember member={member} />
             ))}
           </Box>
         </Box>
