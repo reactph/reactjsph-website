@@ -5,27 +5,30 @@ import memberPlaceholder from "../images/member-placeholder.jpg"
 
 const TeamMember = ({ member: { photo, name, role }, ...props }) => (
   <Box
-    width="100%"
     sx={{
-      textAlign: "center",
+      display: "inline-flex",
+      flexDirection: ["row", null, "column"],
+      alignItems: "center",
       transition: "200ms transform",
       textShadow: "main",
       "&:hover": {
-        transform: "translateY(-0.5rem)",
+        transform: ["translateY(-0.3rem)", null, "translateY(-0.5rem)"],
         cursor: "pointer",
         img: {
-          transform: "translateY(-0.5rem)",
+          transform: [null, null, "translateY(-0.5rem)"],
         },
       },
     }}
     {...props}
   >
     <Image
+      mb={[0, null, 1]}
+      mr={[2, null, 0]}
       sx={{
         objectFit: "cover",
         objectPosition: "center",
-        width: "174px",
-        height: "174px",
+        minWidth: ["5em", null, "174px"],
+        maxWidth: 0,
         borderRadius: "50%",
         transition: "200ms transform",
         boxShadow: "main",
@@ -33,20 +36,22 @@ const TeamMember = ({ member: { photo, name, role }, ...props }) => (
       src={photo || memberPlaceholder}
       alt={name}
     />
-    <Text
-      mt={0}
-      fontSize={2}
-      fontWeight="bold"
-      color="white"
-      sx={{
-        textTransform: "uppercase",
-      }}
-    >
-      {name}
-    </Text>
-    <Text fontSize={1} color="white">
-      {role}
-    </Text>
+    <Box minWidth="10em" textAlign={["left", null, "center"]}>
+      <Text
+        mt={0}
+        fontSize={[1, 2]}
+        fontWeight="bold"
+        color="white"
+        sx={{
+          textTransform: "uppercase",
+        }}
+      >
+        {name}
+      </Text>
+      <Text fontSize={1} color="white">
+        {role}
+      </Text>
+    </Box>
   </Box>
 )
 

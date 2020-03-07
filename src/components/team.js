@@ -129,13 +129,29 @@ const TeamSection = () => (
         }}
       />
       <Container>
-        <Box sx={{ position: "relative" }}>
-          <TeamMember member={Members[0]} mb={[3, null, 4]} />
+        <Box
+          width={["60%", "90%"]}
+          minWidth="16em"
+          mx="auto"
+          sx={{ position: "relative" }}
+        >
+          <Box
+            display="flex"
+            justifyContent="center"
+            width="100%"
+            mb={[2, 3, 4]}
+          >
+            <TeamMember member={Members[0]} width={["100%", "auto"]} />
+          </Box>
           <Box
             sx={{
               display: "grid",
-              gridTemplateColumns: `repeat(auto-fit, minmax(16rem, 1fr))`,
-              gridRowGap: [3, null, 4],
+              gridTemplateColumns: [
+                "1fr",
+                "1fr 1fr",
+                "repeat(auto-fit, minmax(16rem, 1fr))",
+              ],
+              gridRowGap: [2, 3, 4],
               gridColumnGap: 4,
             }}
           >
