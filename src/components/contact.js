@@ -47,7 +47,7 @@ const Contact = () => {
       null
 
     const data = {
-      "form-name": "contact",
+      "form-name": "contact-form",
       "g-recaptcha-response": recaptchaValue,
       ...values,
     }
@@ -113,6 +113,7 @@ const Contact = () => {
         >
           {({ values, handleSubmit, handleChange, touched, errors }) => (
             <form onSubmit={handleSubmit}>
+              <input type="hidden" name="form-name" value="contact-form" />
               <Box
                 sx={{
                   display: "grid",
