@@ -3,11 +3,10 @@ import { Box, Text, Image } from "rebass"
 
 import memberPlaceholder from "../images/member-placeholder.jpg"
 
-const TeamMember = ({ member: { photo, name, role } }) => (
+const TeamMember = ({ member: { photo, name, role }, ...props }) => (
   <Box
     width="100%"
     sx={{
-      flexShrink: [0, 1],
       textAlign: "center",
       transition: "200ms transform",
       textShadow: "main",
@@ -19,6 +18,7 @@ const TeamMember = ({ member: { photo, name, role } }) => (
         },
       },
     }}
+    {...props}
   >
     <Image
       sx={{

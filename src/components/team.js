@@ -7,6 +7,12 @@ import TeamMember from "./teamMember"
 
 const Members = [
   {
+    id: 0,
+    photo: "",
+    name: "Franrey Saycon",
+    role: "Head Director",
+  },
+  {
     id: 1,
     photo: "",
     name: "Marjorie J. Martinez",
@@ -15,14 +21,14 @@ const Members = [
   {
     id: 2,
     photo: "",
-    name: "Franrey Saycon",
-    role: "Head Director",
+    name: "Jayson de los reyes",
+    role: "Director, Internal Affairs",
   },
   {
     id: 3,
     photo: "",
-    name: "Jayson de los reyes",
-    role: "Director, Internal Affairs",
+    name: "Miguel N. Galace",
+    role: "Director, External Affairs",
   },
   {
     id: 4,
@@ -117,27 +123,23 @@ const TeamSection = () => (
           left: "-9999px",
           right: "-9999px",
           maxWidth: "none",
-          height: "100%",
+          height: "85%",
           m: "auto",
           userSelect: "none",
         }}
       />
       <Container>
-        <Box
-          sx={{
-            zIndex: 2,
-            position: "relative",
-          }}
-        >
+        <Box sx={{ position: "relative" }}>
+          <TeamMember member={Members[0]} mb={[3, null, 4]} />
           <Box
             sx={{
               display: "grid",
               gridTemplateColumns: `repeat(auto-fit, minmax(16rem, 1fr))`,
-              gridRowGap: [4, null, 6],
+              gridRowGap: [3, null, 4],
               gridColumnGap: 4,
             }}
           >
-            {Members.map(member => (
+            {Members.slice(1).map(member => (
               <TeamMember member={member} />
             ))}
           </Box>
