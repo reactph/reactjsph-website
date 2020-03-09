@@ -131,6 +131,7 @@ const customTheme = {
       },
     },
     outline: {
+      minWidth: "120px",
       borderWidth: "3px",
       borderStyle: "solid",
       borderColor: "darkblue",
@@ -140,7 +141,8 @@ const customTheme = {
       fontFamily: "Avenir, Helvetica, Arial, sans-serif",
       letterSpacing: "0.1em",
       textTransform: "uppercase",
-      p: 1,
+      px: 2,
+      py: 1,
       boxShadow: generate3dShadow(5, darkBlue),
       outline: 0,
       cursor: "pointer",
