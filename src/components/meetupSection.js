@@ -1,38 +1,51 @@
-import React from "react"
-import { Box, Button, Flex, Image, Link, Text } from "rebass"
+import React, { Fragment } from "react"
+import { Box, Button, Flex, Text } from "rebass"
+import nanoid from "nanoid"
+import { format } from "date-fns"
 
 import theme from "../theme"
 import Container from "./container"
-import Logo from "../images/logo.svg"
 
-const meetups = [
-  {
-    id: 1,
-    logo: Logo,
-    title: "August Meet-up",
-    date: "August 2019",
-    venue: "Venue TBA",
-    replay: null,
-  },
-  {
-    id: 2,
-    logo: Logo,
-    title: "July Meet-up",
-    date: "18 July 2019, 6:00–10:00 pm",
-    venue:
-      "SplitmediaLabs Philippines, Inc. 86 Eulogio Rodriguez Jr. Avenue, Quezon City",
-    replay: true,
-  },
-  {
-    id: 3,
-    logo: Logo,
-    title: "June Meet-up",
-    date: "8 June 2019, 1:00–5:00 pm",
-    venue:
-      "7/F Launchpad Building, Reliance cor. Sheridan St., Bgy. Highway Hills, Mandaluyong City",
-    replay: true,
-  },
-]
+const generateId = () => nanoid(5)
+
+const formatDate = date => format(new Date(date), "dd MMM yyyy")
+
+// Date must in YYYY-MM-DD format
+const meetups = {
+  upcoming: [
+    {
+      id: generateId(),
+      title: "Testing and Architecture",
+      date: "2020-03-19",
+      venue: "Taguig",
+      rsvp: "",
+      link: "",
+    },
+  ],
+  past: [
+    {
+      id: generateId(),
+      title: "React JS Meetup #7",
+      date: "2020-01-30",
+      venue: "iRipple / Pasig",
+      link: "https://facebook.com/events/542679469665255/",
+    },
+    {
+      id: generateId(),
+      title: "React JS Meetup #6",
+      date: "2019-11-19",
+      venue: "23F Lake Taal and Sebu W City Center, BGC, Taguig",
+      link: "https://facebook.com/events/567713373977346/",
+    },
+    {
+      id: generateId(),
+      title: "React JS Meetup #5",
+      date: "2019-10-19",
+      venue: "Orange & Bronze Software Labs / Makati",
+      link: "https://facebook.com/events/2972154692814904/",
+    },
+  ],
+}
 
 const MeetupSection = () => (
   <Box pb={[7, 9]}>
@@ -62,75 +75,108 @@ const MeetupSection = () => (
         Community Meet‑ups
       </Text>
 
-      <Box
-        sx={{
-          display: "grid",
-          gridGap: "3rem 2rem",
-          gridTemplateColumns: [
-            "auto",
-            null,
-            `repeat(auto-fit, minmax(25em, 1fr))`,
-          ],
-        }}
-      >
-        {meetups.map(({ id, logo, title, date, venue, replay }) => (
-          <Flex
-            key={id}
-            flexDirection="column"
-            width="100%"
-            maxWidth="30em"
-            color="darkblue"
-            mt={2}
-            mx="auto"
+      {Object.keys(meetups).map(event => (
+        <Fragment key={event}>
+          <Text
+            as="h3"
+            fontSize={[2, 3]}
+            color="white"
+            fontWeight="heading"
+            mb={2}
+            sx={{ textTransform: "uppercase" }}
           >
-            <Image
-              src={logo}
-              alt={title}
-              width="12.5rem"
+            {event}
+          </Text>
+
+          <Box as="ul">
+            {meetups[event].map(({ id, title, date, venue, rsvp, link }) => (
+              <Flex
+                key={id}
+                as="li"
+                bg="white"
+                p={2}
+                mb={2}
+                color="darkBlue"
+                alignItems={["start", "center"]}
+                flexDirection={["column", "row"]}
+              >
+                <Box
+                  as="time"
+                  dateTime={date}
+                  pr={2}
+                  mr={2}
+                  sx={{
+                    textTransform: "uppercase",
+                    borderRightWidth: "1px",
+                    borderRightStyle: "solid",
+                    borderRightColor: ["transparent", "darkBlue"],
+                  }}
+                >
+                  {formatDate(date)}
+                </Box>
+
+                <Box flex={1} pt={[1, 0]} pb={[2, 0]}>
+                  <Text
+                    as="h4"
+                    fontSize={[2, 3]}
+                    fontWeight="heading"
+                    sx={{ textTransform: "uppercase" }}
+                  >
+                    {title}
+                  </Text>
+                  <Text>{venue}</Text>
+                </Box>
+
+                <div>
+                  {rsvp && (
+                    <Button
+                      as="a"
+                      href={rsvp}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      variant="outline"
+                      mr={1}
+                    >
+                      ✛ RSVP
+                    </Button>
+                  )}
+
+                  <Button
+                    as="a"
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="outline"
+                  >
+                    ↗ Open
+                  </Button>
+                </div>
+              </Flex>
+            ))}
+          </Box>
+
+          {event === "upcoming" && (
+            <Box
+              as="hr"
+              my={3}
               mx="auto"
-              mb={3}
-              display="block"
+              sx={{ borderColor: "white", height: "2px", maxWidth: "170px" }}
             />
+          )}
+        </Fragment>
+      ))}
 
-            <Flex
-              bg="white"
-              p={2}
-              flexDirection="column"
-              flex={1}
-              sx={{
-                boxShadow: "main",
-                transition: "200ms transform",
-                "&:hover": {
-                  transform: "translateY(-0.5rem)",
-                },
-              }}
-            >
-              <Box flex={1}>
-                <Flex alignItems="baseline" fontWeight="bold" fontSize={2}>
-                  <Link href="/">{title}</Link>
-                  <Text ml="0.5rem">›</Text>
-                </Flex>
-                <Text my="0.25rem">{date}</Text>
-                <Text>{venue}</Text>
-              </Box>
-
-              <Box mt={2}>
-                {!replay ? (
-                  <>
-                    <Button variant="outline" mr={1}>
-                      △ Sponsor
-                    </Button>
-                    <Button variant="outline" mt="1">
-                      ▩ SPEAK
-                    </Button>
-                  </>
-                ) : (
-                  <Button variant="outline">◉ Watch</Button>
-                )}
-              </Box>
-            </Flex>
-          </Flex>
-        ))}
+      <Box textAlign="center" mt={3}>
+        <Button
+          as="a"
+          href="https://facebook.com/reactjsphilippines/events/"
+          target="_blank"
+          rel="noopener noreferrer"
+          variant="primary"
+          mx="auto"
+        >
+          More on Facebook
+        </Button>
       </Box>
     </Container>
   </Box>
