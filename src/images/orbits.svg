@@ -1,16 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1261" height="1219.052" viewBox="0 0 1261 1219.052">
-  <g id="Group_87" data-name="Group 87" transform="translate(-90 -3586.974)">
-    <g id="Ellipse_16" data-name="Ellipse 16" transform="translate(90 3965)" fill="none" stroke="#7bd5f5" stroke-width="3">
-      <ellipse cx="630.5" cy="231.5" rx="630.5" ry="231.5" stroke="none"/>
-      <ellipse cx="630.5" cy="231.5" rx="629" ry="230" fill="none"/>
-    </g>
-    <g id="Ellipse_17" data-name="Ellipse 17" transform="translate(110.974 4478.636) rotate(-45)" fill="none" stroke="#7bd5f5" stroke-width="3">
-      <ellipse cx="630.5" cy="231.5" rx="630.5" ry="231.5" stroke="none"/>
-      <ellipse cx="630.5" cy="231.5" rx="629" ry="230" fill="none"/>
-    </g>
-    <g id="Ellipse_18" data-name="Ellipse 18" transform="translate(1002.635 4806.026) rotate(-135)" fill="none" stroke="#7bd5f5" stroke-width="3">
-      <ellipse cx="630.5" cy="231.5" rx="630.5" ry="231.5" stroke="none"/>
-      <ellipse cx="630.5" cy="231.5" rx="629" ry="230" fill="none"/>
-    </g>
-  </g>
-</svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!-- Generator: Gravit.io --><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 1311 1000" width="1311pt" height="1000pt"><defs><clipPath id="_clipPath_LYJ0mjE07G8hBZFJGX8HKgGcKcsfdYlU"><rect width="1311" height="1000"/></clipPath></defs><g clip-path="url(#_clipPath_LYJ0mjE07G8hBZFJGX8HKgGcKcsfdYlU)"><g><ellipse vector-effect="non-scaling-stroke" cx="655.5" cy="499.9999999999998" rx="630.5" ry="231.49999999999997" fill="none" stroke-width="3" stroke="rgb(123,213,245)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/><path d=" M 209.669 945.831 C 119.323 855.485 245.744 582.366 491.805 336.305 C 737.866 90.244 1010.985 -36.177 1101.331 54.169 C 1191.677 144.515 1065.256 417.634 819.195 663.695 C 573.134 909.756 300.015 1036.177 209.669 945.831 Z " fill="none" vector-effect="non-scaling-stroke" stroke-width="3" stroke="rgb(123,213,245)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/><path d=" M 209.669 54.169 C 300.015 -36.177 573.134 90.244 819.195 336.305 C 1065.256 582.366 1191.677 855.485 1101.331 945.831 C 1010.985 1036.177 737.866 909.756 491.805 663.695 C 245.744 417.634 119.323 144.515 209.669 54.169 Z " fill="none" vector-effect="non-scaling-stroke" stroke-width="3" stroke="rgb(123,213,245)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/></g></g></svg>

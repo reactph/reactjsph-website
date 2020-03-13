@@ -7,15 +7,16 @@ import communityImg from "../images/community-img.jpg"
 const VisionSection = () => (
   <Box
     backgroundColor="white"
-    pt={5}
+    pt={[3, 4, 6]}
     mt={40}
+    mb={[4, 6]}
     sx={{
       position: "relative",
       ":after": {
         background:
-          "linear-gradient(-35deg,#ffffff 46px,transparent 0),linear-gradient(35deg,#ffffff 46px,transparent 0)",
+          "linear-gradient(-40deg,#ffffff 46px,transparent 0),linear-gradient(40deg,#ffffff 46px,transparent 0)",
         backgroundRepeat: "repeat-x",
-        backgroundSize: "96px 60px",
+        backgroundSize: "80px 60px",
         content: "''",
         display: "block",
         position: "absolute",
@@ -33,7 +34,7 @@ const VisionSection = () => (
         fontSize={[2, 3]}
         fontWeight="heading"
         color="gold"
-        mb={3}
+        mb={[2, 3]}
         sx={{ textTransform: "uppercase" }}
       >
         Vision
@@ -42,17 +43,17 @@ const VisionSection = () => (
         fontSize={[2, 3]}
         fontWeight="heading"
         color="darkBlue"
-        maxWidth={582}
         width="100%"
         mx="auto"
         mb={3}
-        lineHeight="3.157rem"
+        lineHeight="1.75"
+        letterSpacing="0.05em"
         sx={{ textTransform: "uppercase" }}
       >
         A community of developers, who practice excellence, in service of
         Filipinos
       </Text>
-      <Image src={zigzag} alt="divider" mb={4} />
+      <Image src={zigzag} alt="divider" mb={[3, 4]} />
     </Box>
     <Box
       height={[200, 330]}
@@ -67,7 +68,7 @@ const VisionSection = () => (
         boxShadow: "0px 0px 20px 0px rgba(0, 0, 0, 0.50)",
       }}
     />
-    <Box height={[100, 165]} backgroundColor="darkBlue" mt={[-100, -165]} />
+    <Box height={[50, 83]} backgroundColor="darkBlue" mt={[-50, -83]} />
   </Box>
 )
 

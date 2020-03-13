@@ -19,7 +19,13 @@
     "import/imports-first": ["error", "absolute-first"],
     "import/newline-after-import": "error",
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-props-no-spreading": [
+      0,
+      {
+        "exceptions": ["Box"]
+      }
+    ]
   },
   "globals": {
     "window": true,

@@ -63,15 +63,18 @@ const Members = [
 ]
 
 const TeamSection = () => (
-  <Box backgroundColor="darkBlue" py={5}>
+  <Box backgroundColor="darkBlue" overflow="hidden" mb={[3, null, 6]}>
     <Container>
       <Flex justifyContent="center" alignItems="center">
         <Text
-          fontSize={[3, 4]}
+          fontSize={[3, 4, 5]}
           fontWeight="bold"
           color="lightBlue"
           sx={{
+            borderBottom: "0.15em groove",
+            borderColor: "lightBlue",
             textTransform: "uppercase",
+            textShadow: "main",
             whiteSpace: "nowrap",
           }}
         >
@@ -80,38 +83,46 @@ const TeamSection = () => (
         <Image
           src={brandmarkLogo}
           alt="ReactJS Philippines"
-          width={["30%", "174px"]}
+          width="20vw"
+          maxWidth="10rem"
         />
         <Text
-          fontSize={[3, 4]}
+          fontSize={[3, 4, 5]}
           fontWeight="bold"
           color="lightBlue"
           sx={{
+            borderBottom: "0.15em groove",
+            borderColor: "lightBlue",
             textTransform: "uppercase",
+            textShadow: "main",
             whiteSpace: "nowrap",
           }}
         >
           Team »
         </Text>
       </Flex>
-      <Box
+    </Container>
+    <Box
+      py={[2, 3, 4]}
+      sx={{
+        position: "relative",
+      }}
+    >
+      <Image
+        src={orbitBackground}
         sx={{
-          position: "relative",
+          position: "absolute",
+          top: "-9999px",
+          bottom: "-9999px",
+          left: "-9999px",
+          right: "-9999px",
+          maxWidth: "none",
           height: "100%",
+          m: "auto",
+          userSelect: "none",
         }}
-      >
-        <Image
-          src={orbitBackground}
-          alt="Orbit"
-          sx={{
-            position: "absolute",
-            width: "100%",
-            top: [0, "28px"],
-            left: 0,
-            zIndex: 1,
-            userSelect: "none",
-          }}
-        />
+      />
+      <Container>
         <Box
           sx={{
             zIndex: 2,
@@ -119,31 +130,27 @@ const TeamSection = () => (
           }}
         >
           <Box
-            mt={3}
-            pt={[3, 0]}
             sx={{
-              display: ["flex", "grid"],
-              gridTemplateColumns: [
-                "initial",
-                `repeat(auto-fit, minmax(295px, 1fr))`,
-              ],
-              overflowX: ["scroll", "initial"],
+              display: "grid",
+              gridTemplateColumns: `repeat(auto-fit, minmax(16rem, 1fr))`,
+              gridRowGap: [4, null, 6],
+              gridColumnGap: 4,
             }}
           >
             {Members.map(member => (
               <Box
                 key={member.id}
-                px={2}
-                py={3}
                 width="100%"
                 sx={{
                   flexShrink: [0, 1],
                   textAlign: "center",
-                  transition: "300ms ease all",
+                  transition: "200ms transform",
+                  textShadow: "main",
                   "&:hover": {
-                    transform: "translateY(-10px)",
+                    transform: "translateY(-0.5rem)",
+                    cursor: "pointer",
                     img: {
-                      transform: "scale(1.1)",
+                      transform: "translateY(-0.5rem)",
                     },
                   },
                 }}
@@ -155,7 +162,8 @@ const TeamSection = () => (
                     width: "174px",
                     height: "174px",
                     borderRadius: "50%",
-                    transition: "300ms ease all",
+                    transition: "200ms transform",
+                    boxShadow: "main",
                   }}
                   src={member.photo || memberPlaceholder}
                   alt={member.name}
@@ -178,8 +186,8 @@ const TeamSection = () => (
             ))}
           </Box>
         </Box>
-      </Box>
-    </Container>
+      </Container>
+    </Box>
   </Box>
 )
 
