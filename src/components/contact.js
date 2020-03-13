@@ -204,6 +204,7 @@ const FormInput = ({ name, label, type, value, onChange, error }) => (
         borderStyle: "solid",
         backgroundColor: "transparent",
         boxShadow: theme => generate3dShadow(5, theme.colors.white),
+        fontFamily: "body",
         boxSizing: "border-box",
         color: "white",
         fontSize: 1,
