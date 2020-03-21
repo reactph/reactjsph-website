@@ -139,7 +139,7 @@ module.exports = {
         // Facebook account or page ID
         pageId: facebookPageID,
         params: {
-          fields: ["events"],
+          fields: ["events.limit(3)"],
         },
         // Access Token from Facebook Graph API
         accessToken: process.env.FACEBOOK_GRAPH_TOKEN,
