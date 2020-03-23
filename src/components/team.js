@@ -45,25 +45,7 @@ const Members = [
   {
     id: 6,
     photo: "",
-    name: "RJ David",
-    role: "Member, Board of Trustees",
-  },
-  {
-    id: 7,
-    photo: "",
     name: "Jerome Estiller",
-    role: "Member, Board of Trustees",
-  },
-  {
-    id: 8,
-    photo: "",
-    name: "Paul Simon Ongpin",
-    role: "Member, Board of Trustees",
-  },
-  {
-    id: 9,
-    photo: "",
-    name: "John Dave decano",
     role: "Member, Board of Trustees",
   },
 ]
@@ -123,7 +105,7 @@ const TeamSection = () => (
           left: "-9999px",
           right: "-9999px",
           maxWidth: "none",
-          height: "85%",
+          height: "105%",
           m: "auto",
           userSelect: "none",
         }}
