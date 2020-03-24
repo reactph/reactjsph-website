@@ -5,46 +5,56 @@ import brandmarkLogo from "../images/brandmark.svg"
 import orbitBackground from "../images/orbits.svg"
 import TeamMember from "./teamMember"
 
+import {
+  imgFran,
+  imgMarj,
+  imgJayson,
+  imgGuigi,
+  imgJoe,
+  imgRem,
+  imgJerome,
+} from "../images"
+
 const Members = [
   {
     id: 0,
-    photo: "",
+    photo: imgFran,
     name: "Franrey Saycon",
     role: "Head Director",
   },
   {
     id: 1,
-    photo: "",
+    photo: imgMarj,
     name: "Marjorie J. Martinez",
     role: "Director, External Affairs",
   },
   {
     id: 2,
-    photo: "",
+    photo: imgJayson,
     name: "Jayson de los reyes",
     role: "Director, Internal Affairs",
   },
   {
     id: 3,
-    photo: "",
+    photo: imgGuigi,
     name: "Miguel N. Galace",
     role: "Director, External Affairs",
   },
   {
     id: 4,
-    photo: "",
+    photo: imgJoe,
     name: "Joe Palala",
     role: "Member, Board of Trustees",
   },
   {
     id: 5,
-    photo: "",
+    photo: imgRem,
     name: "Rem Lampa",
     role: "Member, Board of Trustees",
   },
   {
     id: 6,
-    photo: "",
+    photo: imgJerome,
     name: "Jerome Estiller",
     role: "Member, Board of Trustees",
   },
