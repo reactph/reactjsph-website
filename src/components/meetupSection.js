@@ -75,59 +75,62 @@ const MeetupSection = () => {
           Past
         </Text>
 
-        {data.map(({ id, name, start_time, place }) => (
-          <Flex
-            key={id}
-            as="li"
-            bg="white"
-            p={2}
-            mb={2}
-            color="darkBlue"
-            alignItems={["start", "center"]}
-            flexDirection={["column", "row"]}
-          >
-            <Box
-              as="time"
-              dateTime={start_time}
-              pr={2}
-              mr={2}
-              fontSize={[1, 2]}
-              sx={{
-                textTransform: "uppercase",
-                borderRightWidth: "1px",
-                borderRightStyle: "solid",
-                borderRightColor: ["transparent", "darkBlue"],
-              }}
-            >
-              {formatDate(start_time)}
-            </Box>
+        {data.map(({ id, name, start_time, place }) => {
+          const city = place?.location?.city
 
-            <Box flex={1} pt={[1, 0]} pb={[2, 0]} mr={[0, 2]}>
-              <Text
-                as="h4"
-                fontSize={[2, 3]}
-                fontWeight="heading"
-                sx={{ textTransform: "uppercase" }}
+          return (
+            <Flex
+              key={id}
+              as="li"
+              bg="white"
+              p={2}
+              mb={2}
+              color="darkBlue"
+              alignItems={["start", "center"]}
+              flexDirection={["column", "row"]}
+            >
+              <Box
+                as="time"
+                dateTime={start_time}
+                pr={2}
+                mr={2}
+                fontSize={[1, 2]}
+                sx={{
+                  textTransform: "uppercase",
+                  borderRightWidth: "1px",
+                  borderRightStyle: "solid",
+                  borderRightColor: ["transparent", "darkBlue"],
+                }}
               >
-                {name}
-              </Text>
-              <Text>{`${place.name}, ${place.location &&
-                place.location.city}`}</Text>
-            </Box>
+                {formatDate(start_time)}
+              </Box>
 
-            <Button
-              as="a"
-              href={`https://facebook.com/events/${id}/`}
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="outline"
-              mr="6px"
-              mb="6px"
-            >
-              ↗ Open
-            </Button>
-          </Flex>
-        ))}
+              <Box flex={1} pt={[1, 0]} pb={[2, 0]} mr={[0, 2]}>
+                <Text
+                  as="h4"
+                  fontSize={[2, 3]}
+                  fontWeight="heading"
+                  sx={{ textTransform: "uppercase" }}
+                >
+                  {name}
+                </Text>
+                <Text>{`${place.name}${city ? `, ${city}` : ""}`}</Text>
+              </Box>
+
+              <Button
+                as="a"
+                href={`https://facebook.com/events/${id}/`}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="outline"
+                mr="6px"
+                mb="6px"
+              >
+                ↗ Open
+              </Button>
+            </Flex>
+          )
+        })}
 
         <Box textAlign="center" mt={3}>
           <Button
