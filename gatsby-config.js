@@ -3,7 +3,7 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-const facebookPageID = 431794124327063 // ReactJS PH Facebook Page ID
+const FACEBOOK_PAGE_ID = 431794124327063 // ReactJS PH Facebook Page ID
 
 module.exports = {
   siteMetadata: {
@@ -137,7 +137,7 @@ module.exports = {
       resolve: `gatsby-source-facebook-graphql`,
       options: {
         // Facebook account or page ID
-        pageId: facebookPageID,
+        pageId: FACEBOOK_PAGE_ID,
         params: {
           fields: ["events.limit(3)"],
         },

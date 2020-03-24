@@ -91,6 +91,7 @@ const MeetupSection = () => {
               dateTime={start_time}
               pr={2}
               mr={2}
+              fontSize={[1, 2]}
               sx={{
                 textTransform: "uppercase",
                 borderRightWidth: "1px",
@@ -101,7 +102,7 @@ const MeetupSection = () => {
               {formatDate(start_time)}
             </Box>
 
-            <Box flex={1} pt={[1, 0]} pb={[2, 0]}>
+            <Box flex={1} pt={[1, 0]} pb={[2, 0]} mr={[0, 2]}>
               <Text
                 as="h4"
                 fontSize={[2, 3]}
@@ -120,18 +121,13 @@ const MeetupSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               variant="outline"
+              mr="6px"
+              mb="6px"
             >
               ↗ Open
             </Button>
           </Flex>
         ))}
-
-        <Box
-          as="hr"
-          my={3}
-          mx="auto"
-          sx={{ borderColor: "white", height: "2px", maxWidth: "170px" }}
-        />
 
         <Box textAlign="center" mt={3}>
           <Button
