@@ -1,6 +1,9 @@
 import React from "react"
 import { Box, Flex, Text, Image } from "rebass"
+import "csshake/dist/csshake.css"
+
 import Container from "./container"
+import "../assets/custom-shake.css"
 import brandmarkLogo from "../images/brandmark.svg"
 import orbitBackground from "../images/orbits.svg"
 import TeamMember from "./teamMember"
@@ -107,6 +110,7 @@ const TeamSection = () => (
       }}
     >
       <Image
+        className="shake shake-custom shake-constant"
         src={orbitBackground}
         sx={{
           position: "absolute",
