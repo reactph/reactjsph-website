@@ -114,7 +114,8 @@ const TeamSection = () => {
         </Flex>
       </Container>
       <Box
-        py={[2, 3, 4]}
+        pt={[2, 3, 5]}
+        pb={[2, 3, 8]}
         sx={{
           position: "relative",
         }}
@@ -129,7 +130,7 @@ const TeamSection = () => {
             left: "-9999px",
             right: "-9999px",
             maxWidth: "none",
-            height: "105%",
+            height: "100%",
             m: "auto",
             userSelect: "none",
           }}
