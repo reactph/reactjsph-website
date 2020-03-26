@@ -61,7 +61,7 @@ const Header = ({ siteTitle }) => {
             <Image src={Logo} alt={siteTitle} width="12.5rem" />
           </Link>
 
-          <Box as="nav" ref={navRef}>
+          <Box as="nav" ref={navRef} sx={{ display: "none" }}>
             <Box
               as="button"
               fontSize={3}
