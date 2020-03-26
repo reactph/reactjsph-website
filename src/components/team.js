@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Box, Flex, Text, Image } from "rebass"
 import "csshake/dist/csshake.css"
 
@@ -63,102 +63,115 @@ const Members = [
   },
 ]
 
-const TeamSection = () => (
-  <Box backgroundColor="darkBlue" overflow="hidden" mb={[3, null, 6]}>
-    <Container>
-      <Flex justifyContent="center" alignItems="center">
-        <Text
-          fontSize={[3, 4, 5]}
-          fontWeight="bold"
-          color="lightBlue"
-          sx={{
-            borderBottom: "0.15em groove",
-            borderColor: "lightBlue",
-            textTransform: "uppercase",
-            textShadow: "main",
-            whiteSpace: "nowrap",
-          }}
-        >
-          « Core
-        </Text>
-        <Image
-          src={brandmarkLogo}
-          alt="ReactJS Philippines"
-          width="20vw"
-          maxWidth="10rem"
-        />
-        <Text
-          fontSize={[3, 4, 5]}
-          fontWeight="bold"
-          color="lightBlue"
-          sx={{
-            borderBottom: "0.15em groove",
-            borderColor: "lightBlue",
-            textTransform: "uppercase",
-            textShadow: "main",
-            whiteSpace: "nowrap",
-          }}
-        >
-          Team »
-        </Text>
-      </Flex>
-    </Container>
-    <Box
-      py={[2, 3, 4]}
-      sx={{
-        position: "relative",
-      }}
-    >
-      <Image
-        className="shake shake-custom shake-constant"
-        src={orbitBackground}
-        sx={{
-          position: "absolute",
-          top: "-9999px",
-          bottom: "-9999px",
-          left: "-9999px",
-          right: "-9999px",
-          maxWidth: "none",
-          height: "105%",
-          m: "auto",
-          userSelect: "none",
-        }}
-      />
+const TeamSection = () => {
+  const [highlightedMemberId, setHighlightedMemberId] = useState(Members[0].id)
+
+  return (
+    <Box backgroundColor="darkBlue" overflow="hidden" mb={[3, null, 6]}>
       <Container>
-        <Box
-          width={["60%", "90%"]}
-          minWidth="16em"
-          mx="auto"
-          sx={{ position: "relative" }}
-        >
-          <Box
-            display="flex"
-            justifyContent="center"
-            width="100%"
-            mb={[2, 3, 4]}
-          >
-            <TeamMember member={Members[0]} width={["100%", "auto"]} />
-          </Box>
-          <Box
+        <Flex justifyContent="center" alignItems="center">
+          <Text
+            fontSize={[3, 4, 5]}
+            fontWeight="bold"
+            color="lightBlue"
             sx={{
-              display: "grid",
-              gridTemplateColumns: [
-                "1fr",
-                "1fr 1fr",
-                "repeat(auto-fit, minmax(16rem, 1fr))",
-              ],
-              gridRowGap: [2, 3, 4],
-              gridColumnGap: 4,
+              borderBottom: "0.15em groove",
+              borderColor: "lightBlue",
+              textTransform: "uppercase",
+              textShadow: "main",
+              whiteSpace: "nowrap",
             }}
           >
-            {Members.slice(1).map(member => (
-              <TeamMember member={member} />
-            ))}
-          </Box>
-        </Box>
+            « Core
+          </Text>
+          <Image
+            src={brandmarkLogo}
+            alt="ReactJS Philippines"
+            width="20vw"
+            maxWidth="10rem"
+          />
+          <Text
+            fontSize={[3, 4, 5]}
+            fontWeight="bold"
+            color="lightBlue"
+            sx={{
+              borderBottom: "0.15em groove",
+              borderColor: "lightBlue",
+              textTransform: "uppercase",
+              textShadow: "main",
+              whiteSpace: "nowrap",
+            }}
+          >
+            Team »
+          </Text>
+        </Flex>
       </Container>
+      <Box
+        py={[2, 3, 4]}
+        sx={{
+          position: "relative",
+        }}
+      >
+        <Image
+          className="shake shake-custom shake-constant"
+          src={orbitBackground}
+          sx={{
+            position: "absolute",
+            top: "-9999px",
+            bottom: "-9999px",
+            left: "-9999px",
+            right: "-9999px",
+            maxWidth: "none",
+            height: "105%",
+            m: "auto",
+            userSelect: "none",
+          }}
+        />
+        <Container>
+          <Box
+            width={["60%", "90%"]}
+            minWidth="16em"
+            mx="auto"
+            sx={{ position: "relative" }}
+          >
+            <Box
+              display="flex"
+              justifyContent="center"
+              width="100%"
+              mb={[2, 3, 4]}
+            >
+              <TeamMember
+                member={Members[0]}
+                isHighlighted={highlightedMemberId === Members[0].id}
+                onMouseEnter={() => setHighlightedMemberId(Members[0].id)}
+                width={["100%", "auto"]}
+              />
+            </Box>
+            <Box
+              sx={{
+                display: "grid",
+                gridTemplateColumns: [
+                  "1fr",
+                  "1fr 1fr",
+                  "repeat(auto-fit, minmax(16rem, 1fr))",
+                ],
+                gridRowGap: [2, 3, 4],
+                gridColumnGap: 4,
+              }}
+            >
+              {Members.slice(1).map(member => (
+                <TeamMember
+                  member={member}
+                  isHighlighted={highlightedMemberId === member.id}
+                  onMouseEnter={() => setHighlightedMemberId(member.id)}
+                />
+              ))}
+            </Box>
+          </Box>
+        </Container>
+      </Box>
     </Box>
-  </Box>
-)
+  )
+}
 
 export default TeamSection

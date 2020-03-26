@@ -1,23 +1,32 @@
 import React from "react"
 import { Box, Text, Image } from "rebass"
+import { keyframes } from "@emotion/core"
 
 import memberPlaceholder from "../images/member-placeholder.jpg"
 
-const TeamMember = ({ member: { photo, name, role }, ...props }) => (
+const float = keyframes`
+  to {
+    transform: translateY(-0.3rem);
+  }
+`
+
+const TeamMember = ({
+  isHighlighted = false,
+  member: { photo, name, role },
+  onMouseEnter: handleMouseEnter,
+  ...props
+}) => (
   <Box
+    onMouseEnter={handleMouseEnter}
     sx={{
       display: "inline-flex",
       flexDirection: ["row", null, "column"],
       alignItems: "center",
-      transition: "200ms transform",
       textShadow: "main",
-      "&:hover": {
-        transform: ["translateY(-0.3rem)", null, "translateY(-0.5rem)"],
-        cursor: "pointer",
-        img: {
-          transform: [null, null, "translateY(-0.5rem)"],
-        },
-      },
+      cursor: "pointer",
+      ...(isHighlighted && {
+        animation: `${float} 300ms ease-in-out infinite alternate`,
+      }),
     }}
     {...props}
   >
@@ -34,8 +43,11 @@ const TeamMember = ({ member: { photo, name, role }, ...props }) => (
         borderWidth: ["3px", null, "4px"],
         borderStyle: "solid",
         borderColor: "white",
-        transition: "200ms transform",
-        boxShadow: "main",
+        transition: "300ms box-shadow, 300ms transform",
+        ...(isHighlighted && {
+          boxShadow: "0 0 80px rgba(123, 213, 245, 0.75)",
+          transform: "scale(1.05)",
+        }),
       }}
       src={photo || memberPlaceholder}
       alt={name}
