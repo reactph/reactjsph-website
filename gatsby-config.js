@@ -5,7 +5,7 @@ module.exports = {
     author: `ReactJS PH`,
     email: `reactjs.ph@yahoo.com`,
     cover: `/meta-image-cover.jpg`,
-    url: `https://www.reactjs.ph`,
+    url: `https://reactjs.org.ph`,
     social: {
       facebook: `https://www.facebook.com/reactjsphilippines/`,
       messenger: `https://m.me/reactjsphilippines`,
