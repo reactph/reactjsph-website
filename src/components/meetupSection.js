@@ -1,54 +1,56 @@
+/* eslint-disable camelcase */
 import React from "react"
-import { Box, Button, Flex, Image, Link, Text } from "rebass"
+import { Box, Button, Flex, Text } from "rebass"
+import { format } from "date-fns"
+import { useStaticQuery, graphql } from "gatsby"
 
 import theme from "../theme"
 import Container from "./container"
-import Logo from "../images/logo.svg"
 
-const meetups = [
-  {
-    id: 1,
-    logo: Logo,
-    title: "August Meet-up",
-    date: "August 2019",
-    venue: "Venue TBA",
-    replay: null,
-  },
-  {
-    id: 2,
-    logo: Logo,
-    title: "July Meet-up",
-    date: "18 July 2019, 6:00–10:00 pm",
-    venue:
-      "SplitmediaLabs Philippines, Inc. 86 Eulogio Rodriguez Jr. Avenue, Quezon City",
-    replay: true,
-  },
-  {
-    id: 3,
-    logo: Logo,
-    title: "June Meet-up",
-    date: "8 June 2019, 1:00–5:00 pm",
-    venue:
-      "7/F Launchpad Building, Reliance cor. Sheridan St., Bgy. Highway Hills, Mandaluyong City",
-    replay: true,
-  },
-]
+const formatDate = date => format(new Date(date), "dd MMM yyyy")
 
-const MeetupSection = () => (
-  <Box pb={[7, 9]}>
-    <Container>
-      <Text
-        as="h2"
-        fontSize={[4, 5]}
-        color="darkBlue"
-        fontWeight="bold"
-        textAlign="center"
-        lineHeight="heading"
-        mb={[2, 3]}
-        sx={{
-          textTransform: "uppercase",
-          textShadow: `
-            -1px -1px 0 ${theme.colors.lightBlue},  
+const facebookEventQuery = graphql`
+  query FacebookEventQuery {
+    facebook {
+      events {
+        data {
+          id
+          name
+          start_time
+          place {
+            name
+            location {
+              city
+            }
+          }
+        }
+      }
+    }
+  }
+`
+
+const MeetupSection = () => {
+  const {
+    facebook: {
+      events: { data },
+    },
+  } = useStaticQuery(facebookEventQuery)
+
+  return (
+    <Box pb={[7, 9]}>
+      <Container>
+        <Text
+          as="h2"
+          fontSize={[4, 5]}
+          color="darkBlue"
+          fontWeight="bold"
+          textAlign="center"
+          lineHeight="heading"
+          mb={[2, 3]}
+          sx={{
+            textTransform: "uppercase",
+            textShadow: `
+            -1px -1px 0 ${theme.colors.lightBlue},
             1px -1px 0 ${theme.colors.lightBlue},
             -1px 1px 0 ${theme.colors.lightBlue},
             1px 1px 0 ${theme.colors.lightBlue},
@@ -57,83 +59,83 @@ const MeetupSection = () => (
             4px 4px 0 ${theme.colors.lightBlue},
             5px 5px 0 ${theme.colors.lightBlue}
           `,
-        }}
-      >
-        Community Meet‑ups
-      </Text>
+          }}
+        >
+          Community Meet‑ups
+        </Text>
 
-      <Box
-        sx={{
-          display: "grid",
-          gridGap: "3rem 2rem",
-          gridTemplateColumns: [
-            "auto",
-            null,
-            `repeat(auto-fit, minmax(25em, 1fr))`,
-          ],
-        }}
-      >
-        {meetups.map(({ id, logo, title, date, venue, replay }) => (
-          <Flex
-            key={id}
-            flexDirection="column"
-            width="100%"
-            maxWidth="30em"
-            color="darkblue"
-            mt={2}
-            mx="auto"
-          >
-            <Image
-              src={logo}
-              alt={title}
-              width="12.5rem"
-              mx="auto"
-              mb={3}
-              display="block"
-            />
+        {data.map(({ id, name, start_time, place }) => {
+          const city = place?.location?.city
 
+          return (
             <Flex
+              key={id}
+              as="li"
               bg="white"
               p={2}
-              flexDirection="column"
-              flex={1}
-              sx={{
-                boxShadow: "main",
-                transition: "200ms transform",
-                "&:hover": {
-                  transform: "translateY(-0.5rem)",
-                },
-              }}
+              mb={2}
+              color="darkBlue"
+              alignItems={["start", "center"]}
+              flexDirection={["column", "row"]}
             >
-              <Box flex={1}>
-                <Flex alignItems="baseline" fontWeight="bold" fontSize={2}>
-                  <Link href="/">{title}</Link>
-                  <Text ml="0.5rem">›</Text>
-                </Flex>
-                <Text my="0.25rem">{date}</Text>
-                <Text>{venue}</Text>
+              <Box
+                as="time"
+                dateTime={start_time}
+                pr={2}
+                mr={2}
+                fontSize={[1, 2]}
+                sx={{
+                  textTransform: "uppercase",
+                  borderRightWidth: "1px",
+                  borderRightStyle: "solid",
+                  borderRightColor: ["transparent", "darkBlue"],
+                }}
+              >
+                {formatDate(start_time)}
               </Box>
 
-              <Box mt={2}>
-                {!replay ? (
-                  <>
-                    <Button variant="outline" mr={1}>
-                      △ Sponsor
-                    </Button>
-                    <Button variant="outline" mt="1">
-                      ▩ SPEAK
-                    </Button>
-                  </>
-                ) : (
-                  <Button variant="outline">◉ Watch</Button>
-                )}
+              <Box flex={1} pt={[1, 0]} pb={[2, 0]} mr={[0, 2]}>
+                <Text
+                  as="h4"
+                  fontSize={[2, 3]}
+                  fontWeight="heading"
+                  sx={{ textTransform: "uppercase" }}
+                >
+                  {name}
+                </Text>
+                <Text>{`${place.name}${city ? `, ${city}` : ""}`}</Text>
               </Box>
+
+              <Button
+                as="a"
+                href={`https://facebook.com/events/${id}/`}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="outline"
+                mr="6px"
+                mb="6px"
+              >
+                ↗ Open
+              </Button>
             </Flex>
-          </Flex>
-        ))}
-      </Box>
-    </Container>
-  </Box>
-)
+          )
+        })}
+
+        <Box textAlign="center" mt={3}>
+          <Button
+            as="a"
+            href="https://facebook.com/reactjsphilippines/events/"
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="primary"
+            mx="auto"
+          >
+            More on Facebook
+          </Button>
+        </Box>
+      </Container>
+    </Box>
+  )
+}
 
 export default MeetupSection
