@@ -64,17 +64,6 @@ const MeetupSection = () => {
           Community Meet‑ups
         </Text>
 
-        <Text
-          as="h3"
-          fontSize={[2, 3]}
-          color="white"
-          fontWeight="heading"
-          mb={2}
-          sx={{ textTransform: "uppercase" }}
-        >
-          Past
-        </Text>
-
         {data.map(({ id, name, start_time, place }) => {
           const city = place?.location?.city
 
