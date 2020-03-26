@@ -12,17 +12,22 @@ const float = keyframes`
 
 const TeamMember = ({
   isHighlighted = false,
-  member: { photo, name, role },
+  member: { photo, name, role, website },
   onMouseEnter: handleMouseEnter,
   ...props
 }) => (
   <Box
+    as="a"
+    href={website}
+    target="_blank"
+    rel="noopener noreferrer"
     onMouseEnter={handleMouseEnter}
     sx={{
       display: "inline-flex",
       flexDirection: ["row", null, "column"],
       alignItems: "center",
       textShadow: "main",
+      textDecoration: "none",
       cursor: "pointer",
       ...(isHighlighted && {
         animation: `${float} 300ms ease-in-out infinite alternate`,
