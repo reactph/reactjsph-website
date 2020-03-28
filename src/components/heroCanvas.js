@@ -93,7 +93,7 @@ const drawHeroBg = (canvas, imageEl) => {
   drawRotatingBrandmark(canvas, heroImage)
 
   const heroBg = fabric.util.object.clone(heroImage)
-  heroBg.set({ opacity: 0.2 })
+  heroBg.set({ opacity: 0.15 })
   canvas.add(heroBg)
   heroBg.center()
 }
