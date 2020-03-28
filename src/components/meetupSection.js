@@ -77,6 +77,13 @@ const MeetupSection = () => {
               color="darkBlue"
               alignItems={["start", null, "center"]}
               flexDirection={["column", null, "row"]}
+              sx={{
+                cursor: "pointer",
+                transition: "transform 200ms",
+                ":hover": {
+                  transform: "translateY(-0.25rem)",
+                },
+              }}
             >
               <Box
                 as="time"
