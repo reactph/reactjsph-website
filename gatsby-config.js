@@ -8,7 +8,7 @@ const FACEBOOK_PAGE_ID = 431794124327063 // ReactJS PH Facebook Page ID
 module.exports = {
   siteMetadata: {
     title: `ReactJS Philippines`,
-    description: `ReactJS Enthusiasts in the Philippines`,
+    description: `We are a group of Filipino developers dedicated to nation-building through our community and shared enthusiasm for React and for excellence overall.`,
     author: `ReactJS PH`,
     email: `reactjs.ph@yahoo.com`,
     cover: `/meta-image-cover.jpg`,
@@ -37,7 +37,7 @@ module.exports = {
       options: {
         name: `ReactJS Philippines`,
         short_name: `ReactJS PH`,
-        description: `ReactJS Enthusiasts in the Philippines`,
+        description: `We are a group of Filipino developers dedicated to nation-building through our community and shared enthusiasm for React and for excellence overall.`,
         start_url: `/`,
         background_color: `#0c1d60`,
         theme_color: `#0c1d60`,
