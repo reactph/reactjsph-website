@@ -142,7 +142,7 @@ const MeetupSection = () => {
             variant="primary"
             mx="auto"
           >
-            More on Facebook
+            ↗ More on Facebook
           </Button>
         </Box>
       </Container>
