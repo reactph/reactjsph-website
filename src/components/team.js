@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import { Box, Flex, Text, Image } from "rebass"
 import "csshake/dist/csshake.css"
 
@@ -9,112 +10,163 @@ import brandmarkLogo from "../images/brandmark.svg"
 import orbitBackground from "../images/orbits.svg"
 import TeamPage from "./teamPage"
 
-import {
-  imgFran,
-  imgMarj,
-  imgJayson,
-  imgGuigi,
-  imgJoe,
-  imgRem,
-  imgJerome,
-  imgEricson,
-  imgGian,
-  imgJedo,
-  imgMichael,
-  imgChristian,
-} from "../images"
+export const fluidMemberImage = graphql`
+  fragment fluidMemberImage on File {
+    childImageSharp {
+      fluid(maxWidth: 200, quality: 90) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
 
-const Members = [
-  {
-    id: 0,
-    photo: imgFran,
-    name: "Franrey Saycon",
-    role: "Head Director",
-    website: "https://fsaycon.dev",
-  },
-  {
-    id: 1,
-    photo: imgJayson,
-    name: "Jayson de los reyes",
-    role: "Director, Internal Affairs",
-    website: "https://itsdyeyson.dev/",
-  },
-  {
-    id: 2,
-    photo: imgGuigi,
-    name: "Miguel N. Galace",
-    role: "Director, External Affairs",
-    website: "https://galacemiguel.com",
-  },
-  {
-    id: 3,
-    photo: imgMarj,
-    name: "Marjorie J. Martinez",
-    role: "Director, External Affairs",
-    website: "https://github.com/marjmartinezz",
-  },
-  {
-    id: 4,
-    photo: imgJedo,
-    name: "Jedo de la Peña II",
-    role: "Member, Core Team",
-  },
-  {
-    id: 5,
-    photo: imgJerome,
-    name: "Jerome Estiller",
-    role: "Member, Core Team",
-    website: "https://github.com/jromest",
-  },
-  {
-    id: 6,
-    photo: imgGian,
-    name: "Gian Hirakawa",
-    role: "Member, Core Team",
-    website: "https://www.linkedin.com/in/gian-hirakawa",
-  },
-  {
-    id: 7,
-    photo: imgMichael,
-    name: "Michael Isaig",
-    role: "Member, Core Team",
-  },
-  {
-    id: 8,
-    photo: imgRem,
-    name: "Rem Lampa",
-    role: "Member, Core Team",
-    website: "https://facebook.com/Rem.Lampa",
-  },
-  {
-    id: 9,
-    photo: imgEricson,
-    name: "Ericson Luciano",
-    role: "Member, Core Team",
-    website: "https://ericsonluciano.com",
-  },
-  {
-    id: 10,
-    photo: imgJoe,
-    name: "Joe Palala",
-    role: "Member, Core Team",
-    website: "https://jpalala.io",
-  },
-  {
-    id: 11,
-    photo: imgChristian,
-    name: "Christian Villamin",
-    role: "Member, Core Team",
-  },
-]
+const memberImagesQuery = graphql`
+  query {
+    imgFran: file(relativePath: { eq: "team/fran.jpeg" }) {
+      ...fluidMemberImage
+    }
+    imgJayson: file(relativePath: { eq: "team/jayson.jpeg" }) {
+      ...fluidMemberImage
+    }
+    imgGuigi: file(relativePath: { eq: "team/guigi.jpeg" }) {
+      ...fluidMemberImage
+    }
+    imgMarj: file(relativePath: { eq: "team/marj.jpeg" }) {
+      ...fluidMemberImage
+    }
+    imgJedo: file(relativePath: { eq: "team/jedo.jpg" }) {
+      ...fluidMemberImage
+    }
+    imgJerome: file(relativePath: { eq: "team/jerome.jpeg" }) {
+      ...fluidMemberImage
+    }
+    imgGian: file(relativePath: { eq: "team/gian.jpg" }) {
+      ...fluidMemberImage
+    }
+    imgMichael: file(relativePath: { eq: "team/michael.jpg" }) {
+      ...fluidMemberImage
+    }
+    imgRem: file(relativePath: { eq: "team/rem.jpeg" }) {
+      ...fluidMemberImage
+    }
+    imgEricson: file(relativePath: { eq: "team/ericson.jpg" }) {
+      ...fluidMemberImage
+    }
+    imgJoe: file(relativePath: { eq: "team/joe.jpeg" }) {
+      ...fluidMemberImage
+    }
+    imgChristian: file(relativePath: { eq: "team/christian.jpg" }) {
+      ...fluidMemberImage
+    }
+  }
+`
 
 const FIRST_PAGE_SIZE = 7
 const NORMAL_PAGE_SIZE = 9
-const pageTotal =
-  Math.ceil((Members.length - FIRST_PAGE_SIZE) / NORMAL_PAGE_SIZE) + 1
 
 const TeamSection = () => {
+  const {
+    imgFran,
+    imgJayson,
+    imgGuigi,
+    imgMarj,
+    imgJedo,
+    imgJerome,
+    imgGian,
+    imgMichael,
+    imgRem,
+    imgEricson,
+    imgJoe,
+    imgChristian,
+  } = useStaticQuery(memberImagesQuery)
+  const Members = [
+    {
+      id: 0,
+      photo: imgFran?.childImageSharp.fluid.src,
+      name: "Franrey Saycon",
+      role: "Head Director",
+      website: "https://fsaycon.dev",
+    },
+    {
+      id: 1,
+      photo: imgJayson?.childImageSharp.fluid.src,
+      name: "Jayson de los reyes",
+      role: "Director, Internal Affairs",
+      website: "https://itsdyeyson.dev/",
+    },
+    {
+      id: 2,
+      photo: imgGuigi?.childImageSharp.fluid.src,
+      name: "Miguel N. Galace",
+      role: "Director, External Affairs",
+      website: "https://galacemiguel.com",
+    },
+    {
+      id: 3,
+      photo: imgMarj?.childImageSharp.fluid.src,
+      name: "Marjorie J. Martinez",
+      role: "Director, External Affairs",
+      website: "https://github.com/marjmartinezz",
+    },
+    {
+      id: 4,
+      photo: imgJedo?.childImageSharp.fluid.src,
+      name: "Jedo de la Peña II",
+      role: "Member, Core Team",
+    },
+    {
+      id: 5,
+      photo: imgJerome?.childImageSharp.fluid.src,
+      name: "Jerome Estiller",
+      role: "Member, Core Team",
+      website: "https://github.com/jromest",
+    },
+    {
+      id: 6,
+      photo: imgGian?.childImageSharp.fluid.src,
+      name: "Gian Hirakawa",
+      role: "Member, Core Team",
+      website: "https://www.linkedin.com/in/gian-hirakawa",
+    },
+    {
+      id: 7,
+      photo: imgMichael?.childImageSharp.fluid.src,
+      name: "Michael Isaig",
+      role: "Member, Core Team",
+    },
+    {
+      id: 8,
+      photo: imgRem?.childImageSharp.fluid.src,
+      name: "Rem Lampa",
+      role: "Member, Core Team",
+      website: "https://facebook.com/Rem.Lampa",
+    },
+    {
+      id: 9,
+      photo: imgEricson?.childImageSharp.fluid.src,
+      name: "Ericson Luciano",
+      role: "Member, Core Team",
+      website: "https://ericsonluciano.com",
+    },
+    {
+      id: 10,
+      photo: imgJoe?.childImageSharp.fluid.src,
+      name: "Joe Palala",
+      role: "Member, Core Team",
+      website: "https://jpalala.io",
+    },
+    {
+      id: 11,
+      photo: imgChristian?.childImageSharp.fluid.src,
+      name: "Christian Villamin",
+      role: "Member, Core Team",
+    },
+  ]
+
   const [page, setPage] = useState(1)
+  const pageTotal =
+    Math.ceil((Members.length - FIRST_PAGE_SIZE) / NORMAL_PAGE_SIZE) + 1
+
   const [highlightedMemberId, setHighlightedMemberId] = useState(Members[0].id)
 
   return (

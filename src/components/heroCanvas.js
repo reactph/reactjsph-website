@@ -1,9 +1,22 @@
 import React, { useEffect, useRef, useState } from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import { Box } from "rebass"
 import { fabric } from "fabric"
 import debounce from "lodash.debounce"
 
-import { heroImg, brandmarkPath } from "../images"
+import { brandmarkPath } from "../images"
+
+const heroImgQuery = graphql`
+  query {
+    heroImg: file(relativePath: { eq: "hero-img.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2048, quality: 80) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 
 const getScaledHeroImage = (canvas, imageEl) => {
   const heroImage = new fabric.Image(imageEl)
@@ -101,6 +114,7 @@ const drawHeroBg = (canvas, imageEl) => {
 const HeroCanvas = () => {
   const canvasContainerRef = useRef(null)
   const [imageEl, setImageEl] = useState(null)
+  const { heroImg } = useStaticQuery(heroImgQuery)
 
   const initializeCanvas = () => {
     const { clientWidth, clientHeight } = canvasContainerRef.current
@@ -117,7 +131,10 @@ const HeroCanvas = () => {
   useEffect(() => {
     const canvas = initializeCanvas()
     const emptyImageEl = new Image()
-    emptyImageEl.src = heroImg
+
+    if (heroImg) {
+      emptyImageEl.src = heroImg.childImageSharp.fluid.src
+    }
 
     const handleImageLoad = ({ target: loadedImageEl }) => {
       setImageEl(loadedImageEl)
@@ -127,7 +144,7 @@ const HeroCanvas = () => {
     emptyImageEl.addEventListener("load", handleImageLoad)
 
     return () => emptyImageEl.removeEventListener("load", handleImageLoad)
-  }, [])
+  }, [heroImg])
 
   useEffect(() => {
     const handleWindowResize = debounce(() => {
