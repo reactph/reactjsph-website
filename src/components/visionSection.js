@@ -31,7 +31,7 @@ const VisionSection = () => (
         <StarDivider />
       </Box>
       <Text
-        fontSize={[2, 3]}
+        fontSize={2}
         fontWeight="heading"
         color="gold"
         mb={[2, 3]}
@@ -45,7 +45,7 @@ const VisionSection = () => (
         color="darkBlue"
         width="100%"
         mx="auto"
-        mb={3}
+        mb={[3, 4]}
         lineHeight="1.75"
         letterSpacing="0.05em"
         sx={{ textTransform: "uppercase" }}
