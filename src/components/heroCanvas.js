@@ -39,8 +39,8 @@ const drawRotatingBrandmark = (canvas, heroImageTemplate) => {
   clipPath.absolutePositioned = true
 
   const relativeWidth = 0.8 * canvas.width
-  const ABSOLUTE_MIN_WIDTH = 500
-  const width = Math.max(relativeWidth, ABSOLUTE_MIN_WIDTH)
+  const relativeHeight = 0.6 * canvas.height
+  const width = Math.max(relativeWidth, relativeHeight)
   clipPath.scale(width / clipPath.width)
 
   const ANIMATION_TIME = 60 * 1000
