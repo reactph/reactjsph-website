@@ -3,10 +3,11 @@ import { Box, Flex, Text, Image } from "rebass"
 import "csshake/dist/csshake.css"
 
 import Container from "./container"
+import CircleButton from "./circleButton"
 import "../styles/custom-shake.css"
 import brandmarkLogo from "../images/brandmark.svg"
 import orbitBackground from "../images/orbits.svg"
-import TeamMember from "./teamMember"
+import TeamPage from "./teamPage"
 
 import {
   imgFran,
@@ -107,7 +108,13 @@ const Members = [
   },
 ]
 
+const FIRST_PAGE_SIZE = 7
+const NORMAL_PAGE_SIZE = 9
+const pageTotal =
+  Math.ceil((Members.length - FIRST_PAGE_SIZE) / NORMAL_PAGE_SIZE) + 1
+
 const TeamSection = () => {
+  const [page, setPage] = useState(1)
   const [highlightedMemberId, setHighlightedMemberId] = useState(Members[0].id)
 
   return (
@@ -179,39 +186,65 @@ const TeamSection = () => {
             mx="auto"
             sx={{ position: "relative" }}
           >
-            <Box
-              display="flex"
-              justifyContent="center"
-              width="100%"
-              mb={[2, 3, 4]}
-            >
-              <TeamMember
-                member={Members[0]}
-                isHighlighted={highlightedMemberId === Members[0].id}
-                onMouseEnter={() => setHighlightedMemberId(Members[0].id)}
-                width={["100%", "auto"]}
-              />
-            </Box>
-            <Box
+            <TeamPage
+              isFirstPage
+              members={Members.slice(0, 7)}
+              isCurrent={page === 1}
+              highlightedMemberId={highlightedMemberId}
+              setHighlightedMemberId={setHighlightedMemberId}
+            />
+            <TeamPage
+              members={Members.slice(7)}
+              isCurrent={page === 2}
+              highlightedMemberId={highlightedMemberId}
+              setHighlightedMemberId={setHighlightedMemberId}
+              mt={[2, 3, 0]}
               sx={{
-                display: "grid",
-                gridTemplateColumns: [
-                  "1fr",
-                  "1fr 1fr",
-                  "repeat(auto-fit, minmax(16rem, 1fr))",
-                ],
-                gridRowGap: [2, 3, 4],
-                gridColumnGap: 4,
+                position: ["relative", null, "absolute"],
+                top: 0,
+                left: 0,
+              }}
+            />
+            <Flex
+              alignItems="center"
+              margin="auto"
+              sx={{
+                position: "absolute",
+                top: 0,
+                bottom: 0,
+                right: "100%",
+                visibility: ["hidden", null, "visible"],
               }}
             >
-              {Members.slice(1).map(member => (
-                <TeamMember
-                  member={member}
-                  isHighlighted={highlightedMemberId === member.id}
-                  onMouseEnter={() => setHighlightedMemberId(member.id)}
-                />
-              ))}
-            </Box>
+              <CircleButton
+                pr="3px"
+                mr={2}
+                onClick={() =>
+                  setPage(state => (state - 1 === 0 ? pageTotal : state - 1))
+                }
+              >
+                ‹
+              </CircleButton>
+            </Flex>
+            <Flex
+              alignItems="center"
+              margin="auto"
+              sx={{
+                position: "absolute",
+                top: 0,
+                left: "100%",
+                bottom: 0,
+                visibility: ["hidden", null, "visible"],
+              }}
+            >
+              <CircleButton
+                pl="3px"
+                ml={2}
+                onClick={() => setPage(state => (state % pageTotal) + 1)}
+              >
+                ›
+              </CircleButton>
+            </Flex>
           </Box>
         </Container>
       </Box>
