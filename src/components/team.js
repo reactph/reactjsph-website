@@ -16,6 +16,11 @@ import {
   imgJoe,
   imgRem,
   imgJerome,
+  imgEricson,
+  imgGian,
+  imgJedo,
+  imgMichael,
+  imgChristian,
 } from "../images"
 
 const Members = [
@@ -51,22 +56,54 @@ const Members = [
     id: 4,
     photo: imgJoe,
     name: "Joe Palala",
-    role: "Member, Board of Trustees",
+    role: "Member, Core Team",
     website: "https://jpalala.io",
   },
   {
     id: 5,
     photo: imgRem,
     name: "Rem Lampa",
-    role: "Member, Board of Trustees",
+    role: "Member, Core Team",
     website: "https://facebook.com/Rem.Lampa",
   },
   {
     id: 6,
     photo: imgJerome,
     name: "Jerome Estiller",
-    role: "Member, Board of Trustees",
+    role: "Member, Core Team",
     website: "https://github.com/jromest",
+  },
+  {
+    id: 7,
+    photo: imgChristian,
+    name: "Christian Villamin",
+    role: "Member, Core Team",
+  },
+  {
+    id: 8,
+    photo: imgEricson,
+    name: "Ericson Luciano",
+    role: "Member, Core Team",
+    website: "https://ericsonluciano.com",
+  },
+  {
+    id: 9,
+    photo: imgGian,
+    name: "Gian Hirakawa",
+    role: "Member, Core Team",
+    website: "https://www.linkedin.com/in/gian-hirakawa",
+  },
+  {
+    id: 10,
+    photo: imgMichael,
+    name: "Michael Isaig",
+    role: "Member, Core Team",
+  },
+  {
+    id: 11,
+    photo: imgJedo,
+    name: "Jedo de la Peña II",
+    role: "Member, Core Team",
   },
 ]
 
