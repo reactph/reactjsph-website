@@ -78,7 +78,7 @@ const customTheme = {
       transition: "400ms ease all",
       textTransform: "uppercase",
 
-      ":first-child": { ml: 0 },
+      ":first-of-type": { ml: 0 },
 
       ":last-child": { mr: 0 },
 
