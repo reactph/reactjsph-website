@@ -1,194 +1,255 @@
-import React from "react"
+import React, { useState } from "react"
 import { Box, Flex, Text, Image } from "rebass"
+import "csshake/dist/csshake.css"
+
 import Container from "./container"
+import CircleButton from "./circleButton"
+import "../styles/custom-shake.css"
 import brandmarkLogo from "../images/brandmark.svg"
 import orbitBackground from "../images/orbits.svg"
-import memberPlaceholder from "../images/member-placeholder.jpg"
+import TeamPage from "./teamPage"
+
+import {
+  imgFran,
+  imgMarj,
+  imgJayson,
+  imgGuigi,
+  imgJoe,
+  imgRem,
+  imgJerome,
+  imgEricson,
+  imgGian,
+  imgJedo,
+  imgMichael,
+  imgChristian,
+} from "../images"
 
 const Members = [
   {
+    id: 0,
+    photo: imgFran,
+    name: "Franrey Saycon",
+    role: "Head Director",
+    website: "https://fsaycon.dev",
+  },
+  {
     id: 1,
-    photo: "",
-    name: "Marjorie J. Martinez",
-    role: "Director, External Affairs",
+    photo: imgJayson,
+    name: "Jayson de los reyes",
+    role: "Director, Internal Affairs",
+    website: "https://itsdyeyson.dev/",
   },
   {
     id: 2,
-    photo: "",
-    name: "Franrey Saycon",
-    role: "Head Director",
+    photo: imgGuigi,
+    name: "Miguel N. Galace",
+    role: "Director, External Affairs",
+    website: "https://galacemiguel.com",
   },
   {
     id: 3,
-    photo: "",
-    name: "Jayson de los reyes",
-    role: "Director, Internal Affairs",
+    photo: imgMarj,
+    name: "Marjorie J. Martinez",
+    role: "Director, External Affairs",
+    website: "https://github.com/marjmartinezz",
   },
   {
     id: 4,
-    photo: "",
-    name: "Joe Palala",
-    role: "Member, Board of Trustees",
+    photo: imgJedo,
+    name: "Jedo de la Peña II",
+    role: "Member, Core Team",
   },
   {
     id: 5,
-    photo: "",
-    name: "Rem Lampa",
-    role: "Member, Board of Trustees",
+    photo: imgJerome,
+    name: "Jerome Estiller",
+    role: "Member, Core Team",
+    website: "https://github.com/jromest",
   },
   {
     id: 6,
-    photo: "",
-    name: "RJ David",
-    role: "Member, Board of Trustees",
+    photo: imgGian,
+    name: "Gian Hirakawa",
+    role: "Member, Core Team",
+    website: "https://www.linkedin.com/in/gian-hirakawa",
   },
   {
     id: 7,
-    photo: "",
-    name: "Jerome Estiller",
-    role: "Member, Board of Trustees",
+    photo: imgMichael,
+    name: "Michael Isaig",
+    role: "Member, Core Team",
   },
   {
     id: 8,
-    photo: "",
-    name: "Paul Simon Ongpin",
-    role: "Member, Board of Trustees",
+    photo: imgRem,
+    name: "Rem Lampa",
+    role: "Member, Core Team",
+    website: "https://facebook.com/Rem.Lampa",
   },
   {
     id: 9,
-    photo: "",
-    name: "John Dave decano",
-    role: "Member, Board of Trustees",
+    photo: imgEricson,
+    name: "Ericson Luciano",
+    role: "Member, Core Team",
+    website: "https://ericsonluciano.com",
+  },
+  {
+    id: 10,
+    photo: imgJoe,
+    name: "Joe Palala",
+    role: "Member, Core Team",
+    website: "https://jpalala.io",
+  },
+  {
+    id: 11,
+    photo: imgChristian,
+    name: "Christian Villamin",
+    role: "Member, Core Team",
   },
 ]
 
-const TeamSection = () => (
-  <Box backgroundColor="darkBlue" overflow="hidden" mb={[3, null, 6]}>
-    <Container>
-      <Flex justifyContent="center" alignItems="center">
-        <Text
-          fontSize={[3, 4, 5]}
-          fontWeight="bold"
-          color="lightBlue"
-          sx={{
-            borderBottom: "0.15em groove",
-            borderColor: "lightBlue",
-            textTransform: "uppercase",
-            textShadow: "main",
-            whiteSpace: "nowrap",
-          }}
-        >
-          « Core
-        </Text>
-        <Image
-          src={brandmarkLogo}
-          alt="ReactJS Philippines"
-          width="20vw"
-          maxWidth="10rem"
-        />
-        <Text
-          fontSize={[3, 4, 5]}
-          fontWeight="bold"
-          color="lightBlue"
-          sx={{
-            borderBottom: "0.15em groove",
-            borderColor: "lightBlue",
-            textTransform: "uppercase",
-            textShadow: "main",
-            whiteSpace: "nowrap",
-          }}
-        >
-          Team »
-        </Text>
-      </Flex>
-    </Container>
-    <Box
-      py={[2, 3, 4]}
-      sx={{
-        position: "relative",
-      }}
-    >
-      <Image
-        src={orbitBackground}
-        sx={{
-          position: "absolute",
-          top: "-9999px",
-          bottom: "-9999px",
-          left: "-9999px",
-          right: "-9999px",
-          maxWidth: "none",
-          height: "100%",
-          m: "auto",
-          userSelect: "none",
-        }}
-      />
+const FIRST_PAGE_SIZE = 7
+const NORMAL_PAGE_SIZE = 9
+const pageTotal =
+  Math.ceil((Members.length - FIRST_PAGE_SIZE) / NORMAL_PAGE_SIZE) + 1
+
+const TeamSection = () => {
+  const [page, setPage] = useState(1)
+  const [highlightedMemberId, setHighlightedMemberId] = useState(Members[0].id)
+
+  return (
+    <Box backgroundColor="darkBlue" overflow="hidden" mb={[3, null, 6]}>
       <Container>
-        <Box
-          sx={{
-            zIndex: 2,
-            position: "relative",
-          }}
-        >
-          <Box
+        <Flex justifyContent="center" alignItems="center">
+          <Text
+            fontSize={[3, 4, 5]}
+            fontWeight="bold"
+            color="lightBlue"
             sx={{
-              display: "grid",
-              gridTemplateColumns: `repeat(auto-fit, minmax(16rem, 1fr))`,
-              gridRowGap: [4, null, 6],
-              gridColumnGap: 4,
+              borderBottom: "0.15em groove",
+              borderColor: "lightBlue",
+              textTransform: "uppercase",
+              textShadow: "main",
+              whiteSpace: "nowrap",
             }}
           >
-            {Members.map(member => (
-              <Box
-                key={member.id}
-                width="100%"
-                sx={{
-                  flexShrink: [0, 1],
-                  textAlign: "center",
-                  transition: "200ms transform",
-                  textShadow: "main",
-                  "&:hover": {
-                    transform: "translateY(-0.5rem)",
-                    cursor: "pointer",
-                    img: {
-                      transform: "translateY(-0.5rem)",
-                    },
-                  },
-                }}
-              >
-                <Image
-                  sx={{
-                    objectFit: "cover",
-                    objectPosition: "center",
-                    width: "174px",
-                    height: "174px",
-                    borderRadius: "50%",
-                    transition: "200ms transform",
-                    boxShadow: "main",
-                  }}
-                  src={member.photo || memberPlaceholder}
-                  alt={member.name}
-                />
-                <Text
-                  mt={0}
-                  fontSize={2}
-                  fontWeight="bold"
-                  color="white"
-                  sx={{
-                    textTransform: "uppercase",
-                  }}
-                >
-                  {member.name}
-                </Text>
-                <Text fontSize={1} color="white">
-                  {member.role}
-                </Text>
-              </Box>
-            ))}
-          </Box>
-        </Box>
+            « Core
+          </Text>
+          <Image
+            src={brandmarkLogo}
+            alt="ReactJS Philippines"
+            width="20vw"
+            maxWidth="10rem"
+          />
+          <Text
+            fontSize={[3, 4, 5]}
+            fontWeight="bold"
+            color="lightBlue"
+            sx={{
+              borderBottom: "0.15em groove",
+              borderColor: "lightBlue",
+              textTransform: "uppercase",
+              textShadow: "main",
+              whiteSpace: "nowrap",
+            }}
+          >
+            Team »
+          </Text>
+        </Flex>
       </Container>
+      <Box
+        pt={[2, 3, 5]}
+        pb={[3, null, 8]}
+        sx={{
+          position: "relative",
+        }}
+      >
+        <Image
+          className="shake shake-custom shake-constant"
+          src={orbitBackground}
+          sx={{
+            position: "absolute",
+            top: "-9999px",
+            bottom: "-9999px",
+            left: "-9999px",
+            right: "-9999px",
+            maxWidth: "none",
+            height: "100%",
+            m: "auto",
+            userSelect: "none",
+          }}
+        />
+        <Container>
+          <Box
+            width={["60%", "90%"]}
+            minWidth="16em"
+            mx="auto"
+            sx={{ position: "relative" }}
+          >
+            <TeamPage
+              isFirstPage
+              members={Members.slice(0, 7)}
+              isCurrent={page === 1}
+              highlightedMemberId={highlightedMemberId}
+              setHighlightedMemberId={setHighlightedMemberId}
+            />
+            <TeamPage
+              members={Members.slice(7)}
+              isCurrent={page === 2}
+              highlightedMemberId={highlightedMemberId}
+              setHighlightedMemberId={setHighlightedMemberId}
+              mt={[2, 3, 0]}
+              sx={{
+                position: ["relative", null, "absolute"],
+                top: 0,
+                left: 0,
+              }}
+            />
+            <Flex
+              alignItems="center"
+              margin="auto"
+              sx={{
+                position: "absolute",
+                top: 0,
+                bottom: 0,
+                right: "100%",
+                visibility: ["hidden", null, "visible"],
+              }}
+            >
+              <CircleButton
+                pr="3px"
+                mr={2}
+                onClick={() =>
+                  setPage(state => (state - 1 === 0 ? pageTotal : state - 1))
+                }
+              >
+                ‹
+              </CircleButton>
+            </Flex>
+            <Flex
+              alignItems="center"
+              margin="auto"
+              sx={{
+                position: "absolute",
+                top: 0,
+                left: "100%",
+                bottom: 0,
+                visibility: ["hidden", null, "visible"],
+              }}
+            >
+              <CircleButton
+                pl="3px"
+                ml={2}
+                onClick={() => setPage(state => (state % pageTotal) + 1)}
+              >
+                ›
+              </CircleButton>
+            </Flex>
+          </Box>
+        </Container>
+      </Box>
     </Box>
-  </Box>
-)
+  )
+}
 
 export default TeamSection
