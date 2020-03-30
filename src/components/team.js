@@ -22,22 +22,22 @@ export const fluidMemberImage = graphql`
 
 const memberImagesQuery = graphql`
   query {
-    imgFran: file(relativePath: { eq: "team/fran.jpeg" }) {
+    imgFran: file(relativePath: { eq: "team/fran.jpg" }) {
       ...fluidMemberImage
     }
-    imgJayson: file(relativePath: { eq: "team/jayson.jpeg" }) {
+    imgJayson: file(relativePath: { eq: "team/jayson.jpg" }) {
       ...fluidMemberImage
     }
-    imgGuigi: file(relativePath: { eq: "team/guigi.jpeg" }) {
+    imgGuigi: file(relativePath: { eq: "team/guigi.jpg" }) {
       ...fluidMemberImage
     }
-    imgMarj: file(relativePath: { eq: "team/marj.jpeg" }) {
+    imgMarj: file(relativePath: { eq: "team/marj.jpg" }) {
       ...fluidMemberImage
     }
     imgJedo: file(relativePath: { eq: "team/jedo.jpg" }) {
       ...fluidMemberImage
     }
-    imgJerome: file(relativePath: { eq: "team/jerome.jpeg" }) {
+    imgJerome: file(relativePath: { eq: "team/jerome.jpg" }) {
       ...fluidMemberImage
     }
     imgGian: file(relativePath: { eq: "team/gian.jpg" }) {
@@ -46,13 +46,13 @@ const memberImagesQuery = graphql`
     imgMichael: file(relativePath: { eq: "team/michael.jpg" }) {
       ...fluidMemberImage
     }
-    imgRem: file(relativePath: { eq: "team/rem.jpeg" }) {
+    imgRem: file(relativePath: { eq: "team/rem.jpg" }) {
       ...fluidMemberImage
     }
     imgEricson: file(relativePath: { eq: "team/ericson.jpg" }) {
       ...fluidMemberImage
     }
-    imgJoe: file(relativePath: { eq: "team/joe.jpeg" }) {
+    imgJoe: file(relativePath: { eq: "team/joe.jpg" }) {
       ...fluidMemberImage
     }
     imgChristian: file(relativePath: { eq: "team/christian.jpg" }) {
