@@ -159,7 +159,7 @@ const TeamSection = () => {
       </Container>
       <Box
         pt={[2, 3, 5]}
-        pb={[2, 3, 8]}
+        pb={[3, null, 8]}
         sx={{
           position: "relative",
         }}

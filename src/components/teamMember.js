@@ -108,7 +108,10 @@ const TeamMember = ({
           borderColor: "white",
           transition: "300ms box-shadow, 300ms transform",
           ...(isHighlighted && {
-            boxShadow: "0 0 80px rgba(123, 213, 245, 0.75)",
+            boxShadow: [
+              "0 0 2rem rgba(123, 213, 245, 0.75)",
+              "0 0 5rem rgba(123, 213, 245, 0.75)",
+            ],
             transform: "scale(1.05)",
           }),
         }}
