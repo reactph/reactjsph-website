@@ -7,7 +7,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import theme from "../theme"
 import Container from "./container"
 
-const formatDate = date => format(new Date(date), "dd MMM yyyy")
+const formatDate = date => format(new Date(date.split("T")[0]), "dd MMM yyyy")
 
 const facebookEventQuery = graphql`
   query FacebookEventQuery {
