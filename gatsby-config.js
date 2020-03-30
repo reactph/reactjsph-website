@@ -10,7 +10,7 @@ module.exports = {
     title: `ReactJS Philippines`,
     description: `We are a group of Filipino developers dedicated to nation-building through our community and shared enthusiasm for React and for excellence overall.`,
     author: `ReactJS PH`,
-    email: `reactjs.ph@yahoo.com`,
+    email: `core.reactjsph@gmail.com`,
     cover: `/meta-image-cover.jpg`,
     url: `https://reactjs.org.ph`,
     social: {
