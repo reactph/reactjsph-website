@@ -14,12 +14,12 @@ import { generate3dShadow } from "../utils"
 const RECAPTCHA_KEY = process.env.GATSBY_SITE_RECAPTCHA_KEY
 
 const contactFormValidationSchema = yup.object().shape({
-  name: yup.string().required("Please enter your name"),
+  name: yup.string().required("Please enter your name."),
   email: yup
     .string()
-    .required("Please enter your email address")
-    .email("Please enter your email address in format: yourname@example.com"),
-  message: yup.string().required("Please enter your message"),
+    .required("Please enter your email address.")
+    .email("Please enter a valid email address."),
+  message: yup.string().required("Please enter your message."),
 })
 
 const encode = data => {
@@ -193,10 +193,6 @@ const FormInput = ({ name, label, type, value, onChange, error }) => (
       label: {
         display: "block",
       },
-      small: {
-        color: "tomato",
-        fontSize: "0.75rem",
-      },
       "input, textarea": {
         width: "100%",
         outline: 0,
@@ -236,10 +232,17 @@ const FormInput = ({ name, label, type, value, onChange, error }) => (
         mb={0}
         sx={{ textTransform: "uppercase" }}
       >
-        {label}{" "}
-        <small style={{ fontWeight: "normal", textTransform: "capitalize" }}>
+        {label}
+        <Text
+          as="small"
+          color="tomato"
+          ml="1"
+          fontSize={1}
+          fontWeight="normal"
+          sx={{ textTransform: "none" }}
+        >
           {error}
-        </small>
+        </Text>
       </Text>
       {type === "textarea" && (
         <textarea name={name} value={value} onChange={onChange} />
