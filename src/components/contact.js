@@ -47,7 +47,7 @@ const Contact = () => {
       null
 
     const data = {
-      "form-name": "contact-form",
+      "form-name": "contact",
       "g-recaptcha-response": recaptchaValue,
       ...values,
     }
@@ -94,12 +94,6 @@ const Contact = () => {
           </Text>
         </Text>
 
-        <form name="contact" netlify="true" netlify-honeypot="bot-field" hidden>
-          <input type="text" name="name" />
-          <input type="email" name="email" />
-          <textarea name="message" />
-        </form>
-
         <Formik
           innerRef={formikRef}
           initialValues={{
@@ -111,8 +105,17 @@ const Contact = () => {
           onSubmit={handleFormSubmit}
         >
           {({ values, handleSubmit, handleChange, touched, errors }) => (
-            <form onSubmit={handleSubmit}>
-              <input type="hidden" name="form-name" value="contact-form" />
+            <form
+              name="contact"
+              method="post"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              onSubmit={handleSubmit}
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <p hidden>
+                <input name="bot-field" onChange={handleChange} />
+              </p>
               <Box
                 sx={{
                   display: "grid",
