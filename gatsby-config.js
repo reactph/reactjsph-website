@@ -37,7 +37,7 @@ module.exports = {
       options: {
         name: `ReactJS Philippines`,
         short_name: `ReactJS PH`,
-        description: `We are a group of Filipino developers dedicated to nation-building through our community and shared enthusiasm for React and for excellence overall.`,
+        description: `We are a group of Filipino developers dedicated to nation-building through our community's shared enthusiasm for React and for excellence overall.`,
         start_url: `/`,
         background_color: `#0c1d60`,
         theme_color: `#0c1d60`,
