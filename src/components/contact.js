@@ -5,13 +5,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons"
 import { Formik } from "formik"
 import * as yup from "yup"
-import Recaptcha from "react-google-recaptcha"
+// import Recaptcha from "react-google-recaptcha"
 import useIntersectionObserver from "@react-hook/intersection-observer"
 import Container from "./container"
 import MessageSentModal from "./messageSentModal"
 import { generate3dShadow } from "../utils"
 
-const RECAPTCHA_KEY = process.env.GATSBY_SITE_RECAPTCHA_KEY
+// const RECAPTCHA_KEY = process.env.GATSBY_SITE_RECAPTCHA_KEY
 
 const contactFormValidationSchema = yup.object().shape({
   name: yup.string().required("Please enter your name."),
@@ -29,7 +29,7 @@ const encode = data => {
 }
 
 const Contact = () => {
-  const recaptchaRef = useRef(null)
+  // const recaptchaRef = useRef(null)
   const formikRef = useRef(null)
   const [showModal, setShowModal] = useState(false)
   const [submitting, setSubmitting] = useState(false)
@@ -39,16 +39,16 @@ const Contact = () => {
 
   const handleFormSubmit = values => {
     setSubmitting(true)
-    recaptchaRef.current.execute()
-    const recaptchaValue =
-      (recaptchaRef &&
-        recaptchaRef.current &&
-        recaptchaRef.current.getValue()) ||
-      null
+    // recaptchaRef.current.execute()
+    // const recaptchaValue =
+    //   (recaptchaRef &&
+    //     recaptchaRef.current &&
+    //     recaptchaRef.current.getValue()) ||
+    //   null
 
     const data = {
       "form-name": "contact",
-      "g-recaptcha-response": recaptchaValue,
+      // "g-recaptcha-response": recaptchaValue,
       ...values,
     }
 
@@ -58,7 +58,7 @@ const Contact = () => {
       body: encode(data),
     })
       .then(() => {
-        recaptchaRef.current.reset()
+        // recaptchaRef.current.reset()
         formikRef.current.resetForm({
           name: "",
           email: "",
@@ -175,11 +175,11 @@ const Contact = () => {
                   display: entry && entry.isIntersecting ? "block" : "none",
                 }}
               >
-                <Recaptcha
+                {/* <Recaptcha
                   ref={recaptchaRef}
                   size="invisible"
                   sitekey={RECAPTCHA_KEY}
-                />
+                /> */}
               </Box>
             </form>
           )}
