@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from "react"
 import PropTypes from "prop-types"
 import { Link as GatsbyLink } from "gatsby"
-import { Box, Image, Flex, Link } from "rebass"
+import { Box, Flex, Link } from "rebass"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 import { useWindowSize, useOnClickOutside } from "../utils"
-import Logo from "../images/logo.svg"
+import { Logo } from "../images"
 import Container from "./container"
 
 const menus = [
@@ -58,7 +58,7 @@ const Header = ({ siteTitle }) => {
           py={2}
         >
           <Link as={GatsbyLink} to="/">
-            <Image src={Logo} alt={siteTitle} width="12.5rem" />
+            <Logo title={siteTitle} width="12.5rem" />
           </Link>
 
           <Box as="nav" ref={navRef} sx={{ display: "none" }}>
