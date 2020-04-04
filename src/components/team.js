@@ -160,6 +160,7 @@ const TeamSection = () => {
       photo: imgChristian?.childImageSharp.fluid.src,
       name: "Christian Villamin",
       role: "Member, Core Team",
+      website: "https://crxnvlmn.github.io/",
     },
   ]
 
