@@ -7,7 +7,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import theme from "../theme"
 import Container from "./container"
 
-const formatDate = date => format(new Date(date), "dd MMM yyyy")
+const formatDate = date => format(new Date(date.split("T")[0]), "dd MMM yyyy")
 
 const facebookEventQuery = graphql`
   query FacebookEventQuery {
@@ -46,7 +46,7 @@ const MeetupSection = () => {
           fontWeight="bold"
           textAlign="center"
           lineHeight="heading"
-          mb={[2, 3]}
+          mb={[3, 4]}
           sx={{
             textTransform: "uppercase",
             textShadow: `
@@ -75,29 +75,41 @@ const MeetupSection = () => {
               p={2}
               mb={2}
               color="darkBlue"
-              alignItems={["start", "center"]}
-              flexDirection={["column", "row"]}
+              alignItems={["start", null, "center"]}
+              flexDirection={["column", null, "row"]}
+              sx={{
+                cursor: "pointer",
+                transition: "transform 200ms",
+                ":hover": {
+                  transform: "translateY(-0.25rem)",
+                },
+              }}
             >
               <Box
                 as="time"
                 dateTime={start_time}
                 pr={2}
                 mr={2}
-                fontSize={[1, 2]}
+                fontSize={[1, null, 2]}
                 sx={{
                   textTransform: "uppercase",
                   borderRightWidth: "1px",
                   borderRightStyle: "solid",
-                  borderRightColor: ["transparent", "darkBlue"],
+                  borderRightColor: ["transparent", null, "darkBlue"],
                 }}
               >
                 {formatDate(start_time)}
               </Box>
 
-              <Box flex={1} pt={[1, 0]} pb={[2, 0]} mr={[0, 2]}>
+              <Box
+                flex={1}
+                pt={[1, null, 0]}
+                pb={[2, null, 0]}
+                mr={[0, null, 2]}
+              >
                 <Text
                   as="h4"
-                  fontSize={[2, 3]}
+                  fontSize={[2, null, 3]}
                   fontWeight="heading"
                   sx={{ textTransform: "uppercase" }}
                 >
@@ -130,7 +142,7 @@ const MeetupSection = () => {
             variant="primary"
             mx="auto"
           >
-            More on Facebook
+            ↗ More on Facebook
           </Button>
         </Box>
       </Container>

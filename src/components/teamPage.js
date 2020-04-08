@@ -46,6 +46,7 @@ const TeamPage = ({
     >
       {(isFirstPage ? members.slice(1) : members).map(member => (
         <TeamMember
+          key={member.id}
           member={member}
           isHidden={[false, null, !isCurrent]}
           isHighlighted={highlightedMemberId === member.id}

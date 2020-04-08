@@ -5,21 +5,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons"
 import { Formik } from "formik"
 import * as yup from "yup"
-import Recaptcha from "react-google-recaptcha"
+// import Recaptcha from "react-google-recaptcha"
 import useIntersectionObserver from "@react-hook/intersection-observer"
 import Container from "./container"
 import MessageSentModal from "./messageSentModal"
 import { generate3dShadow } from "../utils"
 
-const RECAPTCHA_KEY = process.env.GATSBY_SITE_RECAPTCHA_KEY
+// const RECAPTCHA_KEY = process.env.GATSBY_SITE_RECAPTCHA_KEY
 
 const contactFormValidationSchema = yup.object().shape({
-  name: yup.string().required("Please enter your name"),
+  name: yup.string().required("Please enter your name."),
   email: yup
     .string()
-    .required("Please enter your email address")
-    .email("Please enter your email address in format: yourname@example.com"),
-  message: yup.string().required("Please enter your message"),
+    .required("Please enter your email address.")
+    .email("Please enter a valid email address."),
+  message: yup.string().required("Please enter your message."),
 })
 
 const encode = data => {
@@ -29,7 +29,7 @@ const encode = data => {
 }
 
 const Contact = () => {
-  const recaptchaRef = useRef(null)
+  // const recaptchaRef = useRef(null)
   const formikRef = useRef(null)
   const [showModal, setShowModal] = useState(false)
   const [submitting, setSubmitting] = useState(false)
@@ -39,16 +39,16 @@ const Contact = () => {
 
   const handleFormSubmit = values => {
     setSubmitting(true)
-    recaptchaRef.current.execute()
-    const recaptchaValue =
-      (recaptchaRef &&
-        recaptchaRef.current &&
-        recaptchaRef.current.getValue()) ||
-      null
+    // recaptchaRef.current.execute()
+    // const recaptchaValue =
+    //   (recaptchaRef &&
+    //     recaptchaRef.current &&
+    //     recaptchaRef.current.getValue()) ||
+    //   null
 
     const data = {
-      "form-name": "contact-form",
-      "g-recaptcha-response": recaptchaValue,
+      "form-name": "contact",
+      // "g-recaptcha-response": recaptchaValue,
       ...values,
     }
 
@@ -58,7 +58,7 @@ const Contact = () => {
       body: encode(data),
     })
       .then(() => {
-        recaptchaRef.current.reset()
+        // recaptchaRef.current.reset()
         formikRef.current.resetForm({
           name: "",
           email: "",
@@ -94,12 +94,6 @@ const Contact = () => {
           </Text>
         </Text>
 
-        <form name="contact" netlify="true" netlify-honeypot="bot-field" hidden>
-          <input type="text" name="name" />
-          <input type="email" name="email" />
-          <textarea name="message" />
-        </form>
-
         <Formik
           innerRef={formikRef}
           initialValues={{
@@ -111,8 +105,17 @@ const Contact = () => {
           onSubmit={handleFormSubmit}
         >
           {({ values, handleSubmit, handleChange, touched, errors }) => (
-            <form onSubmit={handleSubmit}>
-              <input type="hidden" name="form-name" value="contact-form" />
+            <form
+              name="contact"
+              method="post"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              onSubmit={handleSubmit}
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <p hidden>
+                <input name="bot-field" onChange={handleChange} />
+              </p>
               <Box
                 sx={{
                   display: "grid",
@@ -172,11 +175,11 @@ const Contact = () => {
                   display: entry && entry.isIntersecting ? "block" : "none",
                 }}
               >
-                <Recaptcha
+                {/* <Recaptcha
                   ref={recaptchaRef}
                   size="invisible"
                   sitekey={RECAPTCHA_KEY}
-                />
+                /> */}
               </Box>
             </form>
           )}
@@ -192,10 +195,6 @@ const FormInput = ({ name, label, type, value, onChange, error }) => (
     sx={{
       label: {
         display: "block",
-      },
-      small: {
-        color: "tomato",
-        fontSize: "0.75rem",
       },
       "input, textarea": {
         width: "100%",
@@ -236,10 +235,17 @@ const FormInput = ({ name, label, type, value, onChange, error }) => (
         mb={0}
         sx={{ textTransform: "uppercase" }}
       >
-        {label}{" "}
-        <small style={{ fontWeight: "normal", textTransform: "capitalize" }}>
+        {label}
+        <Text
+          as="small"
+          color="tomato"
+          ml="1"
+          fontSize={1}
+          fontWeight="normal"
+          sx={{ textTransform: "none" }}
+        >
           {error}
-        </small>
+        </Text>
       </Text>
       {type === "textarea" && (
         <textarea name={name} value={value} onChange={onChange} />

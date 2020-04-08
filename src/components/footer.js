@@ -96,7 +96,9 @@ const FooterContentLeft = () => (
         Miguel N. Galace.
       </Link>
     </Text>
-    <Text fontSize={1}>© 2019 ReactJS Philippines. All rights reserved.</Text>
+    <Text fontSize={1}>
+      © {new Date().getFullYear()} ReactJS Philippines. All rights reserved.
+    </Text>
   </Box>
 )
 

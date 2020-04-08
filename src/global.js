@@ -1,6 +1,19 @@
 import emotionReset from "emotion-reset"
 import { css } from "@emotion/core"
 
+import {
+  AvenirRomanEot,
+  AvenirRomanWoff2,
+  AvenirRomanWoff,
+  AvenirRomanTtf,
+  AvenirRomanSvg,
+  AvenirBlackEot,
+  AvenirBlackWoff2,
+  AvenirBlackWoff,
+  AvenirBlackTtf,
+  AvenirBlackSvg,
+} from "./fonts"
+
 export default css`
   ${emotionReset}
 
@@ -8,26 +21,26 @@ export default css`
 
   @font-face {
     font-family: "Avenir";
-    src: local("Avenir-Roman"), url("/fonts/Avenir-Roman.eot");
+    src: local("Avenir-Roman"), url("${AvenirRomanEot}");
     src: local("Avenir-Roman"),
-      url("/fonts/Avenir-Roman.eot?#iefix") format("embedded-opentype"),
-      url("/fonts/Avenir-Roman.woff2") format("woff2"),
-      url("/fonts/Avenir-Roman.woff") format("woff"),
-      url("/fonts/Avenir-Roman.ttf") format("truetype"),
-      url("/fonts/Avenir-Roman.svg#Avenir-Roman") format("svg");
+      url("${AvenirRomanEot}?#iefix") format("embedded-opentype"),
+      url("${AvenirRomanWoff2}") format("woff2"),
+      url("${AvenirRomanWoff}") format("woff"),
+      url("${AvenirRomanTtf}") format("truetype"),
+      url("${AvenirRomanSvg}") format("svg");
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: "Avenir";
-    src: local("Avenir-Black"), url("/fonts/Avenir-Black.eot");
+    src: local("Avenir-Black"), url("${AvenirBlackEot}");
     src: local("Avenir-Black"),
-      url("/fonts/Avenir-Black.eot?#iefix") format("embedded-opentype"),
-      url("/fonts/Avenir-Black.woff2") format("woff2"),
-      url("/fonts/Avenir-Black.woff") format("woff"),
-      url("/fonts/Avenir-Black.ttf") format("truetype"),
-      url("/fonts/Avenir-Black.svg#Avenir-Black") format("svg");
+      url("${AvenirBlackEot}?#iefix") format("embedded-opentype"),
+      url("${AvenirBlackWoff2}") format("woff2"),
+      url("${AvenirBlackWoff}") format("woff"),
+      url("${AvenirBlackTtf}") format("truetype"),
+      url("${AvenirBlackSvg}") format("svg");
     font-weight: 900;
     font-style: normal;
   }
