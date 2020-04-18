@@ -15,6 +15,8 @@ Happy contributing!
 1. Found a bug or just asking a question? Feel free to create an [issue](https://github.com/reactph/reactjsph-website/issues/new)
 1. Contribute anything to help us improve this project
 
+**Working on your first Pull Request?** You can learn how from this _free_ series [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github).
+
 ## Requirements
 
 This project is built with [Gatsby](https://www.gatsbyjs.org/).
@@ -65,6 +67,8 @@ Please make sure you have this installed on your machine:
 
 1. **Create a [pull request](https://github.com/reactph/reactjsph-website/pulls)**
 
+---
+
 If you have some questions, message us at [Messenger](m.me/reactjsphilippines), if you haven't joined, join our [Facebook group](https://web.facebook.com/groups/875676539148789/).
 
-Not on Facebook? Join our [Discord](https://discord.gg/n9Pads7).
+**Not on Facebook?** Join us on [Discord](https://discord.gg/J6eZNUG).
