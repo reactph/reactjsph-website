@@ -1,14 +1,29 @@
-# ReactJS PH Website
+<div align="center">
+  <a href="https://reactjs.org.ph/">
+    <img
+      width="800"
+      alt="ReactJS Philippines"
+      src="https://raw.githubusercontent.com/reactph/reactjsph-website/master/static/meta-image-cover.jpg"
+    />
+  </a>
+    <p>We are a group of Filipino developers dedicated to nation-building through our community and shared enthusiasm for React and for excellence overall.</p>
+</div>
 
-Build with [Gatsby](https://www.gatsbyjs.org/)
+---
+
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![GitHub issues](https://img.shields.io/github/issues/reactph/reactjsph-website)](https://github.com/reactph/reactjsph-website/issues)
+[![GitHub license](https://img.shields.io/github/license/reactph/reactjsph-website)](https://github.com/reactph/reactjsph-website/blob/master/LICENSE)
+[![Code of Conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg)](https://github.com/reactph/reactjsph-website/blob/master/CODE_OF_CONDUCT.md)
+
+[![Facebook Group](https://img.shields.io/badge/join_the_community-on_facebook-1877F2?logo=facebook)][facebook-group]
+[![Discord](https://img.shields.io/badge/join_the_community-on_discord-7289DA?logo=discord)][discord]
+
+---
 
 ## 🚀 Quick start
 
-1.  **Clone this repo**
-
-    ```sh
-    git clone https://github.com/reactph/reactjsph-website.git
-    ```
+1.  **Fork and clone this repo**
 
 2.  **Install dependencies**
 
@@ -35,16 +50,14 @@ Build with [Gatsby](https://www.gatsbyjs.org/)
 
     Open the `reactjsph-website` directory in your code editor of choice and start developing. Save your changes and the browser will update in real time!
 
----
+More for information about how you can contribute to this project, check our [contributing guidelines](https://github.com/reactph/reactjsph-website/blob/master/CODE_OF_CONDUCT.md).
 
-## Deployment 
+## 🎉 Join the community
 
-Currently, the ReactJSPH Website is deployed at github pages (https://reactph.github.io/reactjsph-website/)
+- [Facebook Group][facebook-group]
+- [Discord][discord]
+- [Meetup][meetup]
 
-1. To deploy to github pages
-
-    ```sh
-    yarn run deploy
-    ```
-
-2. A github login should prompt after the build. You need to have the necessary github role in order to have deploy access.
+[facebook-group]: https://web.facebook.com/groups/875676539148789/
+[discord]: https://discord.gg/J6eZNUG
+[meetup]: https://www.meetup.com/ReactJS-Philippines/
