@@ -3,10 +3,7 @@
     "browser": true
   },
   "extends": ["airbnb", "prettier", "prettier/react"],
-  "plugins": [
-    "prettier",
-    "react-hooks"
-  ],
+  "plugins": ["prettier", "react-hooks"],
   "rules": {
     "react/jsx-filename-extension": [
       1,
@@ -25,7 +22,9 @@
       {
         "exceptions": ["Box"]
       }
-    ]
+    ],
+    "camelcase": "off",
+    "import/prefer-default-export": "off"
   },
   "globals": {
     "window": true,
