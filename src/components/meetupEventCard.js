@@ -1,9 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Box, Button, Flex, Text } from "rebass"
-import { format } from "date-fns"
+import { format, parseISO } from "date-fns"
 
-const formatDate = date => format(new Date(date.split("T")[0]), "dd MMM yyyy")
+const formatDate = date => format(parseISO(date), "dd MMM yyyy")
 
 const MeetupEventCard = ({ event }) => {
   const { id, name, start_time, place } = event

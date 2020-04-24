@@ -1,6 +1,6 @@
 import React from "react"
 import { Box, Button, Text } from "rebass"
-import { isFuture, isPast } from "date-fns"
+import { isFuture, isPast, parseISO } from "date-fns"
 import { useStaticQuery, graphql } from "gatsby"
 
 import theme from "../theme"
@@ -35,9 +35,9 @@ const MeetupSection = () => {
   } = useStaticQuery(facebookEventQuery)
 
   const upcomingEvents = data.filter(event =>
-    isFuture(new Date(event.start_time))
+    isFuture(parseISO(event.start_time))
   )
-  const pastEvents = data.filter(event => isPast(new Date(event.start_time)))
+  const pastEvents = data.filter(event => isPast(parseISO(event.start_time)))
 
   return (
     <Box pb={[7, 9]}>
