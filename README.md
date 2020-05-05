@@ -11,6 +11,8 @@
 
 ---
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cd5d6330-1628-4d0e-aac1-84f8cf4b7863/deploy-status)](https://app.netlify.com/sites/reactjs-ph-website/deploys)
+
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 [![GitHub issues](https://img.shields.io/github/issues/reactph/reactjsph-website)](https://github.com/reactph/reactjsph-website/issues)
 [![GitHub license](https://img.shields.io/github/license/reactph/reactjsph-website)](https://github.com/reactph/reactjsph-website/blob/master/LICENSE)
