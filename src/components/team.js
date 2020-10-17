@@ -6,7 +6,7 @@ import "csshake/dist/csshake.css"
 import Container from "./container"
 import CircleButton from "./circleButton"
 import "../styles/custom-shake.css"
-import brandmarkLogo from "../images/brandmark.svg"
+import { Brandmark } from "../images"
 import orbitBackground from "../images/orbits.svg"
 import TeamPage from "./teamPage"
 
@@ -188,8 +188,8 @@ const TeamSection = () => {
           >
             « Core
           </Text>
-          <Image
-            src={brandmarkLogo}
+          <Box
+            as={Brandmark}
             alt="ReactJS Philippines"
             width="20vw"
             maxWidth="10rem"
