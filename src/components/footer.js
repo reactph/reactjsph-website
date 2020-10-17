@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Flex, Text, Link, Image } from "rebass"
+import { Box, Flex, Text, Link } from "rebass"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faFacebook,
@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 import { useStaticQuery, graphql, Link as GatsbyLink } from "gatsby"
 import Container from "./container"
-import Logo from "../images/brandmark.svg"
+import { Brandmark } from "../images"
 
 const FooterQuery = graphql`
   query FooterQuery {
@@ -79,8 +79,8 @@ const Footer = () => (
 const FooterBrandLogo = () => (
   <Box px={[1, null, 3]} textAlign="center">
     <GatsbyLink to="/">
-      <Image
-        src={Logo}
+      <Box
+        as={Brandmark}
         alt="React JS Philippines"
         width={["8rem", null, "10.88rem"]}
       />
