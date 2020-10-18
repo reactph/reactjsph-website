@@ -6,7 +6,9 @@ const Joi = require("@hapi/joi")
 const devList = JSON.parse(fs.readFileSync("file", "utf8"))
 
 const schema = Joi.object().keys({
-  avatar: Joi.link().required(),
+  avatar: Joi.string()
+    .uri()
+    .required(),
   name: Joi.string()
     .max(50)
     .required(),
@@ -28,7 +30,9 @@ const schema = Joi.object().keys({
       type: Joi.string()
         .valid("website", "github", "linkedin", "email")
         .required(),
-      url: Joi.link().required(),
+      url: Joi.string()
+        .uri()
+        .required(),
     })
   ),
 })
@@ -38,6 +42,7 @@ devList.forEach(dev => {
     if (err) {
       console.log(`${dev.name} has invalid details on devs.json`)
       console.log(err.details)
+      process.exit(1)
     }
   })
 })
