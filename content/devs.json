@@ -24,5 +24,43 @@
         "url": "mailto:galacemiguel@gmail.com"
       }
     ]
+  },
+  {
+    "avatar": "https://ibb.co/KhgxX1q",
+    "name": "Franrey Anthony S. Saycon",
+    "title": "Software Engineer | Team Lead | Architect",
+    "company": "Phitopolis International Corp.",
+    "blurb": "Python and Javascript junkie. I love architecting solutions, learn a lot of tech, and mentor.",
+    "skills": [
+      "React",
+      "Flask",
+      "Typescript",
+      "Docker",
+      "GraphQL",
+      "Angular",
+      "Javascript",
+      "MongoDB",
+      "PostgreSQL",
+      "Linux",
+      "MySQL"
+    ],
+    "contacts": [
+      {
+        "type": "website",
+        "url": "https://fsaycon.dev"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/franreysaycon"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://linkedin.com/in/fssaycon/"
+      },
+      {
+        "type": "email",
+        "url": "mailto:me@fsaycon.dev"
+      }
+    ]
   }
 ]
