@@ -1,11 +1,14 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
 const fs = require("fs")
 
-const Joi = require("@hapi/joi")
+const Joi = require("joi")
 
-const devList = JSON.parse(fs.readFileSync("file", "utf8"))
+const devList = JSON.parse(
+  fs.readFileSync(`${__dirname}/../content/devs.json`, "utf8")
+)
 
-const schema = Joi.object().keys({
+const schema = Joi.object({
   avatar: Joi.string()
     .uri()
     .required(),
@@ -37,12 +40,12 @@ const schema = Joi.object().keys({
   ),
 })
 
-devList.forEach(dev => {
-  Joi.validate(dev, schema, err => {
-    if (err) {
-      console.log(`${dev.name} has invalid details on devs.json`)
-      console.log(err.details)
-      process.exit(1)
-    }
-  })
+devList.forEach(async dev => {
+  try {
+    await schema.validateAsync(dev)
+  } catch (err) {
+    console.log(`${dev.name} has invalid details on devs.json`)
+    console.log(err.details)
+    process.exit(1)
+  }
 })
