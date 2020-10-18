@@ -20,18 +20,18 @@ const schema = Joi.object({
     .required(),
   company: Joi.string()
     .max(50)
-    .required(),
+    .optional(),
   blurb: Joi.string()
     .max(140)
     .required(),
   skills: Joi.array()
-    .items(Joi.string())
-    .max(5)
-    .min(1),
+    .items(Joi.string().max(15))
+    .min(1)
+    .required(),
   contacts: Joi.array().items(
     Joi.object().keys({
       type: Joi.string()
-        .valid("website", "github", "linkedin", "email")
+        .valid("website", "github", "linkedin", "email", "behance", "twitter")
         .required(),
       url: Joi.string()
         .uri()
