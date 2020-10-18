@@ -54,6 +54,33 @@
 
 More for information about how you can contribute to this project, check our [contributing guidelines](https://github.com/reactph/reactjsph-website/blob/master/CODE_OF_CONDUCT.md).
 
+## 📋 Enlisting in the Dev Board
+
+1. Edit the [`content/devs.json`](https://github.com/reactph/reactjsph-website/blob/master/content/devs.json) file.
+
+2. At the end of the array, add an object describing yourself given the format below:
+
+  | Key | Description ||
+  |-|-|-|
+  | `avatar` | An external URL to an image of yourself | <ul><li>Must be a square image</li><li>Must be less than 80 kB</li></ul> |
+  | `name` | Your name |  |
+  | `title` | Your current job title |  |
+  | `company` | Your current employer | <ul><li>Optional</li></ul> |
+  | `blurb` | Short bio describing yourself | <ul><li>Must be 140 characters or less</li></ul> |
+  | `skills` | String array of your skills/technologies that you would like to promote | <ul><li>Only the first 5 will be listed, but feel free to add as many as you like (We plan to allow devs to be filtered by skills in the future)</li></ul> |
+  | `contacts` | Object array of contact information where each item has a `type` and a `url` | <ul><li>`type` can be any of the following: "behance", "email", "github", "linkedin", "twitter", "website"</li><li>`url` must be a URL corresponding to the `type` selected</li></ul> |
+
+3. Open a pull request with your name as the title using the template below. Apply the `dev board` label.
+
+  ```
+  I have read and verified the following upon opening this pull request to add my information to the ReactJS Philippines Dev Board:
+
+  - [ ] My `avatar` is a square image
+  - [ ] My `avatar` is below 80 kB
+  - [ ] My `blurb` is no longer than 140 characters
+  - [ ] I understand that only the first 5 `skills` I list will be shown on the site
+  ```
+
 ## 🎉 Join the community
 
 - [Facebook Group][facebook-group]
