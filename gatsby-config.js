@@ -1,10 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
-
-const FACEBOOK_PAGE_ID = 431794124327063 // ReactJS PH Facebook Page ID
-
 module.exports = {
   siteMetadata: {
     title: `ReactJS Philippines`,
@@ -47,22 +40,13 @@ module.exports = {
     },
     `gatsby-plugin-emotion`,
     {
-      resolve: `gatsby-source-facebook-graphql`,
+      resolve: `gatsby-plugin-env-variables`,
       options: {
-        // Facebook account or page ID
-        pageId: FACEBOOK_PAGE_ID,
-        params: {
-          fields: ["events"],
-        },
-        // Access Token from Facebook Graph API
-        accessToken: process.env.FACEBOOK_GRAPH_TOKEN,
+        allowList: [`FACEBOOK_GRAPH_TOKEN`],
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: `gatsby-plugin-react-svg`,
       options: {
         rule: {
           include: /\.inline\.svg$/,
