@@ -128,5 +128,35 @@
         "url": "mailto:jisun.delosreyes@gmail.com"
       }
     ]
+  },
+  {
+    "avatar": "https://i.ibb.co/cD2CnB8/marj.png",
+    "name": "Marjorie J. Martinez",
+    "title": "Software Engineer",
+    "company": "Phitopolis International Corp.",
+    "blurb": "Hi Marj here! Software Engineer enthusiast. Frustrated freediver and certified dog mom.",
+    "skills": [
+      "React",
+      "GraphQL",
+      "NextJS",
+      "Javascript",
+      "PostgreSQL",
+      "MongoDB",
+      "GatsbyJS"
+    ],
+    "contacts": [
+      {
+        "type": "github",
+        "url": "https://github.com/marjmartinezz"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/marjorie-martinez/"
+      },
+      {
+        "type": "email",
+        "url": "mailto:marjoriemartinezdev@gmail.com"
+      }
+    ]
   }
 ]
