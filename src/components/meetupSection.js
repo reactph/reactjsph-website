@@ -1,43 +1,30 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Box, Button, Text } from "rebass"
 import { isFuture, isPast, parseISO } from "date-fns"
-import { useStaticQuery, graphql } from "gatsby"
 
 import theme from "../theme"
 import Container from "./container"
 import MeetupEventCard from "./meetupEventCard"
+import useFacebookPageEventQuery from "../hooks/useFacebookPageQuery"
 
-const facebookEventQuery = graphql`
-  query FacebookEventQuery {
-    facebook {
-      events {
-        data {
-          id
-          name
-          start_time
-          place {
-            name
-            location {
-              city
-            }
-          }
-        }
-      }
-    }
-  }
-`
+const FACEBOOK_PAGE_ID = "431794124327063" // ReactJS PH Facebook Page ID
 
 const MeetupSection = () => {
-  const {
-    facebook: {
-      events: { data },
-    },
-  } = useStaticQuery(facebookEventQuery)
+  const { data, callApi } = useFacebookPageEventQuery()
 
-  const upcomingEvents = data.filter(event =>
+  useEffect(() => {
+    callApi(FACEBOOK_PAGE_ID)
+  }, [callApi])
+
+  if (!data) {
+    return <></>
+  }
+
+  const events = data?.events?.data || []
+  const upcomingEvents = events.filter(event =>
     isFuture(parseISO(event.start_time))
   )
-  const pastEvents = data.filter(event => isPast(parseISO(event.start_time)))
+  const pastEvents = events.filter(event => isPast(parseISO(event.start_time)))
 
   return (
     <Box pb={[7, 9]}>
