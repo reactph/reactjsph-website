@@ -59,26 +59,21 @@ const useFacebookPageEventQuery = () => {
   const callApi = useCallback(
     pageId => {
       if (isFbReady) {
+        dispatch({
+          type: FacebookPageActions.PENDING,
+        })
         // eslint-disable-next-line consistent-return
         // eslint-disable-next-line no-undef
         FB.api(
           pageId,
           { fields: "events", access_token: process.env.FACEBOOK_GRAPH_TOKEN },
           res => {
-            dispatch({
-              type: FacebookPageActions.PENDING,
-            })
-            if (!res) {
+            if (!res || res.error) {
               dispatch({
                 type: FacebookPageActions.ERROR,
-                payload: { message: "Something went wrong. Empty response." },
-              })
-              return
-            }
-            if (res.error) {
-              dispatch({
-                type: FacebookPageActions.ERROR,
-                payload: res.error,
+                payload: res?.error || {
+                  message: "Something went wrong. Empty response.",
+                },
               })
               return
             }
