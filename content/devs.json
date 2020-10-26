@@ -158,5 +158,39 @@
         "url": "mailto:marjoriemartinezdev@gmail.com"
       }
     ]
+  },
+  {
+    "avatar": "http://adrianriosweb.com/wordpress_react/wp-content/uploads/2020/10/me.min_.jpg",
+    "name": "Adrian Rios",
+    "title": "Front-End Developer",
+    "company": "PLDT Global",
+    "blurb": "Hi, you can call me Pips, a web developer specialized in both front-end & back-end. I love building and customizing Gunpla Models and I also love playing video games.",
+    "skills": [
+      "Javascript",
+      "React",
+      "Angular",
+      "PHP",
+      "MongoDB",
+      "PostgreSQL",
+      "MySQL"
+    ],
+    "contacts": [
+      {
+        "type": "github",
+        "url": "https://github.com/adrianrios25"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/adrianrios13/"
+      },
+      {
+        "type": "email",
+        "url": "mailto:pipsrios25@gmail.com"
+      },
+      {
+        "type": "website",
+        "url": "http://adrianriosweb.com/"
+      }
+    ]
   }
 ]
