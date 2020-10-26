@@ -183,5 +183,38 @@
         "url": "mailto:tj.andoy@gmail.com"
       }
     ]
+  },
+  {
+    "avatar": "https://i.ibb.co/w41V8ZG/Resized-Jay.jpg",
+    "name": "John Joseph Mendez",
+    "title": "Software Engineer",
+    "company": "Mastt",
+    "blurb": "I'm Jay, a Software Engineer and i just love everything about tech",
+    "skills": [
+      "React",
+      "Typescript",
+      "GraphQL",
+      "Arduino",
+      "React Native",
+      "Python",
+      "php",
+      "ApolloGQL",
+      "Javascript"
+    ],
+    "contacts": [
+      {
+        "type": "github",
+        "url": "https://github.com/jaymendez"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/jaymndz/"
+      },
+      {
+        "type": "email",
+        "url": "mailto:jayemndz@gmail.com"
+      }
+    ]
   }
 ]
+  
