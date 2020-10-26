@@ -62,5 +62,101 @@
         "url": "mailto:me@fsaycon.dev"
       }
     ]
+  },
+  {
+    "avatar": "https://i.ibb.co/QDvNvJ8/51011835-1-1.jpg",
+    "name": "Christian Villamin",
+    "title": "Software Engineer",
+    "company": "High Output Ventures",
+    "blurb": "Hi! I have a thing for optimization and solving problems. Always tinkering and excited in ever-growing tech. I also animate stuff.",
+    "skills": [
+      "React",
+      "TypeScript",
+      "GraphQL",
+      "Linux",
+      "Framer Motion",
+      "ApolloGQL",
+      "NextJS",
+      "GatsbyJS",
+      "MongoDB",
+      "PostgreSQL",
+      "Prisma/Nexus"
+    ],
+    "contacts": [
+      {
+        "type": "website",
+        "url": "http://codekcv.github.io/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/codekcv"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://linkedin.com/in/codekcv/"
+      },
+      {
+        "type": "email",
+        "url": "mailto:codekcv31@gmail.com"
+      }
+    ]
+  },
+  {
+    "avatar": "https://i.ibb.co/3RzqhDz/60616167-144000396725182-5973974152078426112-o.jpg",
+    "name": "Jayson De los Reyes",
+    "title": "Frontend Developer",
+    "company": "Orange and Crane Innovations, Inc.",
+    "blurb": "I'm Jayson. Web and Mobile Developer. Casual Gamer. Hobbyist Cosplayer. Furdaddy.",
+    "skills": [
+      "React",
+      "React-Native",
+      "GraphQL",
+      "NextJS",
+      "GatsbyJS"
+    ],
+    "contacts": [
+      {
+        "type": "github",
+        "url": "https://github.com/jisundr"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://linkedin.com/in/jisundr/"
+      },
+      {
+        "type": "email",
+        "url": "mailto:jisun.delosreyes@gmail.com"
+      }
+    ]
+  },
+  {
+    "avatar": "https://i.ibb.co/cD2CnB8/marj.png",
+    "name": "Marjorie J. Martinez",
+    "title": "Software Engineer",
+    "company": "Phitopolis International Corp.",
+    "blurb": "Hi Marj here! Software Engineer enthusiast. Frustrated freediver and certified dog mom.",
+    "skills": [
+      "React",
+      "GraphQL",
+      "NextJS",
+      "Javascript",
+      "PostgreSQL",
+      "MongoDB",
+      "GatsbyJS"
+    ],
+    "contacts": [
+      {
+        "type": "github",
+        "url": "https://github.com/marjmartinezz"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/marjorie-martinez/"
+      },
+      {
+        "type": "email",
+        "url": "mailto:marjoriemartinezdev@gmail.com"
+      }
+    ]
   }
 ]

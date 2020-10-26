@@ -13,3 +13,16 @@ export const ShuffleArray = (array) => {
   }
   return array;
 }
+
+export const loadScript = src =>
+  new Promise((resolve, reject) => {
+    const script = document.createElement("script")
+    script.src = src
+    script.addEventListener("load", () => {
+      resolve()
+    })
+    script.addEventListener("error", e => {
+      reject(e)
+    })
+    document.body.appendChild(script)
+  })
