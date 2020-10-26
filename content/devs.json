@@ -167,14 +167,14 @@
     "blurb": "I'm Jay, a Software Engineer and i just love everything about tech",
     "skills": [
       "React",
+      "Typescript",
+      "GraphQL",
+      "Arduino",
       "React Native",
       "Python",
       "php",
-      "GraphQL",
       "ApolloGQL",
-      "Typescript",
       "Javascript",
-      "Arduino"
     ],
     "contacts": [
       {
