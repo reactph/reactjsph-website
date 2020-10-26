@@ -191,21 +191,21 @@
     ]
   },
   {
-    "avatar": "httpshttps://i.imgur.com/H6xCoQV.jpg",
+    "avatar": "https://imgur.com/6b4c7ec4-251d-4319-bb24-fb1757c3598a",
     "name": "Harvey Jay M. Sison",
     "title": "Platform Engineer",
     "company": "Exora Technologies Incorporated",
-    "blurb": "Hi everyone! 🙌🏼 I'm a full stack software engineer 💻, a UX/UI designer🎨, and an aspiring product/project manager 👨🏽‍💼  from Quezon City, Philippines",
+    "blurb": "Hi! 🙌🏼 I'm a full stack software engineer 💻, a UX/UI designer🎨, and an aspiring technopreneur 👨🏽‍💼  from Quezon City, Philippines",
     "skills": [
       "ReactJS",
-      "GatsbyJS",
-      "NextJS",
+      "NodeJS + Express",
       "TypeScript",
       "React Native",
-      "Flutter",
-      "MongoDB",
       "PostgreSQL",
-      "NodeJS + Express",
+      "MongoDB",
+      "GatsbyJS",
+      "NextJS",      
+      "Flutter",          
       "Django",
     ],
     "contacts": [
