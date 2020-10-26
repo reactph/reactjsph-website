@@ -5,8 +5,10 @@ import Container from "../components/container"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import DevBio from "../components/devBio"
-
+// import { ShuffleArray } from "../utils"
 import DevsJSON from "../../content/devs.json"
+
+// const devs = ShuffleArray(DevsJSON);
 
 const SecondPage = () => (
   <Layout>
