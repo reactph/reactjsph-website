@@ -22,8 +22,14 @@ const DevBio = ({
   dev: { avatar, name, title, company, blurb, skills = [], contacts = [] },
 }) => (
   <Flex color="white" flexDirection={["row", "column"]}>
-    <Image width="100%" height="100%" mb={[0, 2]} mr={[2, 0]} src={avatar} />
-    <Box>
+    <Image
+      width={["25%", "100%"]}
+      height="100%"
+      mb={[0, 2]}
+      mr={[2, 0]}
+      src={avatar}
+    />
+    <Box width={["75%", "100%"]}>
       <Text
         as="p"
         color="lightBlue"

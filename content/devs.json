@@ -85,7 +85,7 @@
     "contacts": [
       {
         "type": "website",
-        "url": "http://codekcv.github.io/"
+        "url": "https://codekcv.now.sh/"
       },
       {
         "type": "github",
@@ -107,13 +107,7 @@
     "title": "Frontend Developer",
     "company": "Orange and Crane Innovations, Inc.",
     "blurb": "I'm Jayson. Web and Mobile Developer. Casual Gamer. Hobbyist Cosplayer. Furdaddy.",
-    "skills": [
-      "React",
-      "React-Native",
-      "GraphQL",
-      "NextJS",
-      "GatsbyJS"
-    ],
+    "skills": ["React", "React-Native", "GraphQL", "NextJS", "GatsbyJS"],
     "contacts": [
       {
         "type": "github",
