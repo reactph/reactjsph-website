@@ -85,7 +85,7 @@
     "contacts": [
       {
         "type": "website",
-        "url": "http://codekcv.github.io/"
+        "url": "https://codekcv.now.sh/"
       },
       {
         "type": "github",
@@ -107,13 +107,7 @@
     "title": "Frontend Developer",
     "company": "Orange and Crane Innovations, Inc.",
     "blurb": "I'm Jayson. Web and Mobile Developer. Casual Gamer. Hobbyist Cosplayer. Furdaddy.",
-    "skills": [
-      "React",
-      "React-Native",
-      "GraphQL",
-      "NextJS",
-      "GatsbyJS"
-    ],
+    "skills": ["React", "React-Native", "GraphQL", "NextJS", "GatsbyJS"],
     "contacts": [
       {
         "type": "github",
@@ -156,6 +150,37 @@
       {
         "type": "email",
         "url": "mailto:marjoriemartinezdev@gmail.com"
+      }
+    ]
+  },
+  {
+    "avatar": "https://i.ibb.co/gymcmtV/terri-dev-pic-1.png",
+    "name": "Terri John P. Andoy, CpE",
+    "title": "Software / DevOps Engineer",
+    "company": "White Cloak Technologies, Inc.",
+    "blurb": "What's up, I'm TJ! I like technology, web-dev stuff and anime!",
+    "skills": [
+      "React",
+      "Go",
+      "TypeScript",
+      "MongoDB",
+      "Arduino",
+      "JavaScript",   
+      "Terraform",
+      "Ansible"
+    ],
+    "contacts": [
+      {
+        "type": "github",
+        "url": "https://github.com/tjandoy"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/tjandoy/"
+      },
+      {
+        "type": "email",
+        "url": "mailto:tj.andoy@gmail.com"
       }
     ]
   },
