@@ -277,5 +277,31 @@
         "url": "mailto:oliver.jurgen90@gmail.com"
       }
     ]
+  },
+  {
+    "avatar": "https://i.ibb.co/0fGg44G/IMG-5i4gyw-1.jpg",
+    "name": "Rhaidzsal Ali",
+    "title": "Software Engineer",
+    "company": "High Output Ventures",
+    "blurb": "I'm Rhaidz and I make things on the web.",
+    "skills": ["React", "Typescript", "GraphQL"],
+    "contacts": [
+      {
+        "type": "website",
+        "url": "https://rhaicode.netlify.com"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/rhaicode"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/rhaicode"
+      },
+      {
+        "type": "email",
+        "url": "mailto:rhaidzsal.ali@gmail.com"
+      }
+    ]
   }
 ]
