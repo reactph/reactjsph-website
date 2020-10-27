@@ -222,13 +222,7 @@
     "title": "Software Engineer",
     "company": "High Output Ventures",
     "blurb": "I'm Oliver. A self taught developer, relentless Learning Machine and an obsessive compulsive Problem Solver.",
-    "skills": [
-      "React",
-      "Typescript",
-      "GraphQL",
-      "React Testing Libary",
-      "Python"
-    ],
+    "skills": ["React", "Typescript", "GraphQL", "Python"],
     "contacts": [
       {
         "type": "github",
