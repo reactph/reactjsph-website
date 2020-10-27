@@ -85,7 +85,7 @@
     "contacts": [
       {
         "type": "website",
-        "url": "http://codekcv.github.io/"
+        "url": "https://codekcv.now.sh/"
       },
       {
         "type": "github",
@@ -191,7 +191,7 @@
     ]
   },
   {
-    "avatar": "https://imgur.com/6b4c7ec4-251d-4319-bb24-fb1757c3598a",
+    "avatar": "https://i.imgur.com/g3gPlAp.jpg",
     "name": "Harvey Jay M. Sison",
     "title": "Platform Engineer",
     "company": "Exora Technologies Incorporated",
@@ -206,7 +206,7 @@
       "GatsbyJS",
       "NextJS",      
       "Flutter",          
-      "Django",
+      "Django"
     ],
     "contacts": [
       {
@@ -222,5 +222,5 @@
         "url": "mailto:harveyjaysison@gmail.com"
       }
     ]
-  },
+  }
 ]
