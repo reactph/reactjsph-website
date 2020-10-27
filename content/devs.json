@@ -107,7 +107,13 @@
     "title": "Frontend Developer",
     "company": "Orange and Crane Innovations, Inc.",
     "blurb": "I'm Jayson. Web and Mobile Developer. Casual Gamer. Hobbyist Cosplayer. Furdaddy.",
-    "skills": ["React", "React-Native", "GraphQL", "NextJS", "GatsbyJS"],
+    "skills": [
+      "React",
+      "React-Native",
+      "GraphQL",
+      "NextJS",
+      "GatsbyJS"
+    ],
     "contacts": [
       {
         "type": "github",
@@ -182,6 +188,40 @@
         "type": "email",
         "url": "mailto:tj.andoy@gmail.com"
       }
+    ]
+  },
+  {
+    "avatar": "https://i.imgur.com/LXw7ryd.jpg",
+    "name": "Harvey Jay M. Sison",
+    "title": "Platform Engineer",
+    "company": "Exora Technologies Incorporated",
+    "blurb": "Hi! 🙌🏼 I'm a full stack software engineer 💻, a UX/UI designer🎨, and an aspiring technopreneur 👨🏽‍💼  from Quezon City, Philippines",
+    "skills": [
+      "ReactJS",
+      "NodeJS",
+      "Express",
+      "TypeScript",
+      "React Native",
+      "PostgreSQL",
+      "MongoDB",
+      "GatsbyJS",
+      "NextJS",      
+      "Flutter",          
+      "Django"
+    ],
+    "contacts": [
+      {
+        "type": "github",
+          "url": "httpshttps://github.com/Hjkun77"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://linkedin.com/in/harveyjaysison/"
+      },
+      {
+        "type": "email",
+        "url": "mailto:harveyjaysison@gmail.com"
+       }
     ]
   },
   {
