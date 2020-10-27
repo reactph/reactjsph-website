@@ -171,7 +171,7 @@
       "TypeScript",
       "MongoDB",
       "Arduino",
-      "JavaScript",   
+      "JavaScript",
       "Terraform",
       "Ansible"
     ],
@@ -211,7 +211,7 @@
     "contacts": [
       {
         "type": "github",
-        "url": "httpshttps://github.com/Hjkun77"
+          "url": "httpshttps://github.com/Hjkun77"
       },
       {
         "type": "linkedin",
@@ -220,6 +220,60 @@
       {
         "type": "email",
         "url": "mailto:harveyjaysison@gmail.com"
+       }
+    ]
+  },
+  {
+    "avatar": "https://i.ibb.co/w41V8ZG/Resized-Jay.jpg",
+    "name": "John Joseph Mendez",
+    "title": "Software Engineer",
+    "company": "Mastt",
+    "blurb": "I'm Jay, a Software Engineer and i just love everything about tech",
+    "skills": [
+      "React",
+      "Typescript",
+      "GraphQL",
+      "Arduino",
+      "React Native",
+      "Python",
+      "php",
+      "ApolloGQL",
+      "Javascript"
+    ],
+    "contacts": [
+      {
+        "type": "github",
+        "url": "https://github.com/jaymendez"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/jaymndz/"
+      },
+      {
+        "type": "email",
+        "url": "mailto:jayemndz@gmail.com"
+      }
+    ]
+  },
+  {
+    "avatar": "https://i.ibb.co/GW5Ntkc/test2-resize.jpg",
+    "name": "Oliver Jurgen Escoto",
+    "title": "Software Engineer - Frontend",
+    "company": "High Output Ventures",
+    "blurb": "I'm Oliver. A self taught developer, relentless Learning Machine and an obsessive compulsive Problem Solver.",
+    "skills": ["React", "Typescript", "GraphQL", "Python"],
+    "contacts": [
+      {
+        "type": "github",
+        "url": "https://github.com/oliverJurgen"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/oliverEscoto/"
+      },
+      {
+        "type": "email",
+        "url": "mailto:oliver.jurgen90@gmail.com"
       }
     ]
   }
