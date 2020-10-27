@@ -198,7 +198,8 @@
     "blurb": "Hi! 🙌🏼 I'm a full stack software engineer 💻, a UX/UI designer🎨, and an aspiring technopreneur 👨🏽‍💼  from Quezon City, Philippines",
     "skills": [
       "ReactJS",
-      "NodeJS + Express",
+      "NodeJS",
+      "Express",
       "TypeScript",
       "React Native",
       "PostgreSQL",
