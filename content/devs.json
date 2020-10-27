@@ -165,7 +165,7 @@
       "TypeScript",
       "MongoDB",
       "Arduino",
-      "JavaScript",   
+      "JavaScript",
       "Terraform",
       "Ansible"
     ],
@@ -215,6 +215,33 @@
         "url": "mailto:jayemndz@gmail.com"
       }
     ]
+  },
+  {
+    "avatar": "https://i.ibb.co/4V7JPJb/test2.jpg",
+    "name": "Oliver Escoto",
+    "title": "Software Engineer",
+    "company": "High Output Ventures",
+    "blurb": "I'm Oliver. A self taught developer, relentless Learning Machine and an obsessive compulsive Problem Solver.",
+    "skills": [
+      "React",
+      "Typescript",
+      "GraphQL",
+      "Unit/Integration Testing",
+      "Python"
+    ],
+    "contacts": [
+      {
+        "type": "github",
+        "url": "https://github.com/oliverJurgen"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/oliverEscoto/"
+      },
+      {
+        "type": "email",
+        "url": "oliver.jurgen90@gmail.com"
+      }
+    ]
   }
 ]
-  
