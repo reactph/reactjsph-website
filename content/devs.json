@@ -310,7 +310,7 @@
     "title": "Junior Software Engineer",
     "company": "Damstra Technology/Shore360",
     "blurb": "Hi, I'm a JavaScript & React enthusiast, have an eye for design, convert mock design to a live website, and naturally curious.",
-    "skills": ["JavaScript", "React", "Gatsby", "NodeJS", "MongoDB", "GraphQL", "Sass", "Styled-components", "Git"],
+    "skills": ["JavaScript", "React", "Gatsby", "NodeJS", "MongoDB", "GraphQL", "Git"],
     "contacts": [
       {
         "type": "website",
