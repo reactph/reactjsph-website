@@ -107,7 +107,13 @@
     "title": "Frontend Developer",
     "company": "Orange and Crane Innovations, Inc.",
     "blurb": "I'm Jayson. Web and Mobile Developer. Casual Gamer. Hobbyist Cosplayer. Furdaddy.",
-    "skills": ["React", "React-Native", "GraphQL", "NextJS", "GatsbyJS"],
+    "skills": [
+      "React",
+      "React-Native",
+      "GraphQL",
+      "NextJS",
+      "GatsbyJS"
+    ],
     "contacts": [
       {
         "type": "github",
@@ -185,6 +191,40 @@
     ]
   },
   {
+    "avatar": "https://i.imgur.com/LXw7ryd.jpg",
+    "name": "Harvey Jay M. Sison",
+    "title": "Platform Engineer",
+    "company": "Exora Technologies Incorporated",
+    "blurb": "Hi! 🙌🏼 I'm a full stack software engineer 💻, a UX/UI designer🎨, and an aspiring technopreneur 👨🏽‍💼  from Quezon City, Philippines",
+    "skills": [
+      "ReactJS",
+      "NodeJS",
+      "Express",
+      "TypeScript",
+      "React Native",
+      "PostgreSQL",
+      "MongoDB",
+      "GatsbyJS",
+      "NextJS",      
+      "Flutter",          
+      "Django"
+    ],
+    "contacts": [
+      {
+        "type": "github",
+          "url": "httpshttps://github.com/Hjkun77"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://linkedin.com/in/harveyjaysison/"
+      },
+      {
+        "type": "email",
+        "url": "mailto:harveyjaysison@gmail.com"
+       }
+    ]
+  },
+  {
     "avatar": "https://i.ibb.co/w41V8ZG/Resized-Jay.jpg",
     "name": "John Joseph Mendez",
     "title": "Software Engineer",
@@ -237,5 +277,91 @@
         "url": "mailto:oliver.jurgen90@gmail.com"
       }
     ]
+  },
+  {
+    "avatar": "https://i.ibb.co/0fGg44G/IMG-5i4gyw-1.jpg",
+    "name": "Rhaidzsal Ali",
+    "title": "Software Engineer",
+    "company": "High Output Ventures",
+    "blurb": "I'm Rhaidz and I make things on the web.",
+    "skills": ["React", "Typescript", "GraphQL"],
+    "contacts": [
+      {
+        "type": "website",
+        "url": "https://rhaicode.netlify.com"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/rhaicode"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/rhaicode"
+      },
+      {
+        "type": "email",
+        "url": "mailto:rhaidzsal.ali@gmail.com"
+      }
+    ]
+  },
+  {
+    "avatar": "https://i.ibb.co/k3KVxqK/me2-min.jpg",
+    "name": "Adrian Rios",
+    "title": "Front-End Developer",
+    "company": "PLDT Global",
+    "blurb": "Hi, you can call me Pips, a web developer from Nueva Ecija. I love building and customizing Gunpla Models and playing video games.",
+    "skills": [
+      "Javascript",
+      "React",
+      "Angular",
+      "PHP",
+      "MongoDB",
+      "PostgreSQL",
+      "MySQL"
+    ],
+    "contacts": [
+          {
+            "type": "github",
+            "url": "https://github.com/adrianrios25"
+          },
+          {
+            "type": "linkedin",
+            "url": "https://www.linkedin.com/in/adrianrios13/"
+          },
+          {
+            "type": "email",
+            "url": "mailto:pipsrios25@gmail.com"
+          },
+          {
+            "type": "website",
+            "url": "http://adrianriosweb.com/"
+          }
+        ]
+      },
+      {
+        "avatar": "https://avatars1.githubusercontent.com/u/36836488?s=460&u=3bad90fad66e85a12ff90883ea54e2d3ba8f7fe7&v=4",
+        "name": "Mark Dino Pelonia",
+        "title": "Junior Software Engineer",
+        "company": "Damstra Technology/Shore360",
+        "blurb": "Hi, I'm a JavaScript & React enthusiast, have an eye for design, convert mock design to a live website, and naturally curious.",
+        "skills": ["JavaScript", "React", "Gatsby", "NodeJS", "MongoDB", "GraphQL", "Git"],
+        "contacts": [
+          {
+            "type": "website",
+            "url": "https://www.markdino.com"
+          },
+          {
+            "type": "github",
+            "url": "https://github.com/markdino"
+          },
+          {
+            "type": "linkedin",
+            "url": "https://linkedin.com/in/markdinopelonia"
+          },
+          {
+            "type": "email",
+            "url": "mailto:markdinopelonia447@gmail.com"
+          }
+        ]
   }
 ]
