@@ -320,21 +320,23 @@
       "MySQL"
     ],
     "contacts": [
-      {
-        "type": "github",
-        "url": "https://github.com/adrianrios25"
-      },
-      {
-        "type": "linkedin",
-        "url": "https://www.linkedin.com/in/adrianrios13/"
-      },
-      {
-        "type": "email",
-        "url": "mailto:pipsrios25@gmail.com"
-      },
-      {
-        "type": "website",
-        "url": "http://adrianriosweb.com/"
+          {
+            "type": "github",
+            "url": "https://github.com/adrianrios25"
+          },
+          {
+            "type": "linkedin",
+            "url": "https://www.linkedin.com/in/adrianrios13/"
+          },
+          {
+            "type": "email",
+            "url": "mailto:pipsrios25@gmail.com"
+          },
+          {
+            "type": "website",
+            "url": "http://adrianriosweb.com/"
+          }
+        ]
       },
       {
         "avatar": "https://avatars1.githubusercontent.com/u/36836488?s=460&u=3bad90fad66e85a12ff90883ea54e2d3ba8f7fe7&v=4",
