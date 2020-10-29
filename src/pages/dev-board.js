@@ -8,8 +8,6 @@ import DevBio from "../components/devBio"
 import { ShuffleArray } from "../utils"
 import devsJSON from "../../content/devs.json"
 
-// const devs = ShuffleArray(DevsJSON);
-
 const shuffledDevList = ShuffleArray(devsJSON)
 const SecondPage = () => (
   <Layout>
