@@ -6,6 +6,7 @@ import {
   faFacebookMessenger,
   faMeetup,
   faLinkedin,
+  faDiscord,
 } from "@fortawesome/free-brands-svg-icons"
 import { useStaticQuery, graphql, Link as GatsbyLink } from "gatsby"
 import Container from "./container"
@@ -20,6 +21,7 @@ const FooterQuery = graphql`
           linkedin
           meetup
           messenger
+          discord
         }
       }
     }
@@ -106,7 +108,7 @@ const FooterContentRight = () => {
   const {
     site: {
       siteMetadata: {
-        social: { facebook, linkedin, meetup, messenger },
+        social: { facebook, linkedin, meetup, messenger, discord },
       },
     },
   } = useStaticQuery(FooterQuery)
@@ -130,6 +132,9 @@ const FooterContentRight = () => {
       </Text>
 
       <Text fontSize={3}>
+        <Link href={discord} color="white" mr={2}>
+          <FontAwesomeIcon icon={faDiscord} />
+        </Link>
         <Link href={facebook} color="white" mr={2}>
           <FontAwesomeIcon icon={faFacebook} />
         </Link>

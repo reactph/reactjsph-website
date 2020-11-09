@@ -11,6 +11,7 @@ module.exports = {
       messenger: `https://m.me/reactjsphilippines`,
       meetup: `https://www.meetup.com/ReactJS-Philippines/`,
       linkedin: `https://www.linkedin.com/company/reactjs-philippines/`,
+      discord: `https://discord.gg/J6eZNUG`,
     },
   },
   pathPrefix: `/reactjsph-website`,
