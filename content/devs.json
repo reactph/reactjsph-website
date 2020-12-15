@@ -363,48 +363,79 @@
       "MySQL"
     ],
     "contacts": [
-          {
-            "type": "github",
-            "url": "https://github.com/adrianrios25"
-          },
-          {
-            "type": "linkedin",
-            "url": "https://www.linkedin.com/in/adrianrios13/"
-          },
-          {
-            "type": "email",
-            "url": "mailto:pipsrios25@gmail.com"
-          },
-          {
-            "type": "website",
-            "url": "http://adrianriosweb.com/"
-          }
-        ]
+      {
+        "type": "github",
+        "url": "https://github.com/adrianrios25"
       },
       {
-        "avatar": "https://avatars1.githubusercontent.com/u/36836488?s=460&u=3bad90fad66e85a12ff90883ea54e2d3ba8f7fe7&v=4",
-        "name": "Mark Dino Pelonia",
-        "title": "Junior Software Engineer",
-        "company": "Damstra Technology/Shore360",
-        "blurb": "Hi, I'm a JavaScript & React enthusiast, have an eye for design, convert mock design to a live website, and naturally curious.",
-        "skills": ["JavaScript", "React", "Gatsby", "NodeJS", "MongoDB", "GraphQL", "Git"],
-        "contacts": [
-          {
-            "type": "website",
-            "url": "https://www.markdino.com"
-          },
-          {
-            "type": "github",
-            "url": "https://github.com/markdino"
-          },
-          {
-            "type": "linkedin",
-            "url": "https://linkedin.com/in/markdinopelonia"
-          },
-          {
-            "type": "email",
-            "url": "mailto:markdinopelonia447@gmail.com"
-          }
-        ]
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/adrianrios13/"
+      },
+      {
+        "type": "email",
+        "url": "mailto:pipsrios25@gmail.com"
+      },
+      {
+        "type": "website",
+        "url": "http://adrianriosweb.com/"
+      }
+    ]
+  },
+  {
+    "avatar": "https://avatars1.githubusercontent.com/u/36836488?s=460&u=3bad90fad66e85a12ff90883ea54e2d3ba8f7fe7&v=4",
+    "name": "Mark Dino Pelonia",
+    "title": "Junior Software Engineer",
+    "company": "Damstra Technology/Shore360",
+    "blurb": "Hi, I'm a JavaScript & React enthusiast, have an eye for design, convert mock design to a live website, and naturally curious.",
+    "skills": ["JavaScript", "React", "Gatsby", "NodeJS", "MongoDB", "GraphQL", "Git"],
+    "contacts": [
+      {
+        "type": "website",
+        "url": "https://www.markdino.com"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/markdino"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://linkedin.com/in/markdinopelonia"
+      },
+      {
+        "type": "email",
+        "url": "mailto:markdinopelonia447@gmail.com"
+      }
+    ]
+  },
+  {
+    "avatar": "https://ryan3sg.github.io/images/rye-ayan.jpg",
+    "name": "Ryan Bautista",
+    "title": "Frontend Developer",
+    "blurb": "My career mostly driven by my passion in UI. I have been part of building web apps for several years. I make great ideas happen.",
+    "skills": [
+      "React",
+      "Gatsby",
+      "Mobx",
+      "TypeScript",
+      "VueJS"
+    ],
+    "contacts": [
+      {
+        "type": "website",
+        "url": "https://ryan3sg.github.io/"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/ryan3sg/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/ryan3sg"
+      },
+      {
+        "type": "email",
+        "url": "mailto:ryan3sg@yahoo.com"
+      }
+    ]
   }
 ]
