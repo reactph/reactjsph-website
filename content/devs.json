@@ -468,5 +468,38 @@
         "url": "mailto:devlargs@gmail.com"
       }
     ]
+  },
+  {
+    "avatar": "https://i.imgur.com/JjBvTHW.jpg",
+    "name": "Nemuel  Lim",
+    "title": "Software Engineer - Frontend",
+    "blurb": "Im Nem! Former software engineer from Talon Amadeo Cavite. I love playing sports, mobile and pc games.",
+    "skills": [
+      "Angular",
+      "Vue",
+      "React",
+      "Javascript/TypeScript",
+      "Graphql",
+      "Basic Electron",
+      "Basic Nodejs"
+    ],
+    "contacts": [
+      {
+        "type": "website",
+        "url": "https://nemuel.pb.online"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/nemuel-lim-4092791a1/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/limnemuel22"
+      },
+      {
+        "type": "email",
+        "url": "mailto:lim.nemuel.22@gmail.com"
+      }
+    ]
   }
 ]
