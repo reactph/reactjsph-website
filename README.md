@@ -81,6 +81,22 @@ More for information about how you can contribute to this project, check our [co
   - [ ] I understand that only the first 5 `skills` I list will be shown on the site
   ```
 
+## 🗂 Contributing to the Project Board
+
+1. Edit the [`content/projects.json`](https://github.com/reactph/reactjsph-website/blob/master/content/projects.json) file.
+
+2. At the end of the array, add an object describing your project given the format below:
+
+  | Key | Description ||
+  |-|-|-|
+  | `name` | The name of your project |  |
+  | `author` | Your name |  |
+  | `description` | A description of your project | <ul><li>No longer than 280 characters</li></ul> |
+  | `homepage` | Your project's homepage |  |
+  | `tags` | String array of keywords related to your project | <ul><li>Only the first 5 will be listed, but feel free to add as many as you like (We plan to allow projects to be filtered by tags in the future)</li></ul> |
+
+3. Open a pull request with the title `[PROJECT BOARD] {PROJECT_NAME}`.
+
 ## 🎉 Join the community
 
 - [Facebook Group][facebook-group]
