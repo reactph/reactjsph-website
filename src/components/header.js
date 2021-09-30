@@ -5,7 +5,10 @@ import { Box, Flex, Link, Text } from "rebass"
 import { Brandmark } from "../images"
 import Container from "./container"
 
-const menus = [{ label: "Dev Board", path: "/dev-board" }]
+const menus = [
+  { label: "Dev Board", path: "/dev-board" },
+  { label: "Projects", path: "/projects" },
+]
 
 const Header = ({ siteTitle }) => (
   <Box
@@ -50,15 +53,20 @@ const Header = ({ siteTitle }) => (
           </Text>
         </Flex>
 
-        <ul>
-          {menus.map(menu => (
-            <li key={menu.label}>
+        <Box
+          as="ul"
+          display="flex"
+          flexDirection={["column", "row"]}
+          textAlign="right"
+        >
+          {menus.map((menu, i) => (
+            <Box as="li" key={menu.label} ml={i !== 0 ? 2 : 0}>
               <Link variant="nav" href={menu.path} fontSize={[1, 2]}>
                 {menu.label}
               </Link>
-            </li>
+            </Box>
           ))}
-        </ul>
+        </Box>
       </Flex>
     </Container>
   </Box>
