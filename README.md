@@ -56,9 +56,9 @@ More for information about how you can contribute to this project, check our [co
 
 ## 📋 Enlisting in the Dev Board
 
-1. Edit the [`content/devs.json`](https://github.com/reactph/reactjsph-website/blob/master/content/devs.json) file.
+1. Add a JSON file in the [`content/devs`](https://github.com/reactph/reactjsph-website/blob/master/content/devs) folder with `firstname-lastname.json` as filename, all lowercase, separated by `-` (e.g. `juan-dela-cruz.json`).
 
-2. At the end of the array, add an object describing yourself given the format below:
+2. Create an object describing yourself given the format below, here's an [example](https://github.com/reactph/reactjsph-website/blob/master/content/devs/franrey-anthony-saycon.json).
 
   | Key | Description ||
   |-|-|-|
@@ -70,7 +70,7 @@ More for information about how you can contribute to this project, check our [co
   | `skills` | String array of your skills/technologies that you would like to promote | <ul><li>Only the first 5 will be listed, but feel free to add as many as you like (We plan to allow devs to be filtered by skills in the future)</li></ul> |
   | `contacts` | Object array of contact information where each item has a `type` and a `url` | <ul><li>`type` can be any of the following: "behance", "email", "github", "linkedin", "twitter", "website"</li><li>`url` must be a URL corresponding to the `type` selected</li></ul> |
 
-3. Open a pull request with the title `[DEV BOARD] {YOUR_NAME}` using the template below:
+3. Commit your changes with the title `[DEV BOARD] {YOUR_NAME}`, open a pull request with the same title, and use the template below:
 
   ```
   I have read and verified the following upon opening this pull request to add my information to the ReactJS Philippines Dev Board:
