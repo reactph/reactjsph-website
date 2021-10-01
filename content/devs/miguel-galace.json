@@ -1,0 +1,26 @@
+{
+  "avatar": "https://res.cloudinary.com/galacemiguel/image/upload/c_fit,dpr_3.0,f_auto,q_auto,w_100/v1576307468/galacemiguel.com/20190103_074056",
+  "name": "Miguel N. Galace",
+  "title": "Software Engineer",
+  "company": "Quipper",
+  "blurb": "I'm Miguel and I obsess over web design. My mission is to elevate the standard of web design and development in the Philippines.",
+  "skills": ["React", "Rails", "TypeScript"],
+  "contacts": [
+    {
+      "type": "website",
+      "url": "https://galacemiguel.com"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/galacemiguel"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://linkedin.com/in/galacemiguel/"
+    },
+    {
+      "type": "email",
+      "url": "mailto:galacemiguel@gmail.com"
+    }
+  ]
+}

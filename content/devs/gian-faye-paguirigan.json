@@ -1,0 +1,43 @@
+{
+  "avatar": "https://i.imgur.com/YTpMxSa.jpg",
+  "name": "Gian Faye Paguirigan",
+  "title": "Frontend Engineer",
+  "blurb": "I've been designing and building user interfaces since 2010.",
+  "skills": [
+    "React",
+    "TypeScript",
+    "Gatsby",
+    "GraphQL",
+    "Redux",
+    "HTML5",
+    "CSS3",
+    "SCSS",
+    "JavaScript",
+    "ES6",
+    "Node.js",
+    "Express",
+    "Python",
+    "Selenium",
+    "Arduino",
+    "UX Design",
+    "UI Design"
+  ],
+  "contacts": [
+    {
+      "type": "website",
+      "url": "https://gianfaye.com"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/gianfaye"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/gianfaye"
+    },
+    {
+      "type": "email",
+      "url": "mailto:contact@gianfaye.com"
+    }
+  ]
+}

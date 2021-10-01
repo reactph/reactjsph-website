@@ -1,0 +1,22 @@
+{
+  "avatar": "https://i.ibb.co/3RzqhDz/60616167-144000396725182-5973974152078426112-o.jpg",
+  "name": "Jayson De los Reyes",
+  "title": "Frontend Developer",
+  "company": "Orange and Crane Innovations, Inc.",
+  "blurb": "I'm Jayson. Web and Mobile Developer. Casual Gamer. Hobbyist Cosplayer. Furdaddy.",
+  "skills": ["React", "React-Native", "GraphQL", "NextJS", "GatsbyJS"],
+  "contacts": [
+    {
+      "type": "github",
+      "url": "https://github.com/jisundr"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://linkedin.com/in/jisundr/"
+    },
+    {
+      "type": "email",
+      "url": "mailto:jisun.delosreyes@gmail.com"
+    }
+  ]
+}
