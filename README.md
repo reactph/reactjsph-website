@@ -83,9 +83,9 @@ More for information about how you can contribute to this project, check our [co
 
 ## 🗂 Contributing to the Project Board
 
-1. Edit the [`content/projects.json`](https://github.com/reactph/reactjsph-website/blob/master/content/projects.json) file.
+1. Create a JSON file in the [`content/projects`](https://github.com/reactph/reactjsph-website/blob/master/content/projects.json) folder with filename `project-name.json` (all lowercase, separated by `-`), e.g., `reactjsph-website`.
 
-2. At the end of the array, add an object describing your project given the format below:
+2. Within that file, define an object describing your project given the format below:
 
   | Key | Description ||
   |-|-|-|
@@ -95,7 +95,7 @@ More for information about how you can contribute to this project, check our [co
   | `homepage` | Your project's homepage |  |
   | `tags` | String array of keywords related to your project | <ul><li>Only the first 5 will be listed, but feel free to add as many as you like (We plan to allow projects to be filtered by tags in the future)</li></ul> |
 
-3. Open a pull request with the title `[PROJECT BOARD] {PROJECT_NAME}`.
+3. Commit your changes with the message `[PROJECT BOARD] {YOUR_NAME}`, then open a pull request with the same title.
 
 ## 🎉 Join the community
 
