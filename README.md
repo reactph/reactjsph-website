@@ -70,7 +70,7 @@ More for information about how you can contribute to this project, check our [co
   | `skills` | String array of your skills/technologies that you would like to promote | <ul><li>Only the first 5 will be listed, but feel free to add as many as you like (We plan to allow devs to be filtered by skills in the future)</li></ul> |
   | `contacts` | Object array of contact information where each item has a `type` and a `url` | <ul><li>`type` can be any of the following: "behance", "email", "github", "linkedin", "twitter", "website"</li><li>`url` must be a URL corresponding to the `type` selected</li></ul> |
 
-3. Commit your changes with the title `[DEV BOARD] {YOUR_NAME}`, open a pull request with the same title, and use the template below:
+3. Commit your changes with the message `[DEV BOARD] {YOUR_NAME}` and open a pull request with the same title, following the template below:
 
   ```
   I have read and verified the following upon opening this pull request to add my information to the ReactJS Philippines Dev Board:
