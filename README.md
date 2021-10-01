@@ -83,6 +83,8 @@ More for information about how you can contribute to this project, check our [co
 
 ## 🗂 Contributing to the Project Board
 
+> We 💙 all projects, but for personal websites, consider listing them under your name through the Dev Board above instead!
+
 1. Create a JSON file in the [`content/projects`](https://github.com/reactph/reactjsph-website/blob/master/content/projects.json) folder with filename `project-name.json` (all lowercase, separated by `-`), e.g., `reactjsph-website`.
 
 2. Within that file, define an object describing your project given the format below:
