@@ -58,7 +58,7 @@ More for information about how you can contribute to this project, check our [co
 
 1. Add a JSON file to the [`content/devs`](https://github.com/reactph/reactjsph-website/blob/master/content/devs) folder with filename `firstname-lastname.json` (all lowercase, separated by `-`), e.g., `juan-dela-cruz.json`.
 
-2. Create an object describing yourself given the format below, here's an [example](https://github.com/reactph/reactjsph-website/blob/master/content/devs/franrey-anthony-saycon.json).
+2. Within that file, define an object describing yourself given the format below. Here's an [example](https://github.com/reactph/reactjsph-website/blob/master/content/devs/franrey-anthony-saycon.json).
 
   | Key | Description ||
   |-|-|-|
