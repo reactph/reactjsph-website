@@ -17,11 +17,19 @@ module.exports = {
   pathPrefix: `/reactjsph-website`,
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `devs`,
+        path: `${__dirname}/content/devs`,
       },
     },
     `gatsby-transformer-sharp`,
