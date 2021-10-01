@@ -1,12 +1,14 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
 const fs = require("fs")
-
 const Joi = require("joi")
+const { spawnSync } = require("child_process")
 
-const devList = JSON.parse(
-  fs.readFileSync(`${__dirname}/../content/devs.json`, "utf8")
-)
+const result = spawnSync("yarn lint", { stdio: "inherit", shell: true })
+
+if (result.status !== 0) {
+  process.exit(result.status)
+}
 
 const schema = Joi.object({
   avatar: Joi.string()
@@ -40,12 +42,22 @@ const schema = Joi.object({
   ),
 })
 
-devList.forEach(async dev => {
-  try {
-    await schema.validateAsync(dev)
-  } catch (err) {
-    console.log(`${dev.name} has invalid details on devs.json`)
-    console.log(err.details)
-    process.exit(1)
+const dir = `${__dirname}/../content/devs/`
+
+fs.readdir(dir, (err, files) => {
+  if (err) {
+    throw err
   }
+
+  files.forEach(async file => {
+    const devJson = JSON.parse(fs.readFileSync(`${dir}${file}`, "utf8"))
+
+    try {
+      await schema.validateAsync(devJson)
+    } catch (error) {
+      console.log(`${file} has invalid details`)
+      console.log(error.details)
+      process.exit(1)
+    }
+  })
 })
