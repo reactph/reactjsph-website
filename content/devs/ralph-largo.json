@@ -1,0 +1,25 @@
+{
+  "avatar": "https://largs.s3.amazonaws.com/2x2.jpg",
+  "name": "Ralph Largo",
+  "title": "Software Engineer",
+  "blurb": "Im Largs! A home-based software engineer from Olongapo. I love Memes and Dota 2.",
+  "skills": ["React", "NextJS", "Electron", "TypeScript", "Graphql"],
+  "contacts": [
+    {
+      "type": "website",
+      "url": "https://ralphlargo.com"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/devlargs/"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/devlargs"
+    },
+    {
+      "type": "email",
+      "url": "mailto:devlargs@gmail.com"
+    }
+  ]
+}
