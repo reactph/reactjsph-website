@@ -56,7 +56,7 @@ More for information about how you can contribute to this project, check our [co
 
 ## 📋 Enlisting in the Dev Board
 
-1. Add a JSON file in the [`content/devs`](https://github.com/reactph/reactjsph-website/blob/master/content/devs) folder with `firstname-lastname.json` as filename, all lowercase, separated by `-` (e.g. `juan-dela-cruz.json`).
+1. Add a JSON file to the [`content/devs`](https://github.com/reactph/reactjsph-website/blob/master/content/devs) folder with filename `firstname-lastname.json` (all lowercase, separated by `-`), e.g., `juan-dela-cruz.json`.
 
 2. Create an object describing yourself given the format below, here's an [example](https://github.com/reactph/reactjsph-website/blob/master/content/devs/franrey-anthony-saycon.json).
 
