@@ -1,16 +1,13 @@
 import React from "react"
+import { graphql } from "gatsby"
 import { Box, Text } from "rebass"
 
 import Container from "../components/container"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import DevBio from "../components/devBio"
-// import { ShuffleArray } from "../utils"
-import DevsJSON from "../../content/devs.json"
 
-// const devs = ShuffleArray(DevsJSON);
-
-const SecondPage = () => (
+const DevBoardPage = ({ data }) => (
   <Layout>
     <SEO title="Dev Board" />
     <Container pt={[0, 3]}>
@@ -66,9 +63,9 @@ const SecondPage = () => (
           rowGap: "2rem",
         }}
       >
-        {DevsJSON.map(dev => (
+        {data.allDevsJson.edges.map(dev => (
           <Box as="li">
-            <DevBio dev={dev} />
+            <DevBio dev={dev.node} />
           </Box>
         ))}
       </Box>
@@ -76,4 +73,24 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export const query = graphql`
+  query DevJsonQuery {
+    allDevsJson {
+      edges {
+        node {
+          avatar
+          name
+          title
+          blurb
+          skills
+          contacts {
+            type
+            url
+          }
+        }
+      }
+    }
+  }
+`
+
+export default DevBoardPage
