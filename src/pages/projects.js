@@ -1,13 +1,13 @@
 import React from "react"
+import { graphql } from "gatsby"
 import { Box, Text } from "rebass"
 
 import Container from "../components/container"
 import Layout from "../components/layout"
 import ProjectCard from "../components/projectCard"
 import SEO from "../components/seo"
-import ProjectsJSON from "../../content/projects.json"
 
-const ProjectsPage = () => (
+const ProjectsPage = ({ data }) => (
   <Layout>
     <SEO title="Community Projects" />
     <Container
@@ -67,14 +67,30 @@ const ProjectsPage = () => (
         </Text>
       </Box>
       <Box as="ul" width="100%">
-        {ProjectsJSON.map(project => (
+        {data.allProjectsJson.edges.map(project => (
           <Box as="li">
-            <ProjectCard project={project} />
+            <ProjectCard project={project.node} />
           </Box>
         ))}
       </Box>
     </Container>
   </Layout>
 )
+
+export const query = graphql`
+  query ProjectsJsonQuery {
+    allProjectsJson {
+      edges {
+        node {
+          name
+          author
+          description
+          homepage
+          tags
+        }
+      }
+    }
+  }
+`
 
 export default ProjectsPage
