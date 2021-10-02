@@ -68,3 +68,6 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+# use yarn instead of npm
+package-lock.json
