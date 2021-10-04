@@ -91,6 +91,7 @@ const contentJsons = [
         .items(Joi.string().max(50))
         .min(1)
         .optional(),
+      pinned: Joi.boolean().optional(),
     }),
   },
 ]

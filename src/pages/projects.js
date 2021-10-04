@@ -67,7 +67,12 @@ const ProjectsPage = ({ data }) => (
         </Text>
       </Box>
       <Box as="ul" width="100%">
-        {data.allProjectsJson.edges.map(project => (
+        {data.pinned.edges.map(project => (
+          <Box as="li">
+            <ProjectCard project={project.node} />
+          </Box>
+        ))}
+        {data.unpinned.edges.map(project => (
           <Box as="li">
             <ProjectCard project={project.node} />
           </Box>
@@ -78,16 +83,24 @@ const ProjectsPage = ({ data }) => (
 )
 
 export const query = graphql`
-  query ProjectsJsonQuery {
-    allProjectsJson {
-      edges {
-        node {
-          name
-          author
-          description
-          homepage
-          tags
-        }
+  query UnpinnedProjectsJsonQuery {
+    unpinned: allProjectsJson(filter: { pinned: { ne: true } }) {
+      ...ProjectsJsonConnectionFragment
+    }
+    pinned: allProjectsJson(filter: { pinned: { eq: true } }) {
+      ...ProjectsJsonConnectionFragment
+    }
+  }
+
+  fragment ProjectsJsonConnectionFragment on ProjectsJsonConnection {
+    edges {
+      node {
+        name
+        author
+        description
+        homepage
+        tags
+        pinned
       }
     }
   }

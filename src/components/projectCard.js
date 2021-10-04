@@ -1,8 +1,11 @@
+import { faThumbtack } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import React from "react"
 import { Box, Button, Flex, Text } from "rebass"
+import theme from "../theme"
 
 const ProjectCard = ({
-  project: { name, author, description, homepage, tags },
+  project: { name, author, description, homepage, tags, pinned },
 }) => (
   <Flex
     bg="white"
@@ -18,8 +21,32 @@ const ProjectCard = ({
       ":hover": {
         transform: "translateY(-0.25rem)",
       },
+      position: "relative",
     }}
   >
+    {pinned && (
+      <Box
+        sx={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+        }}
+      >
+        <Box
+          sx={{
+            borderStyle: "solid",
+            borderWidth: "45px 45px 0 0",
+            borderColor: `${theme.colors.lightBlue} transparent transparent transparent;`,
+            zIndex: 0,
+          }}
+          width="0"
+          height="0"
+        />
+        <Box sx={{ position: "absolute", zIndex: 1, top: "15%", left: "15%" }}>
+          <FontAwesomeIcon icon={faThumbtack} />
+        </Box>
+      </Box>
+    )}
     <Box mr={[0, null, 3]} mb={[2, null, 0]}>
       <Text
         as="p"
