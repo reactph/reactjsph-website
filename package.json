@@ -14,6 +14,7 @@
     "@reach/dialog": "^0.8.6",
     "@react-hook/intersection-observer": "^2.0.10",
     "@rebass/preset": "^4.0.3",
+    "babel-eslint": "^10.1.0",
     "csshake": "^1.5.3",
     "date-fns": "^2.10.0",
     "emotion-reset": "^2.0.2",
@@ -43,7 +44,7 @@
     "yup": "^0.28.1"
   },
   "devDependencies": {
-    "eslint": "^6.2.0",
+    "eslint": "6.2.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.1.0",
     "eslint-plugin-import": "^2.18.2",
@@ -66,7 +67,7 @@
     "start": "yarn run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "lint": "eslint 'src/**/*.{js,jsx}' --fix",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --fix",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "validate": "lint-staged"
   },
