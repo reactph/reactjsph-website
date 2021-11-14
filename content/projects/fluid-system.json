@@ -1,0 +1,13 @@
+{
+  "name": "Fluid System",
+  "author": "Miguel N. Galace",
+  "description": "Fluid System is a style props function transformer for generating fluid styles. 💦",
+  "homepage": "https://github.com/galacemiguel/fluid-system",
+  "tags": [
+    "typography",
+    "fluid",
+    "styled-system",
+    "styled-components",
+    "emotion"
+  ]
+}

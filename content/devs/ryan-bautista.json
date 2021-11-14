@@ -1,0 +1,25 @@
+{
+  "avatar": "https://ryan3sg.github.io/images/rye-ayan.jpg",
+  "name": "Ryan Bautista",
+  "title": "Frontend Developer",
+  "blurb": "My career mostly driven by my passion in UI. I have been part of building web apps for several years. I make great ideas happen.",
+  "skills": ["React", "Gatsby", "Mobx", "TypeScript", "VueJS"],
+  "contacts": [
+    {
+      "type": "website",
+      "url": "https://ryan3sg.github.io/"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/ryan3sg/"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/ryan3sg"
+    },
+    {
+      "type": "email",
+      "url": "mailto:ryan3sg@yahoo.com"
+    }
+  ]
+}

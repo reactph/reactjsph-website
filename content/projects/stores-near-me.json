@@ -1,0 +1,7 @@
+{
+  "name": "Stores Near Me",
+  "author": "Franrey Anthony S. Saycon",
+  "description": "Find convenience stores near you in a click of a button.",
+  "homepage": "https://github.com/franreysaycon/cra-stores-near-me",
+  "tags": ["reactjs", "google api", "philippines"]
+}

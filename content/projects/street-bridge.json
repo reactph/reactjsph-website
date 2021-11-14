@@ -1,0 +1,7 @@
+{
+  "name": "Street Bridge",
+  "author": "Carl de Guia",
+  "description": "Not your grandma's Bridge game",
+  "homepage": "https://street-bridge.web.app/",
+  "tags": ["reactjs", "bridge", "typescript", "firebase"]
+}

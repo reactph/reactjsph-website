@@ -56,9 +56,9 @@ More for information about how you can contribute to this project, check our [co
 
 ## 📋 Enlisting in the Dev Board
 
-1. Edit the [`content/devs.json`](https://github.com/reactph/reactjsph-website/blob/master/content/devs.json) file.
+1. Add a JSON file to the [`content/devs`](https://github.com/reactph/reactjsph-website/blob/master/content/devs) folder with filename `firstname-lastname.json` (all lowercase, separated by `-`), e.g., `juan-dela-cruz.json`.
 
-2. At the end of the array, add an object describing yourself given the format below:
+2. Within that file, define an object describing yourself given the format below. Here's an [example](https://github.com/reactph/reactjsph-website/blob/master/content/devs/franrey-anthony-saycon.json).
 
   | Key | Description ||
   |-|-|-|
@@ -70,7 +70,7 @@ More for information about how you can contribute to this project, check our [co
   | `skills` | String array of your skills/technologies that you would like to promote | <ul><li>Only the first 5 will be listed, but feel free to add as many as you like (We plan to allow devs to be filtered by skills in the future)</li></ul> |
   | `contacts` | Object array of contact information where each item has a `type` and a `url` | <ul><li>`type` can be any of the following: "behance", "email", "github", "linkedin", "twitter", "website"</li><li>`url` must be a URL corresponding to the `type` selected</li></ul> |
 
-3. Open a pull request with the title `[DEV BOARD] {YOUR_NAME}` using the template below:
+3. Commit your changes with the message `[DEV BOARD] {YOUR_NAME}` and open a pull request with the same title, following the template below:
 
   ```
   I have read and verified the following upon opening this pull request to add my information to the ReactJS Philippines Dev Board:
@@ -80,6 +80,24 @@ More for information about how you can contribute to this project, check our [co
   - [ ] My `blurb` is no longer than 140 characters
   - [ ] I understand that only the first 5 `skills` I list will be shown on the site
   ```
+
+## 🗂 Contributing to the Project Board
+
+> We 💙 all projects, but for personal websites, consider listing them under your name through the Dev Board above instead!
+
+1. Create a JSON file in the [`content/projects`](https://github.com/reactph/reactjsph-website/blob/master/content/projects.json) folder with filename `project-name.json` (all lowercase, separated by `-`), e.g., `reactjsph-website`.
+
+2. Within that file, define an object describing your project given the format below:
+
+  | Key | Description ||
+  |-|-|-|
+  | `name` | The name of your project |  |
+  | `author` | Your name |  |
+  | `description` | A description of your project | <ul><li>No longer than 280 characters</li></ul> |
+  | `homepage` | Your project's homepage |  |
+  | `tags` | String array of keywords related to your project | <ul><li>Only the first 5 will be listed, but feel free to add as many as you like (We plan to allow projects to be filtered by tags in the future)</li></ul> |
+
+3. Commit your changes with the message `[PROJECT BOARD] {YOUR_NAME}`, then open a pull request with the same title.
 
 ## 🎉 Join the community
 

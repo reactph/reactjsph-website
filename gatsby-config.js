@@ -11,16 +11,31 @@ module.exports = {
       messenger: `https://m.me/reactjsphilippines`,
       meetup: `https://www.meetup.com/ReactJS-Philippines/`,
       linkedin: `https://www.linkedin.com/company/reactjs-philippines/`,
+      discord: `https://discord.gg/J6eZNUG`,
     },
   },
   pathPrefix: `/reactjsph-website`,
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `devs`,
+        path: `${__dirname}/content/devs`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/projects`,
       },
     },
     `gatsby-transformer-sharp`,

@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import { Box, Text } from "rebass"
 
 import Container from "../components/container"
@@ -67,7 +68,7 @@ const SecondPage = () => (
       >
         {shuffledDevList.map(dev => (
           <Box as="li">
-            <DevBio dev={dev} />
+            <DevBio dev={dev.node} />
           </Box>
         ))}
       </Box>
@@ -75,4 +76,24 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export const query = graphql`
+  query DevJsonQuery {
+    allDevsJson {
+      edges {
+        node {
+          avatar
+          name
+          title
+          blurb
+          skills
+          contacts {
+            type
+            url
+          }
+        }
+      }
+    }
+  }
+`
+
+export default DevBoardPage
