@@ -1,0 +1,39 @@
+{
+  "name": "Carl de Guia",
+  "avatar": "https://i.ibb.co/RTSHmfm/20181205-142824-01.jpg",
+  "title": "Software Engineer",
+  "blurb": "Hey I'm Carl, a full-stack engineer, UI/UX designer, frustrated AI guy and an amateur cruciverbalist.",
+  "skills": [
+    "React",
+    "Typescript",
+    "NodeJS",
+    "NextJS",
+    "MongoDB",
+    "Angular",
+    "Python",
+    "GraphQL",
+    "Figma"
+  ],
+  "contacts": [
+    {
+      "type": "email",
+      "url": "mailto:carl@carldegs.com"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/carldegs"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/carl-justin-de-guia-b40a1b97/"
+    },
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/carldegs"
+    },
+    {
+      "type": "website",
+      "url": "https://carldegs.com"
+    }
+  ]
+}

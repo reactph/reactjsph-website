@@ -34,6 +34,9 @@ const memberImagesQuery = graphql`
     imgMarj: file(relativePath: { eq: "team/marj.jpg" }) {
       ...fluidMemberImage
     }
+    imgCarl: file(relativePath: { eq: "team/carl.jpg" }) {
+      ...fluidMemberImage
+    }
     imgJedo: file(relativePath: { eq: "team/jedo.jpg" }) {
       ...fluidMemberImage
     }
@@ -70,6 +73,7 @@ const TeamSection = () => {
     imgJayson,
     imgGuigi,
     imgMarj,
+    imgCarl,
     imgJedo,
     imgJerome,
     imgGian,
@@ -81,88 +85,90 @@ const TeamSection = () => {
   } = useStaticQuery(memberImagesQuery)
   const Members = [
     {
-      id: 0,
       photo: imgFran?.childImageSharp.fluid.src,
       name: "Franrey Saycon",
       role: "Head Director",
       website: "https://fsaycon.dev",
     },
     {
-      id: 1,
       photo: imgJayson?.childImageSharp.fluid.src,
       name: "Jayson de los reyes",
-      role: "Director, Internal Affairs",
+      role: "Co-Director",
       website: "https://itsdyeyson.dev/",
     },
     {
-      id: 2,
       photo: imgGuigi?.childImageSharp.fluid.src,
       name: "Miguel N. Galace",
-      role: "Director, External Affairs",
+      role: "Co-Director",
       website: "https://galacemiguel.com",
     },
     {
-      id: 3,
       photo: imgMarj?.childImageSharp.fluid.src,
       name: "Marjorie J. Martinez",
-      role: "Director, External Affairs",
+      role: "Co-Director",
       website: "https://github.com/marjmartinezz",
     },
     {
-      id: 4,
+      photo: imgCarl?.childImageSharp.fluid.src,
+      name: "Carl de Guia",
+      role: "Co-Director",
+      website: "https://github.com/carldegs",
+    },
+    {
       photo: imgJedo?.childImageSharp.fluid.src,
       name: "Jedo de la Peña II",
       role: "Member, Core Team",
     },
     {
-      id: 5,
       photo: imgJerome?.childImageSharp.fluid.src,
       name: "Jerome Estiller",
       role: "Member, Core Team",
       website: "https://github.com/jromest",
     },
     {
-      id: 6,
       photo: imgGian?.childImageSharp.fluid.src,
       name: "Gian Hirakawa",
       role: "Member, Core Team",
       website: "https://www.linkedin.com/in/gian-hirakawa",
     },
     {
-      id: 7,
       photo: imgMichael?.childImageSharp.fluid.src,
       name: "Michael Isaig",
       role: "Member, Core Team",
     },
     {
-      id: 8,
       photo: imgRem?.childImageSharp.fluid.src,
       name: "Rem Lampa",
       role: "Member, Core Team",
       website: "https://facebook.com/Rem.Lampa",
     },
     {
-      id: 9,
       photo: imgEricson?.childImageSharp.fluid.src,
       name: "Ericson Luciano",
       role: "Member, Core Team",
       website: "https://ericsonluciano.com",
     },
     {
-      id: 10,
       photo: imgJoe?.childImageSharp.fluid.src,
       name: "Joe Palala",
       role: "Member, Core Team",
       website: "https://jpalala.io",
     },
     {
-      id: 11,
       photo: imgChristian?.childImageSharp.fluid.src,
       name: "Christian Villamin",
       role: "Member, Core Team",
       website: "https://codekcv.now.sh/",
     },
-  ]
+  ].map(teamMember => ({
+    id: teamMember.name
+      .toLowerCase()
+      .split(".")
+      .join("")
+      .split(" ")
+      .join("-"),
+    ...teamMember,
+  }))
 
   const [page, setPage] = useState(1)
   const pageTotal =
