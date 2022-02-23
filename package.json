@@ -54,6 +54,7 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "gh-pages": "^2.1.1",
     "husky": "^3.0.4",
+    "inquirer": "^8.2.0",
     "joi": "^17.2.1",
     "lint-staged": "^9.2.3",
     "prettier": "^1.17.1",
@@ -69,7 +70,8 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "lint": "eslint \"src/**/*.{js,jsx}\" --fix",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "validate": "lint-staged"
+    "validate": "lint-staged",
+    "enlist": "node scripts/add-dev-board.js"
   },
   "repository": {
     "type": "git",

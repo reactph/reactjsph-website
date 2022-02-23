@@ -56,6 +56,8 @@ More for information about how you can contribute to this project, check our [co
 
 ## 📋 Enlisting in the Dev Board
 
+Run `yarn enlist` to enlist using the CLI or create a JSON file by following the steps below.
+
 1. Add a JSON file to the [`content/devs`](https://github.com/reactph/reactjsph-website/blob/master/content/devs) folder with filename `firstname-lastname.json` (all lowercase, separated by `-`), e.g., `juan-dela-cruz.json`.
 
 2. Within that file, define an object describing yourself given the format below. Here's an [example](https://github.com/reactph/reactjsph-website/blob/master/content/devs/franrey-anthony-saycon.json).
