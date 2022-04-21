@@ -6,8 +6,11 @@ import Container from "../components/container"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import DevBio from "../components/devBio"
+import { ShuffleArray } from "../utils"
+import devsJSON from "../../content/devs.json"
 
-const DevBoardPage = ({ data }) => (
+const shuffledDevList = ShuffleArray(devsJSON)
+const SecondPage = () => (
   <Layout>
     <SEO title="Dev Board" />
     <Container pt={[0, 3]}>
@@ -63,7 +66,7 @@ const DevBoardPage = ({ data }) => (
           rowGap: "2rem",
         }}
       >
-        {data.allDevsJson.edges.map(dev => (
+        {shuffledDevList.map(dev => (
           <Box as="li">
             <DevBio dev={dev.node} />
           </Box>
