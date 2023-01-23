@@ -1,15 +1,16 @@
 {
     "avatar": "https://i.ibb.co/YNDH5K8/avatar-2-1.jpg",
     "name": "Boone Raye Flores",
-    "title": "Web Developer",
+    "title": "Web Developer/ Digital Marketer",
     "company": "Gate Distribution Ent., Inc.,",
-    "blurb": "Hello Everyone! I'm Boone, I am a career shifter and currently working as web developer and IT Admin Support. Happy coding!",
+    "blurb": "Hello Everyone! I'm Boone, I am a career shifter and currently working as web developer/ IT Specialist. Happy coding!",
     "skills": [
       "Javascript",
       "React",
       "PHP",
       "MySQL",
-      "Adobe XD"
+      "Adobe XD",
+      "NodeJs"
     ],
     "contacts": [
       {
@@ -26,7 +27,7 @@
       },
       {
         "type": "website",
-        "url": "http://www.booneraye.online/"
+        "url": "https://traveltayo.com"
       }
     ]
   }
