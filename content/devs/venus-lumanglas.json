@@ -1,0 +1,36 @@
+{
+  "name": "Venus Lumanglas",
+  "avatar": "https://i.imgur.com/1pWVMoZ.jpg",
+  "title": "Software Engineer",
+  "blurb": "I am committed to crafting solutions that meet expectations, making a meaningful impact in the world of software development.",
+  "skills": [
+    "JavaScript",
+    "Ruby on Rails",
+    "React",
+    "Flutter",
+    "TypeScript",
+    "NodeJS",
+    "MongoDB",
+    "PostgreSQL",
+    "MySQL",
+    "Linux"
+  ],
+  "contacts": [
+    {
+      "type": "email",
+      "url": "mailto:vlumanglas30@gmail.com"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/binos30"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/binos30"
+    },
+    {
+      "type": "website",
+      "url": "https://binos30.github.io"
+    }
+  ]
+}
