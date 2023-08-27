@@ -1,0 +1,41 @@
+{
+  "name": "Bernardino Ochoa",
+  "avatar": "https://i.ibb.co/6n8dFrL/DSCF1071.jpg",
+  "title": "Sr. Analyst, Analytic Technology",
+  "company": "Concentrix Catalyst",
+  "blurb": "I'm Bernard,a  Self Taught Frontend Developer ",
+  "skills": [
+    "ReactJs",
+    "TypeScript",
+    "JavaScript",
+    "NextJs",
+    "TailwindCss",
+    "Prisma",
+    "Sanity.io",
+    "Supabase",
+    "Redux",
+    "ShadCn",
+    "NodeJs",
+    "Zustand",
+    "Trpc",
+    "Zod"
+  ],
+  "contacts": [
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/bernard-ochoa/"
+    },
+    {
+      "type": "email",
+      "url": "mailto:ajaxecho3@gmail.com"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/ajaxecho3/"
+    },
+    {
+      "type": "website",
+      "url": "https://bernardochoa.vercel.app/"
+    }
+  ]
+}
