@@ -1,0 +1,35 @@
+{
+  "name": "Robbie Mariano",
+  "avatar": "https://i.ibb.co/6n8dFrL/DSCF1071.jpg",
+  "title": "Senior Fullstack Engineer",
+  "company": "NA",
+  "blurb": "Hey there, I'am Robbie",
+  "skills": [
+    "ReactJs",
+    "NodeJs",
+    "TypeScript",
+    "JavaScript",
+    "NextJs",
+    "TailwindCss",
+    "Prisma",
+    "Firebase",
+    "MongoDB",
+    "Redux",
+    "RTK",
+    "SharePoint Framework"
+  ],
+  "contacts": [
+    {
+      "type": "email",
+      "url": "mailto:robbiemariano126@gmail.com"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/RMrobb1e/"
+    },
+    {
+      "type": "website",
+      "url": "https://ralm-portfolio.netlify.app/"
+    }
+  ]
+}
