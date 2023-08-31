@@ -1,12 +1,13 @@
 {
   "name": "Robbie Mariano",
-  "avatar": "",
+  "avatar": "https://avatars.githubusercontent.com/u/26958814?v=4",
   "title": "Senior Fullstack Engineer",
   "company": "NA",
   "blurb": "Hey there, I'am Robbie",
   "skills": [
     "ReactJs",
     "NodeJs",
+    "SharePoint Framework",
     "TypeScript",
     "JavaScript",
     "NextJs",
@@ -16,7 +17,6 @@
     "MongoDB",
     "Redux",
     "RTK",
-    "SharePoint Framework"
   ],
   "contacts": [
     {
