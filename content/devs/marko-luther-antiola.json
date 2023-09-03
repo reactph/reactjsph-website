@@ -1,0 +1,38 @@
+{
+    "avatar": "https://i.imgur.com/V60iuCT.jpg",
+    "name": "Marko Luther Antiola",
+    "title": "Frontend Developer",
+    "company": "Welch Studio",
+    "blurb": "I'm Marko Luther, a front-end developer with a passion for crafting innovative mobile and web applications.",
+    "skills": [
+        "React",
+        "RemixJS",
+        "React Native",
+        "Angular",
+        "TypeScript",
+        "Ionic",
+        "VueJS",
+        "NextJS",
+        "MongoDB",
+        "Firebase",
+        "Supabase"
+    ],
+    "contacts": [
+        {
+            "type": "website",
+            "url": "https://markolutherantiola.vercel.app/"
+        },
+        {
+            "type": "github",
+            "url": "https://github.com/markhuz1925"
+        },
+        {
+            "type": "linkedin",
+            "url": "https://www.linkedin.com/in/marko-luther-antiola-066350113/"
+        },
+        {
+            "type": "email",
+            "url": "mailto:antiolamarkoluther@gmail.com"
+        }
+    ]
+}
