@@ -1,0 +1,34 @@
+{
+  "avatar": "https://i.ibb.co/vvzYMDM/avatar.jpg",
+  "name": "Yoshilyn Fujitani",
+  "title": "Fullstack Designer",
+
+  "blurb": "Hi! I'm Yoshi. I have a passion for designing websites and turning them into code. I also love pixel games",
+  "skills": [
+    "Javascript",
+    "React",
+    "Redux",
+    "Figma",
+    "PostgreSQL",
+    "MongoDB",
+    "MySQL"
+  ],
+  "contacts": [
+    {
+      "type": "github",
+      "url": "https://github.com/yoshilynfujitani"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/yoshilyn-fujitani-b3ab72232/"
+    },
+    {
+      "type": "email",
+      "url": "mailto:fujitaniyoshilynp@gmail.com"
+    },
+    {
+      "type": "website",
+      "url": "https://yoshilynfujitani.github.io/Portfolio/"
+    }
+  ]
+}
