@@ -1,0 +1,33 @@
+{
+  "name": "Almer Tampus",
+  "avatar": "https://i.ibb.co/WFvYJw6/avatar-450x450.jpg",
+  "title": "Front-end Developer",
+  "blurb": "Developer by day. Problem-solver by night. Working dog enthusiast 100% of the time!",
+  "skills": [
+    "React",
+    "Next.js",
+    "Redux",
+    "TypeScript",
+    "Node.js",
+    "Chakra UI",
+    "Tailwind"
+  ],
+  "contacts": [
+    {
+      "type": "email",
+      "url": "mailto:almerflorestampus@gmail.com"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/guyfrommilkyway"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://ph.linkedin.com/in/almerflorestampus"
+    },
+    {
+      "type": "website",
+      "url": "https://almertampus.xyz"
+    }
+  ]
+}
