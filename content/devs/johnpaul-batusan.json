@@ -1,0 +1,31 @@
+{
+  "avatar": "https://ibb.co/rkXj7kT",
+  "name": "John Paul Batusan",
+  "title": "Full Stack Developer",
+  "company": "MEDDICC",
+  "blurb": "I'm JP, a Full Stack Dev for fun.",
+  "skills": [
+    "React",
+    "Next",
+    "Javascript",
+    "Typescript",
+    "Tailwind",
+    "Python",
+    "Node",
+    "PHP"
+  ],
+  "contacts": [
+    {
+      "type": "github",
+      "url": "https://github.com/Pseudoman21"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/john-paul-batusan-8361b617a/"
+    },
+    {
+      "type": "email",
+      "url": "mailto:johnpaul.batusa@gmail.com"
+    }
+  ]
+}
