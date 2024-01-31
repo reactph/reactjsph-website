@@ -1,0 +1,31 @@
+{
+  "avatar": "https://i.imgur.com/WUjGsDU.jpeg",
+  "name": "Mark Kenneth Calendario",
+  "title": "Full-stack Web Developer",
+  "company": "Student",
+  "blurb": "Hello! I'm a freelance web developer and taking BS Computer Science at Polytechnic University of the Philippines.",
+  "skills": [
+    "React",
+    "MySQL",
+    "Express JS",
+    "Node JS"
+  ],
+  "contacts": [
+    {
+      "type": "website",
+      "url": "https://markkennethcalendario.web.app"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/markcalendario"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/markcalendario"
+    },
+    {
+      "type": "email",
+      "url": "mailto:markcalendario@gmail.com"
+    }
+  ]
+}
